@@ -9,8 +9,6 @@ use Spatie\Activitylog\Traits\LogsActivity;
 class Post extends Model
 {
     use LogsActivity;
-    use SoftDeletes;
-    
 
     /**
      * The database table used by the model.
@@ -31,10 +29,23 @@ class Post extends Model
      *
      * @var array
      */
-    protected $fillable = ['title'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'description_uz', 'description_ru', 'description_en',
+        'body_uz', 'body_ru', 'body_en', 'slug', 'meta_keywords', 'meta_description', 'image'];
 
-    
+    public static $searchFields=['title_uz', 'title_ru', 'title_en', 'description_uz', 'description_ru', 'description_en',
+        'body_uz', 'body_ru', 'body_en'];
 
+    protected $attributes=[
+        'view'=>0
+    ];
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::saving(function ($model) {
+            $model->slug = \Str::slug($model->title_uz);
+        });
+    }
     /**
      * Change activity log event description
      *

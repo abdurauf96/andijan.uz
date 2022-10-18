@@ -11,6 +11,9 @@
                 <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
             <li class="dropdown">
+                <a href="{{ route('admin.posts.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Yangiliklar</span></a>
+            </li>
+            <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="briefcase"></i><span>Widgets</span></a>
                 <ul class="dropdown-menu">

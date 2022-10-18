@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\PostsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,10 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('activitylogs', 'App\Http\Controllers\Admin\ActivityLogsController')->only([
         'index', 'show', 'destroy'
     ]);
+
+    Route::resource('posts', PostsController::class);
+    Route::post('posts/image-upload', [PostsController::class, 'imageUpload'])->name('postImageUpload');
+
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
     Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
@@ -34,4 +39,5 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+
 
