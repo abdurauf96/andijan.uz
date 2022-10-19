@@ -52,7 +52,7 @@ class PostsController extends Controller
     {
 
         $requestData = $request->all();
-        //dd($requestData);
+
         $request->validate(['title_uz'=>'required']);
 
         if($request->hasFile('image')){
@@ -109,7 +109,16 @@ class PostsController extends Controller
 
         $requestData = $request->all();
 
+        if($request->hasFile('image')){
+            $file=$request->file('image');
+            $image=time().$file->getClientOriginalName();
+            $path='admin/images/posts';
+            $file->move($path, $image);
+            $requestData['image']=$image;
+        }
+
         $post = Post::findOrFail($id);
+
         $post->update($requestData);
 
         return redirect('admin/posts')->with('flash_message', 'Post updated!');

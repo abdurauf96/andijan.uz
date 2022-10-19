@@ -52,7 +52,9 @@
                                 @foreach($posts as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title_uz }}</td><td>{{ $item->title_ru }}</td><td>{{ $item->title_en }}</td>
+                                        <td>{{ $item->title_uz }}</td>
+                                        <td>{{ $item->description_uz }}</td>
+                                        <td><img src="/admin/images/posts/{{ $item->image }}" width="100" alt=""></td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/posts/' . $item->id) }}" title="View Post"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/posts/' . $item->id . '/edit') }}" title="Edit Post"><i class="far fa-edit"></i></a>
