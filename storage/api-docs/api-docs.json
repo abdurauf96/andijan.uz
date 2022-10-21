@@ -11,6 +11,21 @@
         }
     ],
     "paths": {
+        "/info-categories": {
+            "get": {
+                "tags": [
+                    "InfoCategories"
+                ],
+                "summary": "Get list of InfoCategories",
+                "description": "Returns list of InfoCategories",
+                "operationId": "getInfoCategories",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/posts": {
             "get": {
                 "tags": [
@@ -60,6 +75,10 @@
         {
             "name": "Posts",
             "description": "API Endpoints of Posts"
+        },
+        {
+            "name": "InfoCategories",
+            "description": "API Endpoints of InfoCategories"
         }
     ]
 }

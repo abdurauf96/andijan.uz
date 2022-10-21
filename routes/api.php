@@ -18,5 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
 Route::get('posts', [\App\Http\Controllers\Api\PostsController::class, 'getAll']);
 Route::get('posts/{id}', [\App\Http\Controllers\Api\PostsController::class, 'getOne']);
+Route::get('info-categories', [\App\Http\Controllers\Api\InfoCategoriesController::class, 'getAll']);

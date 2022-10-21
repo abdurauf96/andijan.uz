@@ -25,7 +25,7 @@ class PostsController extends Controller
      */
     public function getAll()
     {
-        return new PostCollection(Post::paginate(1));
+        return new PostCollection(Post::paginate(10));
     }
 
     /**

@@ -19,6 +19,10 @@ use Illuminate\Http\Request;
  *     name="Posts",
  *     description="API Endpoints of Posts"
  * )
+ * @OA\Tag(
+ *     name="InfoCategories",
+ *     description="API Endpoints of InfoCategories"
+ * )
  */
 class BaseController extends Controller
 {
