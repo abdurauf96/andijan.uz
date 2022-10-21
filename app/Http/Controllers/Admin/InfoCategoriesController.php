@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
-use App\Models\Post;
+use App\Models\InfoCategory;
 use Illuminate\Http\Request;
 
-class PostsController extends Controller
+class InfoCategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,17 +18,18 @@ class PostsController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-
         $perPage = 10;
 
-        $searchFields=Post::$searchFields;
+        if (!empty($keyword)) {
+            $infocategories = InfoCategory::where('title_uz', 'LIKE', "%$keyword%")
+                ->orWhere('title_ru', 'LIKE', "%$keyword%")
+                ->orWhere('title_en', 'LIKE', "%$keyword%")
+                ->latest()->paginate($perPage);
+        } else {
+            $infocategories = InfoCategory::latest()->paginate($perPage);
+        }
 
-        $posts = Post::when($keyword, function ($q) use ($searchFields, $keyword) {
-            foreach ($searchFields as $field)
-                $q->orWhere($field, 'like', "%{$keyword}%");
-            })->latest()->paginate($perPage);
-
-        return view('admin.posts.index', compact('posts'));
+        return view('admin.info-categories.index', compact('infocategories'));
     }
 
     /**
@@ -38,7 +39,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        return view('admin.info-categories.create');
     }
 
     /**
@@ -50,22 +51,23 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+			'title_uz' => 'required',
+		]);
 
         $requestData = $request->all();
-
-        $request->validate(['title_uz'=>'required']);
 
         if($request->hasFile('image')){
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
-            $path='admin/images/posts';
+            $path='admin/images/info-categories';
             $file->move($path, $image);
             $requestData['image']=$image;
         }
 
-        Post::create($requestData);
+        InfoCategory::create($requestData);
 
-        return redirect('admin/posts')->with('flash_message', 'Post added!');
+        return redirect('admin/info-categories')->with('flash_message', 'InfoCategory added!');
     }
 
     /**
@@ -77,9 +79,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id);
+        $infocategory = InfoCategory::findOrFail($id);
 
-        return view('admin.posts.show', compact('post'));
+        return view('admin.info-categories.show', compact('infocategory'));
     }
 
     /**
@@ -91,9 +93,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
+        $infocategory = InfoCategory::findOrFail($id);
 
-        return view('admin.posts.edit', compact('post'));
+        return view('admin.info-categories.edit', compact('infocategory'));
     }
 
     /**
@@ -106,22 +108,23 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        $this->validate($request, [
+			'title_uz' => 'required',
+		]);
         $requestData = $request->all();
 
         if($request->hasFile('image')){
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
-            $path='admin/images/posts';
+            $path='admin/images/info-categories';
             $file->move($path, $image);
             $requestData['image']=$image;
         }
 
-        $post = Post::findOrFail($id);
+        $infocategory = InfoCategory::findOrFail($id);
+        $infocategory->update($requestData);
 
-        $post->update($requestData);
-
-        return redirect('admin/posts')->with('flash_message', 'Post updated!');
+        return redirect('admin/info-categories')->with('flash_message', 'InfoCategory updated!');
     }
 
     /**
@@ -133,26 +136,8 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        Post::destroy($id);
+        InfoCategory::destroy($id);
 
-        return redirect('admin/posts')->with('flash_message', 'Post deleted!');
-    }
-
-    public function imageUpload(Request $request)
-    {
-        if($request->hasFile('upload')) {
-            $originName = $request->file('upload')->getClientOriginalName();
-            $fileName = pathinfo($originName, PATHINFO_FILENAME);
-            $extension = $request->file('upload')->getClientOriginalExtension();
-            $fileName = $fileName.'_'.time().'.'.$extension;
-            $request->file('upload')->move(public_path('admin/images/posts/'), $fileName);
-            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('admin/images/posts/'.$fileName);
-            $msg = 'Image successfully uploaded';
-            $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
-
-            @header('Content-type: text/html; charset=utf-8');
-            echo $response;
-        }
+        return redirect('admin/info-categories')->with('flash_message', 'InfoCategory deleted!');
     }
 }
