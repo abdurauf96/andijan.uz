@@ -69,6 +69,50 @@
                     }
                 }
             }
+        },
+        "/projects": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "summary": "Get list of Projects",
+                "description": "Returns list of Projects",
+                "operationId": "getProjects",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/projects/{id}": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "summary": "Get one project by ID",
+                "description": "Returns one project",
+                "operationId": "getOneProject",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Project ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if project not found"
+                    }
+                }
+            }
         }
     },
     "tags": [
@@ -79,6 +123,10 @@
         {
             "name": "InfoCategories",
             "description": "API Endpoints of InfoCategories"
+        },
+        {
+            "name": "Projects",
+            "description": "API Endpoints of Projects"
         }
     ]
 }
