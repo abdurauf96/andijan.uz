@@ -128,6 +128,50 @@
                     }
                 }
             }
+        },
+        "/services": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "Get list of services",
+                "description": "Returns list of services",
+                "operationId": "getServices",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/services/{id}": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "Get one service by ID",
+                "description": "Returns one service",
+                "operationId": "getOneService",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Service ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if service not found"
+                    }
+                }
+            }
         }
     },
     "tags": [
@@ -146,6 +190,10 @@
         {
             "name": "Useful Sites",
             "description": "API Endpoints of useful sites"
+        },
+        {
+            "name": "Services",
+            "description": "API Endpoints of services"
         }
     ]
 }

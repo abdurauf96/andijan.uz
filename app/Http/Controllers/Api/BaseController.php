@@ -31,6 +31,10 @@ use Illuminate\Http\Request;
  *     name="Useful Sites",
  *     description="API Endpoints of useful sites"
  * )
+ *  @OA\Tag(
+ *     name="Services",
+ *     description="API Endpoints of services"
+ * )
  */
 class BaseController extends Controller
 {
