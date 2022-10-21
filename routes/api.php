@@ -24,3 +24,4 @@ Route::get('posts/{id}', [\App\Http\Controllers\Api\PostsController::class, 'get
 Route::get('info-categories', [\App\Http\Controllers\Api\InfoCategoriesController::class, 'getAll']);
 Route::get('projects', [\App\Http\Controllers\Api\ProjectsController::class, 'getAll']);
 Route::get('projects/{id}', [\App\Http\Controllers\Api\ProjectsController::class, 'getOne']);
+Route::get('sites', [\App\Http\Controllers\Api\LinksController::class, 'getAll']);

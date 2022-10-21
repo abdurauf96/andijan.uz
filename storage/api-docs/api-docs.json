@@ -26,6 +26,21 @@
                 }
             }
         },
+        "/sites": {
+            "get": {
+                "tags": [
+                    "Useful Sites"
+                ],
+                "summary": "Get list of useful sites",
+                "description": "Returns list of useful sites",
+                "operationId": "getLinks",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/posts": {
             "get": {
                 "tags": [
@@ -127,6 +142,10 @@
         {
             "name": "Projects",
             "description": "API Endpoints of Projects"
+        },
+        {
+            "name": "Useful Sites",
+            "description": "API Endpoints of useful sites"
         }
     ]
 }
