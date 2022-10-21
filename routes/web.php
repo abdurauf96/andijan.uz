@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\InfoCategoriesController;
 use App\Http\Controllers\Admin\ProjectsController;
+use App\Http\Controllers\Admin\LinksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +37,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('info-categories', InfoCategoriesController::class);
     Route::resource('projects', ProjectsController::class);
     Route::post('projects/image-upload', [ProjectsController::class, 'imageUpload'])->name('projectImageUpload');
+    Route::resource('links', LinksController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -44,4 +46,5 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+
 
