@@ -10,37 +10,17 @@
             <li class="dropdown ">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
-            <li class="dropdown">
-                <a href="{{ route('admin.posts.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Yangiliklar</span></a>
-            </li>
-            <li class="dropdown">
-                <a href="{{ route('admin.info-categories.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Kategoriyalar</span></a>
-            </li>
+
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                        data-feather="briefcase"></i><span>Widgets</span></a>
+                        data-feather="briefcase"></i><span>Bosh sahifa</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="widget-chart.html">Chart Widgets</a></li>
-                    <li><a class="nav-link" href="widget-data.html">Data Widgets</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.posts.index') }}">Yangiliklar</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.info-categories.index') }}">Kategoriyalar</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.projects.index') }}">Loyihalar</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Apps</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="chat.html">Chat</a></li>
-                    <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li><a class="nav-link" href="calendar.html">Calendar</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Email</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="email-inbox.html">Inbox</a></li>
-                    <li><a class="nav-link" href="email-compose.html">Compose</a></li>
-                    <li><a class="nav-link" href="email-read.html">read</a></li>
-                </ul>
-            </li>
+
             <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</span></a>
             </li>
