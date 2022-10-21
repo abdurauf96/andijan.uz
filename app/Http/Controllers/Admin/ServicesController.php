@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
-use App\Models\Post;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
-class PostsController extends Controller
+class ServicesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,17 +18,21 @@ class PostsController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-
         $perPage = 10;
 
-        $searchFields=Post::$searchFields;
+        if (!empty($keyword)) {
+            $services = Service::where('title_uz', 'LIKE', "%$keyword%")
+                ->orWhere('title_ru', 'LIKE', "%$keyword%")
+                ->orWhere('title_en', 'LIKE', "%$keyword%")
+                ->orWhere('body_uz', 'LIKE', "%$keyword%")
+                ->orWhere('body_ru', 'LIKE', "%$keyword%")
+                ->orWhere('body_en', 'LIKE', "%$keyword%")
+                ->latest()->paginate($perPage);
+        } else {
+            $services = Service::latest()->paginate($perPage);
+        }
 
-        $posts = Post::when($keyword, function ($q) use ($searchFields, $keyword) {
-            foreach ($searchFields as $field)
-                $q->orWhere($field, 'like', "%{$keyword}%");
-            })->latest()->paginate($perPage);
-
-        return view('admin.posts.index', compact('posts'));
+        return view('admin.services.index', compact('services'));
     }
 
     /**
@@ -38,7 +42,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        return view('admin.services.create');
     }
 
     /**
@@ -50,22 +54,22 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-
+        $this->validate($request, [
+			'title_uz' => 'required',
+		]);
         $requestData = $request->all();
-
-        $request->validate(['title_uz'=>'required']);
 
         if($request->hasFile('image')){
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
-            $path='admin/images/posts';
+            $path='admin/images/services';
             $file->move($path, $image);
             $requestData['image']=$image;
         }
 
-        Post::create($requestData);
+        Service::create($requestData);
 
-        return redirect('admin/posts')->with('flash_message', 'Post added!');
+        return redirect('admin/services')->with('flash_message', 'Service added!');
     }
 
     /**
@@ -77,9 +81,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id);
+        $service = Service::findOrFail($id);
 
-        return view('admin.posts.show', compact('post'));
+        return view('admin.services.show', compact('service'));
     }
 
     /**
@@ -91,9 +95,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
+        $service = Service::findOrFail($id);
 
-        return view('admin.posts.edit', compact('post'));
+        return view('admin.services.edit', compact('service'));
     }
 
     /**
@@ -106,21 +110,23 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+			'title_uz' => 'required',
+		]);
         $requestData = $request->all();
 
         if($request->hasFile('image')){
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
-            $path='admin/images/posts';
+            $path='admin/images/services';
             $file->move($path, $image);
             $requestData['image']=$image;
         }
 
-        $post = Post::findOrFail($id);
+        $service = Service::findOrFail($id);
+        $service->update($requestData);
 
-        $post->update($requestData);
-
-        return redirect('admin/posts')->with('flash_message', 'Post updated!');
+        return redirect('admin/services')->with('flash_message', 'Service updated!');
     }
 
     /**
@@ -132,11 +138,10 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        Post::destroy($id);
+        Service::destroy($id);
 
-        return redirect('admin/posts')->with('flash_message', 'Post deleted!');
+        return redirect('admin/services')->with('flash_message', 'Service deleted!');
     }
-
     public function imageUpload(Request $request)
     {
         if($request->hasFile('upload')) {
@@ -144,9 +149,9 @@ class PostsController extends Controller
             $fileName = pathinfo($originName, PATHINFO_FILENAME);
             $extension = $request->file('upload')->getClientOriginalExtension();
             $fileName = $fileName.'_'.time().'.'.$extension;
-            $request->file('upload')->move(public_path('admin/images/posts/'), $fileName);
+            $request->file('upload')->move(public_path('admin/images/services/'), $fileName);
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('admin/images/posts/'.$fileName);
+            $url = asset('admin/images/services/'.$fileName);
             $msg = 'Image successfully uploaded';
             $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
 

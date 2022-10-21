@@ -19,6 +19,7 @@
                     <li><a class="nav-link" href="{{ route('admin.info-categories.index') }}">Kategoriyalar</a></li>
                     <li><a class="nav-link" href="{{ route('admin.projects.index') }}">Loyihalar</a></li>
                     <li><a class="nav-link" href="{{ route('admin.links.index') }}">Foydali saytlar</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.services.index') }}">Xizmatlar</a></li>
                 </ul>
             </li>
 
