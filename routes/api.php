@@ -27,3 +27,4 @@ Route::get('projects/{id}', [\App\Http\Controllers\Api\ProjectsController::class
 Route::get('sites', [\App\Http\Controllers\Api\LinksController::class, 'getAll']);
 Route::get('services', [\App\Http\Controllers\Api\ServicesController::class, 'getAll']);
 Route::get('services/{id}', [\App\Http\Controllers\Api\ServicesController::class, 'getOne']);
+Route::get('districts/{id}', [\App\Http\Controllers\Api\DistrictsController::class, 'getOne']);

@@ -11,6 +11,35 @@
         }
     ],
     "paths": {
+        "/districts/{id}": {
+            "get": {
+                "tags": [
+                    "Districts"
+                ],
+                "summary": "Get one district by ID",
+                "description": "Returns one district",
+                "operationId": "getOneDistrict",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "District ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if district not found"
+                    }
+                }
+            }
+        },
         "/info-categories": {
             "get": {
                 "tags": [
@@ -194,6 +223,10 @@
         {
             "name": "Services",
             "description": "API Endpoints of services"
+        },
+        {
+            "name": "Districts",
+            "description": "API Endpoints of districts"
         }
     ]
 }
