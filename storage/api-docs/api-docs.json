@@ -11,6 +11,50 @@
         }
     ],
     "paths": {
+        "/arenas": {
+            "get": {
+                "tags": [
+                    "Arenas"
+                ],
+                "summary": "Get list of arenas",
+                "description": "Returns list of arenas",
+                "operationId": "getArenas",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/arenas/{id}": {
+            "get": {
+                "tags": [
+                    "Arenas"
+                ],
+                "summary": "Get one arena by ID",
+                "description": "Returns one arena",
+                "operationId": "getOneArena",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Arena ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if arena not found"
+                    }
+                }
+            }
+        },
         "/districts/{id}": {
             "get": {
                 "tags": [
@@ -227,6 +271,10 @@
         {
             "name": "Districts",
             "description": "API Endpoints of districts"
+        },
+        {
+            "name": "Arenas",
+            "description": "API Endpoints of arenas"
         }
     ]
 }
