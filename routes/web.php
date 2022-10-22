@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\InfoCategoriesController;
 use App\Http\Controllers\Admin\ProjectsController;
 use App\Http\Controllers\Admin\LinksController;
 use App\Http\Controllers\Admin\ServicesController;
+use App\Http\Controllers\Admin\DistrictsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +42,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('links', LinksController::class);
     Route::resource('services', ServicesController::class);
     Route::post('services/image-upload', [ServicesController::class, 'imageUpload'])->name('serviceImageUpload');
+    Route::resource('districts', DistrictsController::class);
+
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
     Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
@@ -48,6 +51,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+
 
 
 

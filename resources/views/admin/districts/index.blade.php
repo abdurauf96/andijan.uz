@@ -19,19 +19,19 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">%%crudNameCap%%</li>
+                                <li class="breadcrumb-item active">District</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4> %%crudNameCap%% </h4>
+                        <h4> Districts </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/%%routeGroup%%%%viewName%%/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
+                            <a href="{{ url('/admin/districts/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-                        <form method="GET" action="{{ url('/%%routeGroup%%%%viewName%%') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
+                        <form method="GET" action="{{ url('/admin/districts') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
                                 <input type="text" class="form-control" name="search" placeholder="Search..." value="{{ request('search') }}">
                                 <span class="input-group-append">
@@ -45,29 +45,30 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>%%formHeadingHtml%%<th>Actions</th>
+                                        <th>#</th><th>Title Uz</th><th>Description Uz</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($%%crudName%% as $item)
+                                @foreach($districts as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration or $item->%%primaryKey%% }}</td>
-                                        %%formBodyHtml%%
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->title_uz }}</td>
+                                        <td>{{ $item->description_uz }}</td>
                                         <td>
-                                            <a class="btn btn-icon btn-primary" href="{{ url('/%%routeGroup%%%%viewName%%/' . $item->%%primaryKey%%) }}" title="View %%modelName%%"><i class="fas fa-eye"></i></a>
-                                            <a class="btn btn-icon btn-info" href="{{ url('/%%routeGroup%%%%viewName%%/' . $item->%%primaryKey%% . '/edit') }}" title="Edit %%modelName%%"><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/districts/' . $item->id) }}" title="View District"><i class="fas fa-eye"></i></a>
+                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/districts/' . $item->id . '/edit') }}" title="Edit District"><i class="far fa-edit"></i></a>
 
-                                            <form method="POST" action="{{ url('/%%routeGroup%%%%viewName%%' . '/' . $item->%%primaryKey%%) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('/admin/districts' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete %%modelName%%" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete District" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {{ $%%crudName%%->links() }} </div>
+                            <div class="pagination-wrapper"> {{ $districts->links() }} </div>
                         </div>
 
                     </div>
