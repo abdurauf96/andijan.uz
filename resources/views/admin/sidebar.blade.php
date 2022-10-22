@@ -21,6 +21,7 @@
                     <li><a class="nav-link" href="{{ route('admin.links.index') }}">Foydali saytlar</a></li>
                     <li><a class="nav-link" href="{{ route('admin.services.index') }}">Xizmatlar</a></li>
                     <li><a class="nav-link" href="{{ route('admin.districts.index') }}">Tumanlar</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.arenas.index') }}">Sport obyektlari</a></li>
                 </ul>
             </li>
 

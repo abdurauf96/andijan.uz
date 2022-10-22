@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ProjectsController;
 use App\Http\Controllers\Admin\LinksController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\DistrictsController;
+use App\Http\Controllers\Admin\ArenasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +44,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('services', ServicesController::class);
     Route::post('services/image-upload', [ServicesController::class, 'imageUpload'])->name('serviceImageUpload');
     Route::resource('districts', DistrictsController::class);
+    Route::resource('arenas', ArenasController::class);
+    Route::post('arenas/image-upload', [ArenasController::class, 'imageUpload'])->name('arenaImageUpload');
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
