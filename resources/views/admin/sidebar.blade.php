@@ -22,6 +22,7 @@
                     <li><a class="nav-link" href="{{ route('admin.services.index') }}">Xizmatlar</a></li>
                     <li><a class="nav-link" href="{{ route('admin.districts.index') }}">Tumanlar</a></li>
                     <li><a class="nav-link" href="{{ route('admin.arenas.index') }}">Sport obyektlari</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.fields.index') }}">Ustuvor tarmoqlar</a></li>
                 </ul>
             </li>
 
