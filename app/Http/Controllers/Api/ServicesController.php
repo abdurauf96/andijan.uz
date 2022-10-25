@@ -10,20 +10,21 @@ class ServicesController extends Controller
 {
     /**
      * @OA\Get(
-     *      path="/services",
+     *      path="/main-services",
      *      operationId="getServices",
      *      tags={"Services"},
-     *      summary="Get list of services",
-     *      description="Returns list of services",
+     *      summary="Get list of main services",
+     *      description="Returns list of main services",
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
      *       )
      * )
      */
-    public function getAll()
+    public function getAllMain()
     {
-        return ServiceResource::collection(Service::all());
+        $services=Service::whereType(1)->latest()->get();
+        return ServiceResource::collection($services);
     }
 
     /**
@@ -57,5 +58,24 @@ class ServicesController extends Controller
             return response()->json('Service not found', 404);
         }
         return new ServiceResource($service);
+    }
+
+    /**
+     * @OA\Get(
+     *      path="/secondary-services",
+     *      operationId="getSecondaryServices",
+     *      tags={"Services"},
+     *      summary="Get list of secondary services",
+     *      description="Returns list of secondary services",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     * )
+     */
+    public function getAllSecondary()
+    {
+        $services=Service::whereType(2)->latest()->get();
+        return ServiceResource::collection($services);
     }
 }

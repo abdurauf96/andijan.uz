@@ -25,8 +25,12 @@ Route::get('info-categories', [\App\Http\Controllers\Api\InfoCategoriesControlle
 Route::get('projects', [\App\Http\Controllers\Api\ProjectsController::class, 'getAll']);
 Route::get('projects/{id}', [\App\Http\Controllers\Api\ProjectsController::class, 'getOne']);
 Route::get('sites', [\App\Http\Controllers\Api\LinksController::class, 'getAll']);
-Route::get('services', [\App\Http\Controllers\Api\ServicesController::class, 'getAll']);
+
+//services
+Route::get('main-services', [\App\Http\Controllers\Api\ServicesController::class, 'getAllMain']);
+Route::get('secondary-services', [\App\Http\Controllers\Api\ServicesController::class, 'getAllSecondary']);
 Route::get('services/{id}', [\App\Http\Controllers\Api\ServicesController::class, 'getOne']);
+
 Route::get('districts/{id}', [\App\Http\Controllers\Api\DistrictsController::class, 'getOne']);
 Route::get('arenas', [\App\Http\Controllers\Api\ArenasController::class, 'getAll']);
 Route::get('arenas/{id}', [\App\Http\Controllers\Api\ArenasController::class, 'getOne']);

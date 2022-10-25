@@ -45,14 +45,16 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title Uz</th><th>Image</th><th>Actions</th>
+                                        <th>#</th><th>Title Uz</th> <th>Type (Turi)</th> <th>Image</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($services as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title_uz }}</td><td><img src="/admin/images/services/{{ $item->image }}" width="100" alt=""></td>
+                                        <td>{{ $item->title_uz }}</td>
+                                        <td>{{ $item->type==1 ? 'Main (Asosiy)' : 'Secondary (Qo\'shimcha)' }}</td>
+                                        <td><img src="/admin/images/services/{{ $item->image }}" width="100" alt=""></td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/services/' . $item->id) }}" title="View Service"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/services/' . $item->id . '/edit') }}" title="Edit Service"><i class="far fa-edit"></i></a>

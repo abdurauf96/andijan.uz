@@ -41,6 +41,7 @@
                                     <tr><th> Body Ru </th><td> {!! $service->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $service->body_en !!} </td></tr>
                                     <tr><th> Image </th><td> <img src="/admin/images/services/{{ $service->image }}" width="100" alt=""> </td></tr>
+                                    <tr><th> Type </th><td> {{ $service->type==1 ? 'Main (Asosiy)' : 'Secondary (Qo\'shimcha)' }} </td></tr>
                                     <tr><th> Slug </th><td> {{ $service->slug }} </td></tr>
                                     <tr><th> Meta Description </th><td> {{ $service->meta_description }} </td></tr>
                                     <tr><th> Meta Keywords </th><td> {{ $service->meta_keywords }} </td></tr>

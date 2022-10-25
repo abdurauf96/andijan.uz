@@ -34,6 +34,13 @@
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Xizmat turi' }}</label>
+    <select name="type"  class="form-control">
+        <option @isset($service) {{ $service->type==1 ? 'selected' : '' }} @endisset value="1">Asosiy </option>
+        <option @isset($service) {{ $service->type==2 ? 'selected' : '' }} @endisset value="2">Qo'shimcha</option>
+    </select>
+</div>
 <div class="form-group{{ $errors->has('image') ? 'has-error' : ''}}">
     <label for="image" class="control-label">{{ 'Image' }}</label>
     <input class="form-control" name="image" type="file" id="image" value="{{ $service->image ?? ''}}" >

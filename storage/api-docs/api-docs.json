@@ -246,13 +246,13 @@
                 }
             }
         },
-        "/services": {
+        "/main-services": {
             "get": {
                 "tags": [
                     "Services"
                 ],
-                "summary": "Get list of services",
-                "description": "Returns list of services",
+                "summary": "Get list of main services",
+                "description": "Returns list of main services",
                 "operationId": "getServices",
                 "responses": {
                     "200": {
@@ -286,6 +286,21 @@
                     },
                     "404": {
                         "description": "if service not found"
+                    }
+                }
+            }
+        },
+        "/secondary-services": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "Get list of secondary services",
+                "description": "Returns list of secondary services",
+                "operationId": "getSecondaryServices",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
                     }
                 }
             }
