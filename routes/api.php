@@ -30,3 +30,5 @@ Route::get('services/{id}', [\App\Http\Controllers\Api\ServicesController::class
 Route::get('districts/{id}', [\App\Http\Controllers\Api\DistrictsController::class, 'getOne']);
 Route::get('arenas', [\App\Http\Controllers\Api\ArenasController::class, 'getAll']);
 Route::get('arenas/{id}', [\App\Http\Controllers\Api\ArenasController::class, 'getOne']);
+Route::get('fields', [\App\Http\Controllers\Api\FieldsController::class, 'getAll']);
+Route::get('fields/{id}', [\App\Http\Controllers\Api\FieldsController::class, 'getOne']);

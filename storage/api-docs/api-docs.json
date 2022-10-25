@@ -84,6 +84,50 @@
                 }
             }
         },
+        "/fields": {
+            "get": {
+                "tags": [
+                    "Fields"
+                ],
+                "summary": "Get list of fields",
+                "description": "Returns list of fields",
+                "operationId": "getFields",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/fields/{id}": {
+            "get": {
+                "tags": [
+                    "Fields"
+                ],
+                "summary": "Get one field by ID",
+                "description": "Returns one field",
+                "operationId": "getOneField",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Field ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if field not found"
+                    }
+                }
+            }
+        },
         "/info-categories": {
             "get": {
                 "tags": [
@@ -275,6 +319,10 @@
         {
             "name": "Arenas",
             "description": "API Endpoints of arenas"
+        },
+        {
+            "name": "Fields",
+            "description": "API Endpoints of fields"
         }
     ]
 }

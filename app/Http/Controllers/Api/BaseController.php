@@ -43,6 +43,10 @@ use Illuminate\Http\Request;
  *     name="Arenas",
  *     description="API Endpoints of arenas"
  * )
+ * @OA\Tag(
+ *     name="Fields",
+ *     description="API Endpoints of fields"
+ * )
  */
 class BaseController extends Controller
 {
