@@ -36,6 +36,8 @@ Route::get('services/{id}', [\App\Http\Controllers\Api\ServicesController::class
 Route::get('governors', [\App\Http\Controllers\Api\GovernorsController::class, 'getAll']);
 Route::get('governors/{id}', [\App\Http\Controllers\Api\GovernorsController::class, 'getOne']);
 
+Route::get('councils', [\App\Http\Controllers\Api\CouncilsController::class, 'getAll']);
+
 Route::get('districts/{id}', [\App\Http\Controllers\Api\DistrictsController::class, 'getOne']);
 Route::get('arenas', [\App\Http\Controllers\Api\ArenasController::class, 'getAll']);
 Route::get('arenas/{id}', [\App\Http\Controllers\Api\ArenasController::class, 'getOne']);

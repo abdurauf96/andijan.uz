@@ -29,6 +29,9 @@
                 <a href="{{ route('admin.governors.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Xokimlar</span></a>
             </li>
             <li class="dropdown ">
+                <a href="{{ route('admin.councils.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Kengashlar</span></a>
+            </li>
+            <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</span></a>
             </li>
         </ul>
