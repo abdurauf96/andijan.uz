@@ -47,6 +47,10 @@ use Illuminate\Http\Request;
  *     name="Fields",
  *     description="API Endpoints of fields"
  * )
+ * @OA\Tag(
+ *     name="Governors (Hokimlar)",
+ *     description="API Endpoints of governors (hokimlar)"
+ * )
  */
 class BaseController extends Controller
 {

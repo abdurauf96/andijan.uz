@@ -128,6 +128,50 @@
                 }
             }
         },
+        "/governors": {
+            "get": {
+                "tags": [
+                    "Governors (Hokimlar)"
+                ],
+                "summary": "Get list of governors",
+                "description": "Returns list of governors",
+                "operationId": "getGovernors",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/governors/{id}": {
+            "get": {
+                "tags": [
+                    "Governors (Hokimlar)"
+                ],
+                "summary": "Get one governor by ID",
+                "description": "Returns one governor",
+                "operationId": "getOneGovernor",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Governor ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if governor not found"
+                    }
+                }
+            }
+        },
         "/info-categories": {
             "get": {
                 "tags": [
@@ -338,6 +382,10 @@
         {
             "name": "Fields",
             "description": "API Endpoints of fields"
+        },
+        {
+            "name": "Governors (Hokimlar)",
+            "description": "API Endpoints of governors (hokimlar)"
         }
     ]
 }
