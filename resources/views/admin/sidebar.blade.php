@@ -25,7 +25,9 @@
                     <li><a class="nav-link" href="{{ route('admin.fields.index') }}">Ustuvor tarmoqlar</a></li>
                 </ul>
             </li>
-
+            <li class="dropdown ">
+                <a href="{{ route('admin.governors.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Xokimlar</span></a>
+            </li>
             <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</span></a>
             </li>
