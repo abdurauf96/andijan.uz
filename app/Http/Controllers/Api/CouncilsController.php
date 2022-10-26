@@ -24,6 +24,6 @@ class CouncilsController extends Controller
      */
     public function getAll()
     {
-        return CouncilResource::collection(Council::all());
+        return CouncilResource::collection(Council::with('members')->get());
     }
 }

@@ -25,11 +25,16 @@
                     <li><a class="nav-link" href="{{ route('admin.fields.index') }}">Ustuvor tarmoqlar</a></li>
                 </ul>
             </li>
-            <li class="dropdown ">
-                <a href="{{ route('admin.governors.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Xokimlar</span></a>
+            <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                        data-feather="briefcase"></i><span>Kengash</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ route('admin.councils.index') }}">Kengashlar</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.members.index') }}">Kengash a'zolari</a> </li>
+                </ul>
             </li>
             <li class="dropdown ">
-                <a href="{{ route('admin.councils.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Kengashlar</span></a>
+                <a href="{{ route('admin.governors.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Xokimlar</span></a>
             </li>
             <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</span></a>

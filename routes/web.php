@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ArenasController;
 use App\Http\Controllers\Admin\FieldsController;
 use App\Http\Controllers\Admin\GovernorsController;
 use App\Http\Controllers\Admin\CouncilsController;
+use App\Http\Controllers\Admin\MembersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,6 +57,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('governors', GovernorsController::class);
 
     Route::resource('councils', CouncilsController::class);
+    Route::resource('members', MembersController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -64,5 +66,6 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+
 
 

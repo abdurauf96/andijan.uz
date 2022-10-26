@@ -6,9 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
 use App\Models\Council;
+use App\Models\Member;
 use Illuminate\Http\Request;
 
-class CouncilsController extends Controller
+class MembersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +18,8 @@ class CouncilsController extends Controller
      */
     public function index(Request $request)
     {
-        $councils = Council::latest()->paginate(10);
-        return view('admin.councils.index', compact('councils'));
+        $members = Member::latest()->paginate(10);
+        return view('admin.members.index', compact('members'));
     }
 
     /**
@@ -28,7 +29,8 @@ class CouncilsController extends Controller
      */
     public function create()
     {
-        return view('admin.councils.create');
+        $councils = Council::all();
+        return view('admin.members.create', compact('councils'));
     }
 
     /**
@@ -41,13 +43,21 @@ class CouncilsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'title_uz' => 'required'
+			'name_uz' => 'required'
 		]);
         $requestData = $request->all();
 
-        Council::create($requestData);
+        if($request->hasFile('image')){
+            $file=$request->file('image');
+            $image=time().$file->getClientOriginalName();
+            $path='admin/images/members';
+            $file->move($path, $image);
+            $requestData['image']=$image;
+        }
 
-        return redirect('admin/councils')->with('flash_message', 'Council added!');
+        Member::create($requestData);
+
+        return redirect('admin/members')->with('flash_message', 'Member added!');
     }
 
     /**
@@ -59,9 +69,9 @@ class CouncilsController extends Controller
      */
     public function show($id)
     {
-        $council = Council::findOrFail($id);
+        $member = Member::findOrFail($id);
 
-        return view('admin.councils.show', compact('council'));
+        return view('admin.members.show', compact('member'));
     }
 
     /**
@@ -73,9 +83,9 @@ class CouncilsController extends Controller
      */
     public function edit($id)
     {
-        $council = Council::findOrFail($id);
-
-        return view('admin.councils.edit', compact('council'));
+        $member = Member::findOrFail($id);
+        $councils = Council::all();
+        return view('admin.members.edit', compact('member', 'councils'));
     }
 
     /**
@@ -89,14 +99,22 @@ class CouncilsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-			'title_uz' => 'required'
+			'name_uz' => 'required'
 		]);
         $requestData = $request->all();
 
-        $council = Council::findOrFail($id);
-        $council->update($requestData);
+        if($request->hasFile('image')){
+            $file=$request->file('image');
+            $image=time().$file->getClientOriginalName();
+            $path='admin/images/members';
+            $file->move($path, $image);
+            $requestData['image']=$image;
+        }
 
-        return redirect('admin/councils')->with('flash_message', 'Council updated!');
+        $member = Member::findOrFail($id);
+        $member->update($requestData);
+
+        return redirect('admin/members')->with('flash_message', 'Member updated!');
     }
 
     /**
@@ -108,8 +126,8 @@ class CouncilsController extends Controller
      */
     public function destroy($id)
     {
-        Council::destroy($id);
+        Member::destroy($id);
 
-        return redirect('admin/councils')->with('flash_message', 'Council deleted!');
+        return redirect('admin/members')->with('flash_message', 'Member deleted!');
     }
 }

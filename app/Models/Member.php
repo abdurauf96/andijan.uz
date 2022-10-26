@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Council extends Model
+class Member extends Model
 {
     use LogsActivity;
 
@@ -15,7 +15,7 @@ class Council extends Model
      *
      * @var string
      */
-    protected $table = 'councils';
+    protected $table = 'members';
 
     /**
     * The database primary key value.
@@ -29,11 +29,21 @@ class Council extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en'];
+    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'description_uz', 'description_ru', 'description_en', 'council_id', 'image', 'phone', 'email'];
 
-    public function members()
+    public function council()
     {
-        return $this->hasMany(Member::class);
+        return $this->belongsTo(Council::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($model) {
+            if(file_exists('admin/images/members/'.$model->image)){
+                unlink('admin/images/members/'.$model->image);
+            }
+        });
     }
 
     /**

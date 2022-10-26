@@ -8,7 +8,7 @@ use Spatie\Activitylog\Traits\LogsActivity;
 class Governor extends Model
 {
     use LogsActivity;
-    
+
 
     /**
      * The database table used by the model.
@@ -31,7 +31,16 @@ class Governor extends Model
      */
     protected $fillable = ['name_uz', 'name_ru', 'name_en', 'position_uz', 'position_ru', 'position_en', 'body_uz', 'body_ru', 'body_en', 'image'];
 
-    
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($model) {
+            if(file_exists('admin/images/governors/'.$model->image)){
+                unlink('admin/images/governors/'.$model->image);
+            }
+        });
+    }
 
     /**
      * Change activity log event description

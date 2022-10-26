@@ -19,14 +19,14 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Councils</li>
+                                <li class="breadcrumb-item active">Members</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4> Councils </h4>
+                        <h4> Members </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/admin/councils/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
+                            <a href="{{ url('/admin/members/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
                         </div>
                     </div>
 
@@ -35,29 +35,30 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title Uz</th><th>Title Ru</th><th>Title En</th><th>Actions</th>
+                                        <th>#</th><th>Name Uz</th><th>Kengash</th><th>Phone</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($councils as $item)
+                                @foreach($members as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration or $item->id }}</td>
-                                        <td>{{ $item->title_uz }}</td><td>{{ $item->title_ru }}</td><td>{{ $item->title_en }}</td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->name_uz }}</td><td>{{ $item->council->title_uz ?? 'a\'zo emas' }}</td>
+                                        <td>{{ $item->phone }}</td>
                                         <td>
-                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/councils/' . $item->id) }}" title="View Council"><i class="fas fa-eye"></i></a>
-                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/councils/' . $item->id . '/edit') }}" title="Edit Council"><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/members/' . $item->id) }}" title="View Member"><i class="fas fa-eye"></i></a>
+                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/members/' . $item->id . '/edit') }}" title="Edit Member"><i class="far fa-edit"></i></a>
 
-                                            <form method="POST" action="{{ url('/admin/councils' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('/admin/members' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete Council" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete Member" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {{ $councils->links() }} </div>
+                            <div class="pagination-wrapper"> {{ $members->links() }} </div>
                         </div>
 
                     </div>
