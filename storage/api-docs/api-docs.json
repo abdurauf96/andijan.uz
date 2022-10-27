@@ -363,6 +363,50 @@
                     }
                 }
             }
+        },
+        "/speeches": {
+            "get": {
+                "tags": [
+                    "Hokim ma'ruzalari"
+                ],
+                "summary": "Get list of speeches",
+                "description": "Returns list of speeches",
+                "operationId": "getSpeeches",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/speeches/{id}": {
+            "get": {
+                "tags": [
+                    "Hokim ma'ruzalari"
+                ],
+                "summary": "Get one speech by ID",
+                "description": "Returns one speech",
+                "operationId": "getOneSpeech",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Speech ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if speech not found"
+                    }
+                }
+            }
         }
     },
     "tags": [
@@ -405,6 +449,10 @@
         {
             "name": "Councils (Kengashlar)",
             "description": "API Endpoints of councils (Kengashlar)"
+        },
+        {
+            "name": "Hokim ma'ruzalari",
+            "description": "API Endpoints of speeches (Hokim ma'ruzalari)"
         }
     ]
 }

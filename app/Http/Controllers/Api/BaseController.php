@@ -55,6 +55,10 @@ use Illuminate\Http\Request;
  *     name="Councils (Kengashlar)",
  *     description="API Endpoints of councils (Kengashlar)"
  * )
+ * @OA\Tag(
+ *     name="Hokim ma'ruzalari",
+ *     description="API Endpoints of speeches (Hokim ma'ruzalari)"
+ * )
  */
 class BaseController extends Controller
 {

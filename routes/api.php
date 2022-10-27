@@ -35,6 +35,9 @@ Route::get('services/{id}', [\App\Http\Controllers\Api\ServicesController::class
 //hokimlar
 Route::get('governors', [\App\Http\Controllers\Api\GovernorsController::class, 'getAll']);
 Route::get('governors/{id}', [\App\Http\Controllers\Api\GovernorsController::class, 'getOne']);
+//hokim maruzalari
+Route::get('speeches', [\App\Http\Controllers\Api\SpeechesController::class, 'getAll']);
+Route::get('speeches/{id}', [\App\Http\Controllers\Api\SpeechesController::class, 'getOne']);
 
 Route::get('councils', [\App\Http\Controllers\Api\CouncilsController::class, 'getAll']);
 
