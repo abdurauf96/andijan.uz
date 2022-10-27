@@ -37,6 +37,9 @@
                 <a href="{{ route('admin.governors.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Xokimlar</span></a>
             </li>
             <li class="dropdown ">
+                <a href="{{ route('admin.speeches.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Xokim maruzalari</span></a>
+            </li>
+            <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</span></a>
             </li>
         </ul>
