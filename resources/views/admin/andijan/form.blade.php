@@ -1,0 +1,23 @@
+<div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
+    <label for="body_uz" class="control-label">{{ 'Body Uz' }}</label>
+    <textarea class="form-control" rows="5" name="body_uz" type="textarea" id="body_uz" required>{{ $andijan->body_uz ?? ''}}</textarea>
+
+    {!! $errors->first('body_uz', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_ru') ? 'has-error' : ''}}">
+    <label for="body_ru" class="control-label">{{ 'Body Ru' }}</label>
+    <textarea class="form-control" rows="5" name="body_ru" type="textarea" id="body_ru" >{{ $andijan->body_ru ?? ''}}</textarea>
+
+    {!! $errors->first('body_ru', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Body En' }}</label>
+    <textarea class="form-control" rows="5" name="body_en" type="textarea" id="body_en" >{{ $andijan->body_en ?? ''}}</textarea>
+
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
+
+
+<div class="form-group">
+    <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">
+</div>

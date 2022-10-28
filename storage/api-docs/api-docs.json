@@ -11,6 +11,21 @@
         }
     ],
     "paths": {
+        "/andijan": {
+            "get": {
+                "tags": [
+                    "Rahbariyat"
+                ],
+                "summary": "Get andijon rahbariyat",
+                "description": "Returns info about rahbariyat",
+                "operationId": "getAndijan",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/arenas": {
             "get": {
                 "tags": [
@@ -453,6 +468,10 @@
         {
             "name": "Hokim ma'ruzalari",
             "description": "API Endpoints of speeches (Hokim ma'ruzalari)"
+        },
+        {
+            "name": "Rahbariyat",
+            "description": "API Endpoints of andijan"
         }
     ]
 }

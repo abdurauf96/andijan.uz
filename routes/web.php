@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\GovernorsController;
 use App\Http\Controllers\Admin\CouncilsController;
 use App\Http\Controllers\Admin\MembersController;
 use App\Http\Controllers\Admin\SpeechesController;
+use App\Http\Controllers\Admin\AndijanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -62,6 +63,9 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('speeches', SpeechesController::class);
 
+    Route::resource('andijan', AndijanController::class);
+    Route::post('andijan/image-upload', [AndijanController::class, 'imageUpload'])->name('andijanImageUpload');
+
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
     Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
@@ -69,7 +73,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
-
-
-
-

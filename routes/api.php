@@ -46,3 +46,5 @@ Route::get('arenas', [\App\Http\Controllers\Api\ArenasController::class, 'getAll
 Route::get('arenas/{id}', [\App\Http\Controllers\Api\ArenasController::class, 'getOne']);
 Route::get('fields', [\App\Http\Controllers\Api\FieldsController::class, 'getAll']);
 Route::get('fields/{id}', [\App\Http\Controllers\Api\FieldsController::class, 'getOne']);
+
+Route::get('andijan', [\App\Http\Controllers\Api\AndijanController::class, 'getOne']);
