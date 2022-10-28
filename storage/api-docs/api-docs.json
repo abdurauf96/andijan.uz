@@ -70,6 +70,21 @@
                 }
             }
         },
+        "/contact": {
+            "get": {
+                "tags": [
+                    "Manzil"
+                ],
+                "summary": "Get contacts",
+                "description": "Returns contact information",
+                "operationId": "getContact",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/councils": {
             "get": {
                 "tags": [
