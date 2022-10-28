@@ -50,3 +50,4 @@ Route::get('fields/{id}', [\App\Http\Controllers\Api\FieldsController::class, 'g
 Route::get('andijan', [\App\Http\Controllers\Api\AndijanController::class, 'getOne']);
 Route::get('contact', [\App\Http\Controllers\Api\ContactController::class, 'getOne']);
 Route::get('documents', [\App\Http\Controllers\Api\DocumentsController::class, 'getAll']);
+Route::get('decisions', [\App\Http\Controllers\Api\DecisionsController::class, 'getAll']);

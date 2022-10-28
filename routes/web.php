@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\SpeechesController;
 use App\Http\Controllers\Admin\AndijanController;
 use App\Http\Controllers\Admin\ContactsController;
 use App\Http\Controllers\Admin\DocumentsController;
+use App\Http\Controllers\Admin\DecisionsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,6 +71,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('contacts', ContactsController::class);
     Route::resource('documents', DocumentsController::class);
+    Route::resource('decisions', DecisionsController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -78,3 +80,4 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+
