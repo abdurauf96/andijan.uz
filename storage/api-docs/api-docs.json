@@ -73,7 +73,7 @@
         "/contact": {
             "get": {
                 "tags": [
-                    "Manzil"
+                    "Contacts"
                 ],
                 "summary": "Get contacts",
                 "description": "Returns contact information",
@@ -125,6 +125,21 @@
                     },
                     "404": {
                         "description": "if district not found"
+                    }
+                }
+            }
+        },
+        "/documents": {
+            "get": {
+                "tags": [
+                    "Xujjatlar"
+                ],
+                "summary": "Get list of documents",
+                "description": "Returns list of documents",
+                "operationId": "getDocuments",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
                     }
                 }
             }
@@ -487,6 +502,14 @@
         {
             "name": "Rahbariyat",
             "description": "API Endpoints of andijan"
+        },
+        {
+            "name": "Contacts",
+            "description": "API Endpoints of contacts"
+        },
+        {
+            "name": "Xujjatlar",
+            "description": "API Endpoints of documents"
         }
     ]
 }

@@ -34,7 +34,12 @@
                                     <tr>
                                         <th>ID</th><td>{{ $contact->id }}</td>
                                     </tr>
-                                    <tr><th> Addres Uz </th><td> {{ $contact->addres_uz }} </td></tr><tr><th> Addres Ru </th><td> {{ $contact->addres_ru }} </td></tr><tr><th> Addres En </th><td> {{ $contact->addres_en }} </td></tr>
+                                    <tr><th> Addres Uz </th><td> {!! $contact->addres_uz !!} </td></tr>
+                                    <tr><th> Addres Ru </th><td> {!! $contact->addres_ru !!} </td></tr>
+                                    <tr><th> Addres En </th><td> {!! $contact->addres_en !!} </td></tr>
+                                    <tr><th> Phone Uz </th><td> {!! $contact->phone_uz !!} </td></tr>
+                                    <tr><th> Phone Ru </th><td> {!! $contact->phone_ru !!} </td></tr>
+                                    <tr><th> Phone En </th><td> {!! $contact->phone_en !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

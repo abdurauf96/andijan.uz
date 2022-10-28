@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\MembersController;
 use App\Http\Controllers\Admin\SpeechesController;
 use App\Http\Controllers\Admin\AndijanController;
 use App\Http\Controllers\Admin\ContactsController;
+use App\Http\Controllers\Admin\DocumentsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,6 +69,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::post('andijan/image-upload', [AndijanController::class, 'imageUpload'])->name('andijanImageUpload');
 
     Route::resource('contacts', ContactsController::class);
+    Route::resource('documents', DocumentsController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');

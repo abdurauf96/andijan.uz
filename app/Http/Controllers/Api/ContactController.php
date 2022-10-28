@@ -13,7 +13,7 @@ class ContactController extends Controller
      * @OA\Get(
      *      path="/contact",
      *      operationId="getContact",
-     *      tags={"Manzil"},
+     *      tags={"Contacts"},
      *      summary="Get contacts",
      *      description="Returns contact information",
      *
