@@ -54,3 +54,6 @@ Route::get('decisions', [\App\Http\Controllers\Api\DecisionsController::class, '
 //partners
 Route::get('partners', [\App\Http\Controllers\Api\PartnersController::class, 'getAll']);
 Route::get('partners/{id}', [\App\Http\Controllers\Api\PartnersController::class, 'getOne']);
+//tashkilotlar
+Route::get('organizations', [\App\Http\Controllers\Api\OrganizationsController::class, 'getAll']);
+Route::get('organizations/{slug}', [\App\Http\Controllers\Api\OrganizationsController::class, 'getOne']);

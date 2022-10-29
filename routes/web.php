@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\ContactsController;
 use App\Http\Controllers\Admin\DocumentsController;
 use App\Http\Controllers\Admin\DecisionsController;
 use App\Http\Controllers\Admin\PartnersController;
+use App\Http\Controllers\Admin\OrganizationsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -76,6 +77,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('partners', PartnersController::class);
     Route::post('partner/image-upload', [PartnersController::class, 'imageUpload'])->name('partnerImageUpload');
+
+    Route::resource('organizations', OrganizationsController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');

@@ -40,12 +40,7 @@
 
     {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group{{ $errors->has('slug') ? 'has-error' : ''}}">
-    <label for="slug" class="control-label">{{ 'Slug' }}</label>
-    <input class="form-control" name="slug" type="text" id="slug" value="{{ $partner->slug ?? ''}}" >
 
-    {!! $errors->first('slug', '<p class="help-block">:message</p>') !!}
-</div>
 <div class="form-group{{ $errors->has('meta_keywords') ? 'has-error' : ''}}">
     <label for="meta_keywords" class="control-label">{{ 'Meta Keywords' }}</label>
     <textarea class="form-control" rows="5" name="meta_keywords" type="textarea" id="meta_keywords" >{{ $partner->meta_keywords ?? ''}}</textarea>

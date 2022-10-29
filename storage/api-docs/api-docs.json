@@ -277,6 +277,50 @@
                 }
             }
         },
+        "/organizations": {
+            "get": {
+                "tags": [
+                    "Tashkilotlar"
+                ],
+                "summary": "Get list of organizations",
+                "description": "Returns list of organizations",
+                "operationId": "getOrganizations",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/organizations/{slug}": {
+            "get": {
+                "tags": [
+                    "Tashkilotlar"
+                ],
+                "summary": "Get one organization by ID",
+                "description": "Returns one organization",
+                "operationId": "getOneOrganization",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "Organization Slug",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if organization not found"
+                    }
+                }
+            }
+        },
         "/partners": {
             "get": {
                 "tags": [
@@ -577,6 +621,10 @@
         {
             "name": "Partners",
             "description": "API Endpoints of partners"
+        },
+        {
+            "name": "Tashkilotlar",
+            "description": "API Endpoints of organizations"
         }
     ]
 }

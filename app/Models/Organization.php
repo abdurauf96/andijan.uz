@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Partner extends Model
+class Organization extends Model
 {
     use LogsActivity;
 
@@ -15,7 +15,7 @@ class Partner extends Model
      *
      * @var string
      */
-    protected $table = 'partners';
+    protected $table = 'organizations';
 
     /**
     * The database primary key value.
@@ -29,7 +29,7 @@ class Partner extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'image', 'slug', 'meta_keywords', 'meta_description'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'position_uz', 'position_ru', 'position_en', 'image', 'statute', 'addres_uz', 'addres_ru', 'addres_en', 'phone', 'website', 'email', 'fax', 'reception_time_uz', 'reception_time_ru', 'reception_time_en', 'telegram', 'facebook', 'instagram', 'view', 'slug', 'meta_keywords', 'meta_description', 'director', 'director_image', 'director_phone', 'director_info', 'director_facebook', 'director_telegram', 'director_instagram'];
 
     protected static function boot()
     {
@@ -40,6 +40,12 @@ class Partner extends Model
         static::deleting(function ($model) {
             if(file_exists('/'.$model->image)){
                 unlink('/'.$model->image);
+            }
+            if(file_exists('/'.$model->director_image)){
+                unlink('/'.$model->director_image);
+            }
+            if(file_exists('/'.$model->statute)){
+                unlink('/'.$model->statute);
             }
         });
     }
