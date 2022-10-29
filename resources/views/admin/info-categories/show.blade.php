@@ -36,7 +36,7 @@
                                     </tr>
                                     <tr><th> Title Uz </th><td> {{ $infocategory->title_uz }} </td></tr><tr><th> Title Ru </th><td> {{ $infocategory->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $infocategory->title_en }} </td></tr>
-                                    <tr><th> Image </th><td> <img src="/admin/images/info-categories/{{ $infocategory->image }}" alt="" width="100"> </td></tr>
+                                    <tr><th> Image </th><td> <img src="/{{ $infocategory->image }}" alt="" width="100"> </td></tr>
                                 <tr><th>Slug</th> <td>{{ $infocategory->slug }}</td> </tr>
                                 </tbody>
                             </table>

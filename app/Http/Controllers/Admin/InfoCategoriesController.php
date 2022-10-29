@@ -62,7 +62,7 @@ class InfoCategoriesController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/info-categories';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         InfoCategory::create($requestData);
@@ -118,7 +118,7 @@ class InfoCategoriesController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/info-categories';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         $infocategory = InfoCategory::findOrFail($id);

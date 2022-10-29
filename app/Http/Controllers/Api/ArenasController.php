@@ -29,17 +29,17 @@ class ArenasController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/arenas/{id}",
+     *      path="/arenas/{slug}",
      *      operationId="getOneArena",
      *      tags={"Arenas"},
-     *      summary="Get one arena by ID",
+     *      summary="Get one arena by Slug",
      *      description="Returns one arena",
      *      @OA\Parameter(
-     *          name="id",
+     *          name="slug",
      *          required=true,
-     *          description="Arena ID",
+     *          description="Arena Slug",
      *          in="path",
-     *          @OA\Schema(type="integer")
+     *          @OA\Schema(type="string")
      *      ),
      *      @OA\Response(
      *          response=200,
@@ -51,9 +51,9 @@ class ArenasController extends Controller
      *       )
      *     )
      */
-    public function getOne($id)
+    public function getOne($slug)
     {
-        $arena=Arena::find($id);
+        $arena=Arena::whereSlug($slug)->first();
         if(!$arena){
             return response()->json('Arena not found', 404);
         }

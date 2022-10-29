@@ -44,7 +44,7 @@
                                         <td>{{ $loop->iteration or $item->id }}</td>
                                         <td>{{ $item->title_uz }}</td>
                                         <td>{{ $item->link }}</td>
-                                        <td><img src="/admin/images/documents/{{ $item->image }}" width="100" alt=""></td>
+                                        <td><img src="/{{ $item->image }}" width="100" alt=""></td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/documents/' . $item->id) }}" title="View Document"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/documents/' . $item->id . '/edit') }}" title="Edit Document"><i class="far fa-edit"></i></a>

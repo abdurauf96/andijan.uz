@@ -60,8 +60,9 @@ class PostsController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/posts';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
+
 
         Post::create($requestData);
 
@@ -113,7 +114,7 @@ class PostsController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/posts';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         $post = Post::findOrFail($id);

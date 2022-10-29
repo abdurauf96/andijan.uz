@@ -50,7 +50,7 @@ class GovernorsController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/governors';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
         Governor::create($requestData);
 
@@ -105,7 +105,7 @@ class GovernorsController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/governors';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         $governor = Governor::findOrFail($id);

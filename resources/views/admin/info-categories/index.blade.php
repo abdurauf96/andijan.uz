@@ -54,7 +54,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->title_uz }}</td>
-                                        <td><img src="/admin/images/info-categories/{{ $item->image }}" alt="" width="100"></td>
+                                        <td><img src="/{{ $item->image }}" alt="" width="100"></td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/info-categories/' . $item->id) }}" title="View InfoCategory"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/info-categories/' . $item->id . '/edit') }}" title="Edit InfoCategory"><i class="far fa-edit"></i></a>

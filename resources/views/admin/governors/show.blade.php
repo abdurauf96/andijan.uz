@@ -43,7 +43,7 @@
                                     <tr><th> Body Uz </th><td> {!! $governor->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $governor->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $governor->body_en !!} </td></tr>
-                                    <tr><th> Image </th><td><img width="200" src="/admin/images/governors/{{ $governor->image }}" alt=""> </td></tr>
+                                    <tr><th> Image </th><td><img width="200" src="/{{ $governor->image }}" alt=""> </td></tr>
                                 </tbody>
                             </table>
                         </div>

@@ -40,10 +40,10 @@
                                     <tr><th> Body Uz </th><td> {!! $speech->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $speech->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $speech->body_en !!} </td></tr>
-                                    <tr><th> Image </th><td> <img src="/admin/images/speeches/{{ $speech->image }}" width="100" alt=""></td></tr>
+                                    <tr><th> Image </th><td> <img src="/{{ $speech->image }}" width="100" alt=""></td></tr>
                                     <tr><th>Video file</th>
                                         <td><video width="320" height="240" controls>
-                                                <source src="/admin/videos/speeches/{{ $speech->file }}" type="video/mp4">
+                                                <source src="/{{ $speech->file }}" type="video/mp4">
                                             </video></td>
                                     </tr>
                                 </tbody>

@@ -30,17 +30,17 @@ class PartnersController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/partners/{id}",
+     *      path="/partners/{slug}",
      *      operationId="getOnePartner",
      *      tags={"Partners"},
-     *      summary="Get one partner by ID",
+     *      summary="Get one partner by Slug",
      *      description="Returns one partner",
      *      @OA\Parameter(
-     *          name="id",
+     *          name="slug",
      *          required=true,
-     *          description="Partner ID",
+     *          description="Partner Slug",
      *          in="path",
-     *          @OA\Schema(type="integer")
+     *          @OA\Schema(type="string")
      *      ),
      *      @OA\Response(
      *          response=200,
@@ -52,9 +52,9 @@ class PartnersController extends Controller
      *       )
      *     )
      */
-    public function getOne($id)
+    public function getOne($slug)
     {
-        $partner=Partner::find($id);
+        $partner=Partner::whereSlug($slug)->first();
         if(!$partner){
             return response()->json('Partner not found', 404);
         }

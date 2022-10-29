@@ -50,7 +50,7 @@ class ArenasController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/arenas';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         Arena::create($requestData);
@@ -106,7 +106,7 @@ class ArenasController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/arenas';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         $arena = Arena::findOrFail($id);

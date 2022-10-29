@@ -43,7 +43,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->title_uz }}</td>
-                                        <td><a href="/admin/files/decisions/{{ $item->file }}" target="_blank"> yuklab olish</a></td>
+                                        <td><a href="/{{ $item->file }}" target="_blank"> yuklab olish</a></td>
 
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/decisions/' . $item->id) }}" title="View Decision"><i class="fas fa-eye"></i></a>

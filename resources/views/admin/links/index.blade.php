@@ -42,7 +42,7 @@
                                 @foreach($links as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->link }}</td><td><img src="/admin/images/links/{{ $item->image }}" alt="" width="100"> </td>
+                                        <td>{{ $item->link }}</td><td><img src="/{{ $item->image }}" alt="" width="100"> </td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/links/' . $item->id) }}" title="View Link"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/links/' . $item->id . '/edit') }}" title="Edit Link"><i class="far fa-edit"></i></a>

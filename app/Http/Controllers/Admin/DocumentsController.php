@@ -49,7 +49,7 @@ class DocumentsController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/documents';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
         Document::create($requestData);
 
@@ -103,7 +103,7 @@ class DocumentsController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/documents';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
         $document = Document::findOrFail($id);
         $document->update($requestData);

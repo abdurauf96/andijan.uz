@@ -52,7 +52,7 @@ class LinksController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/links';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         Link::create($requestData);
@@ -108,7 +108,7 @@ class LinksController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/links';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         $link = Link::findOrFail($id);

@@ -51,7 +51,7 @@ class FieldsController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/fields';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         Field::create($requestData);
@@ -107,7 +107,7 @@ class FieldsController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/fields';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         $field = Field::findOrFail($id);

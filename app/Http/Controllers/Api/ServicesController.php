@@ -29,17 +29,17 @@ class ServicesController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/services/{id}",
+     *      path="/services/{slug}",
      *      operationId="getOneService",
      *      tags={"Services"},
-     *      summary="Get one service by ID",
+     *      summary="Get one service by SLug",
      *      description="Returns one service",
      *      @OA\Parameter(
-     *          name="id",
+     *          name="slug",
      *          required=true,
-     *          description="Service ID",
+     *          description="Service Slug",
      *          in="path",
-     *          @OA\Schema(type="integer")
+     *          @OA\Schema(type="string")
      *      ),
      *      @OA\Response(
      *          response=200,
@@ -51,13 +51,10 @@ class ServicesController extends Controller
      *       )
      *     )
      */
-    public function getOne($id)
+    public function getOne($slug)
     {
-        $service=Service::find($id);
-        if(!$service){
-            return response()->json('Service not found', 404);
-        }
-        return new ServiceResource($service);
+        $service=Service::whereSlug($slug)->first();
+        return $service ? new ServiceResource($service) : response()->json('Service not found', 404);
     }
 
     /**

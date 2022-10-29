@@ -50,14 +50,14 @@ class SpeechesController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/speeches';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
         if($request->hasFile('file')){
             $file=$request->file('file');
             $video=time().'.'.$file->getClientOriginalExtension();
             $path='admin/videos/speeches';
             $file->move($path, $video);
-            $requestData['file']=$video;
+            $requestData['file']=$path.'/'.$video;
         }
         Speech::create($requestData);
 
@@ -112,14 +112,14 @@ class SpeechesController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/speeches';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
         if($request->hasFile('file')){
             $file=$request->file('file');
             $video=time().'.'.$file->getClientOriginalExtension();
             $path='admin/videos/speeches';
             $file->move($path, $video);
-            $requestData['file']=$video;
+            $requestData['file']=$path.'/'.$video;
         }
 
         $speech = Speech::findOrFail($id);

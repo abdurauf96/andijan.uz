@@ -41,22 +41,22 @@
                 }
             }
         },
-        "/arenas/{id}": {
+        "/arenas/{slug}": {
             "get": {
                 "tags": [
                     "Arenas"
                 ],
-                "summary": "Get one arena by ID",
+                "summary": "Get one arena by Slug",
                 "description": "Returns one arena",
                 "operationId": "getOneArena",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "slug",
                         "in": "path",
-                        "description": "Arena ID",
+                        "description": "Arena Slug",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "string"
                         }
                     }
                 ],
@@ -174,22 +174,22 @@
                 }
             }
         },
-        "/fields/{id}": {
+        "/fields/{slug}": {
             "get": {
                 "tags": [
                     "Fields"
                 ],
-                "summary": "Get one field by ID",
+                "summary": "Get one field by Slug",
                 "description": "Returns one field",
                 "operationId": "getOneField",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "slug",
                         "in": "path",
-                        "description": "Field ID",
+                        "description": "Field Slug",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "string"
                         }
                     }
                 ],
@@ -297,7 +297,7 @@
                 "tags": [
                     "Tashkilotlar"
                 ],
-                "summary": "Get one organization by ID",
+                "summary": "Get one organization by slug",
                 "description": "Returns one organization",
                 "operationId": "getOneOrganization",
                 "parameters": [
@@ -336,22 +336,22 @@
                 }
             }
         },
-        "/partners/{id}": {
+        "/partners/{slug}": {
             "get": {
                 "tags": [
                     "Partners"
                 ],
-                "summary": "Get one partner by ID",
+                "summary": "Get one partner by Slug",
                 "description": "Returns one partner",
                 "operationId": "getOnePartner",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "slug",
                         "in": "path",
-                        "description": "Partner ID",
+                        "description": "Partner Slug",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "string"
                         }
                     }
                 ],
@@ -380,22 +380,22 @@
                 }
             }
         },
-        "/posts/{id}": {
+        "/posts/{slug}": {
             "get": {
                 "tags": [
                     "Posts"
                 ],
-                "summary": "Get one post by ID",
+                "summary": "Get one post by slug",
                 "description": "Returns one post",
                 "operationId": "getOnePost",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "slug",
                         "in": "path",
-                        "description": "Post ID",
+                        "description": "Post slug",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "string"
                         }
                     }
                 ],
@@ -424,22 +424,22 @@
                 }
             }
         },
-        "/projects/{id}": {
+        "/projects/{slug}": {
             "get": {
                 "tags": [
                     "Projects"
                 ],
-                "summary": "Get one project by ID",
+                "summary": "Get one project by slug",
                 "description": "Returns one project",
                 "operationId": "getOneProject",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "slug",
                         "in": "path",
-                        "description": "Project ID",
+                        "description": "Project Slug",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "string"
                         }
                     }
                 ],
@@ -468,22 +468,22 @@
                 }
             }
         },
-        "/services/{id}": {
+        "/services/{slug}": {
             "get": {
                 "tags": [
                     "Services"
                 ],
-                "summary": "Get one service by ID",
+                "summary": "Get one service by SLug",
                 "description": "Returns one service",
                 "operationId": "getOneService",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "slug",
                         "in": "path",
-                        "description": "Service ID",
+                        "description": "Service Slug",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "string"
                         }
                     }
                 ],

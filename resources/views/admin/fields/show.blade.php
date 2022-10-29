@@ -43,7 +43,7 @@
                                     <tr><th> Body Uz </th><td> {!! $field->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $field->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $field->body_en !!} </td></tr>
-                                    <tr><th> Image </th><td><img width="200" src="/admin/images/fields/{{ $field->image }}" alt=""> </td></tr>
+                                    <tr><th> Image </th><td><img width="200" src="/{{ $field->image }}" alt=""> </td></tr>
                                     <tr><th> Slug </th><td> {{ $field->slug }} </td></tr>
                                     <tr><th> Meta Description </th><td> {{ $field->meta_description }} </td></tr>
                                     <tr><th> Meta Keywords </th><td> {{ $field->meta_keywords }} </td></tr>

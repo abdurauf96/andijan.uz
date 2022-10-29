@@ -64,7 +64,7 @@ class ServicesController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/services';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         Service::create($requestData);
@@ -120,7 +120,7 @@ class ServicesController extends Controller
             $image=time().$file->getClientOriginalName();
             $path='admin/images/services';
             $file->move($path, $image);
-            $requestData['image']=$image;
+            $requestData['image']=$path.'/'.$image;
         }
 
         $service = Service::findOrFail($id);

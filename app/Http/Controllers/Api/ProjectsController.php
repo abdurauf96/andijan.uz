@@ -30,17 +30,17 @@ class ProjectsController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/projects/{id}",
+     *      path="/projects/{slug}",
      *      operationId="getOneProject",
      *      tags={"Projects"},
-     *      summary="Get one project by ID",
+     *      summary="Get one project by slug",
      *      description="Returns one project",
      *      @OA\Parameter(
-     *          name="id",
+     *          name="slug",
      *          required=true,
-     *          description="Project ID",
+     *          description="Project Slug",
      *          in="path",
-     *          @OA\Schema(type="integer")
+     *          @OA\Schema(type="string")
      *      ),
      *      @OA\Response(
      *          response=200,
@@ -52,12 +52,9 @@ class ProjectsController extends Controller
      *       )
      *     )
      */
-    public function getOne($id)
+    public function getOne($slug)
     {
-        $project=Project::find($id);
-        if(!$project){
-            return response()->json('Project not found', 404);
-        }
-        return new ProjectsResource($project);
+        $project=Project::whereSlug($slug)->first();
+        return $project ? new ProjectsResource($project) : response()->json('Project not found', 404);
     }
 }

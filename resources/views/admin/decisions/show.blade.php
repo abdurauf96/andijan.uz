@@ -37,7 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $decision->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $decision->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $decision->title_en }} </td></tr>
-                                    <tr><th> File </th><td> <a href="/admin/files/decisions/{{ $decision->file }}" target="_blank"> yuklab olish</a> </td></tr>
+                                    <tr><th> File </th><td> <a href="/{{ $decision->file }}" target="_blank"> yuklab olish</a> </td></tr>
                                 </tbody>
                             </table>
                         </div>

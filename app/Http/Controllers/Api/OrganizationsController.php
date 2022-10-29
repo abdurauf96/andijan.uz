@@ -55,9 +55,10 @@ class OrganizationsController extends Controller
     public function getOne($slug)
     {
         $organization=Organization::whereSlug($slug)->first();
-        if(!$organization){
-            return response()->json('Organization not found', 404);
-        }
-        return new OrganizationResource($organization);
+        $organization ? $organization->increment('view') : '';
+
+        return $organization ? new OrganizationResource($organization) : response()->json('Organization not found', 404);
+
+
     }
 }

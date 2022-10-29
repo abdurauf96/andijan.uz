@@ -43,7 +43,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->title_uz }}</td>
-                                        <td><img src="/admin/images/fields/{{ $item->image }}" width="100" alt=""> </td>
+                                        <td><img src="/{{ $item->image }}" width="100" alt=""> </td>
 
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/fields/' . $item->id) }}" title="View Field"><i class="fas fa-eye"></i></a>

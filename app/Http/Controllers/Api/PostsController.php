@@ -30,17 +30,17 @@ class PostsController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/posts/{id}",
+     *      path="/posts/{slug}",
      *      operationId="getOnePost",
      *      tags={"Posts"},
-     *      summary="Get one post by ID",
+     *      summary="Get one post by slug",
      *      description="Returns one post",
      *      @OA\Parameter(
-     *          name="id",
+     *          name="slug",
      *          required=true,
-     *          description="Post ID",
+     *          description="Post slug",
      *          in="path",
-     *          @OA\Schema(type="integer")
+     *          @OA\Schema(type="string")
      *      ),
      *      @OA\Response(
      *          response=200,
@@ -52,12 +52,11 @@ class PostsController extends Controller
      *       )
      *     )
      */
-    public function getOne($id)
+    public function getOne($slug)
     {
-        $post=Post::find($id);
-        if(!$post){
-            return response()->json('Post not found', 404);
-        }
-        return new PostResource($post);
+        $post=Post::whereSlug($slug)->first();
+        $post ? $post->increment('view') : '';
+
+        return $post ? new PostResource($post) : response()->json('Post not found', 404);
     }
 }

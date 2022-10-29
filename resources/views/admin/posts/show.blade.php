@@ -43,7 +43,7 @@
                                     <tr><th> Body Uz </th><td> {!! $post->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $post->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $post->body_en !!} </td></tr>
-                                    <tr><th> Image </th><td><img width="200" src="/admin/images/posts/{{ $post->image }}" alt=""> </td></tr>
+                                    <tr><th> Image </th><td><img width="200" src="/{{ $post->image }}" alt=""> </td></tr>
                                     <tr><th> Ko'rishlar soni </th><td> {{ $post->view }} ta </td></tr>
                                     <tr><th> Slug </th><td> {{ $post->slug }} </td></tr>
                                     <tr><th> Meta Description </th><td> {{ $post->meta_description }} </td></tr>

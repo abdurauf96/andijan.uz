@@ -34,7 +34,11 @@
                                     <tr>
                                         <th>ID</th><td>{{ $document->id }}</td>
                                     </tr>
-                                    <tr><th> Title Uz </th><td> {{ $document->title_uz }} </td></tr><tr><th> Title Ru </th><td> {{ $document->title_ru }} </td></tr><tr><th> Title En </th><td> {{ $document->title_en }} </td></tr>
+                                    <tr><th> Title Uz </th><td> {{ $document->title_uz }} </td></tr>
+                                    <tr><th> Title Ru </th><td> {{ $document->title_ru }} </td></tr>
+                                    <tr><th> Title En </th><td> {{ $document->title_en }} </td></tr>
+                                    <tr><th> Image  </th><td><img src="/{{ $document->image }}" width="100" alt=""></td></tr>
+                                    <tr><th> Link  </th><td> {{ $document->link }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

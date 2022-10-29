@@ -29,17 +29,17 @@ class FieldsController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/fields/{id}",
+     *      path="/fields/{slug}",
      *      operationId="getOneField",
      *      tags={"Fields"},
-     *      summary="Get one field by ID",
+     *      summary="Get one field by Slug",
      *      description="Returns one field",
      *      @OA\Parameter(
-     *          name="id",
+     *          name="slug",
      *          required=true,
-     *          description="Field ID",
+     *          description="Field Slug",
      *          in="path",
-     *          @OA\Schema(type="integer")
+     *          @OA\Schema(type="string")
      *      ),
      *      @OA\Response(
      *          response=200,
@@ -51,9 +51,9 @@ class FieldsController extends Controller
      *       )
      *     )
      */
-    public function getOne($id)
+    public function getOne($slug)
     {
-        $field=Field::find($id);
+        $field=Field::whereSlug($slug)->first();
         if(!$field){
             return response()->json('Field not found', 404);
         }
