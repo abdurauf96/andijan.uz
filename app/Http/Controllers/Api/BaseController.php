@@ -75,6 +75,10 @@ use Illuminate\Http\Request;
  *     name="Qarorlar",
  *     description="API Endpoints of decisions"
  * )
+ * @OA\Tag(
+ *     name="Partners",
+ *     description="API Endpoints of partners"
+ * )
  */
 class BaseController extends Controller
 {

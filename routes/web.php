@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\AndijanController;
 use App\Http\Controllers\Admin\ContactsController;
 use App\Http\Controllers\Admin\DocumentsController;
 use App\Http\Controllers\Admin\DecisionsController;
+use App\Http\Controllers\Admin\PartnersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -73,6 +74,9 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('documents', DocumentsController::class);
     Route::resource('decisions', DecisionsController::class);
 
+    Route::resource('partners', PartnersController::class);
+    Route::post('partner/image-upload', [PartnersController::class, 'imageUpload'])->name('partnerImageUpload');
+
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
     Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
@@ -80,4 +84,5 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+
 

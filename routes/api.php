@@ -51,3 +51,6 @@ Route::get('andijan', [\App\Http\Controllers\Api\AndijanController::class, 'getO
 Route::get('contact', [\App\Http\Controllers\Api\ContactController::class, 'getOne']);
 Route::get('documents', [\App\Http\Controllers\Api\DocumentsController::class, 'getAll']);
 Route::get('decisions', [\App\Http\Controllers\Api\DecisionsController::class, 'getAll']);
+//partners
+Route::get('partners', [\App\Http\Controllers\Api\PartnersController::class, 'getAll']);
+Route::get('partners/{id}', [\App\Http\Controllers\Api\PartnersController::class, 'getOne']);

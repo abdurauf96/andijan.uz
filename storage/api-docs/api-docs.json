@@ -277,6 +277,50 @@
                 }
             }
         },
+        "/partners": {
+            "get": {
+                "tags": [
+                    "Partners"
+                ],
+                "summary": "Get list of partners",
+                "description": "Returns list of partners",
+                "operationId": "getPartners",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/partners/{id}": {
+            "get": {
+                "tags": [
+                    "Partners"
+                ],
+                "summary": "Get one partner by ID",
+                "description": "Returns one partner",
+                "operationId": "getOnePartner",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Partner ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if partner not found"
+                    }
+                }
+            }
+        },
         "/posts": {
             "get": {
                 "tags": [
@@ -529,6 +573,10 @@
         {
             "name": "Qarorlar",
             "description": "API Endpoints of decisions"
+        },
+        {
+            "name": "Partners",
+            "description": "API Endpoints of partners"
         }
     ]
 }
