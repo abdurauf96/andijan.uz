@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\DecisionsController;
 use App\Http\Controllers\Admin\PartnersController;
 use App\Http\Controllers\Admin\OrganizationsController;
 use App\Http\Controllers\Admin\PressPagesController;
+use App\Http\Controllers\Admin\LocalPagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -81,6 +82,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('organizations', OrganizationsController::class);
     Route::resource('press-pages', PressPagesController::class);
+    Route::resource('local-pages', LocalPagesController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');

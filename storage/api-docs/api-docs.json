@@ -277,6 +277,21 @@
                 }
             }
         },
+        "/local-page": {
+            "get": {
+                "tags": [
+                    "Mahalliy davlat hokimyati"
+                ],
+                "summary": "Get list of local page",
+                "description": "Get list of local page",
+                "operationId": "getLocal",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/organizations": {
             "get": {
                 "tags": [
@@ -644,6 +659,10 @@
         {
             "name": "Matbuot xizmati",
             "description": "API Endpoints of press pages"
+        },
+        {
+            "name": "Mahalliy davlat hokimyati",
+            "description": "API Endpoints of local pages"
         }
     ]
 }

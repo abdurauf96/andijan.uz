@@ -87,6 +87,10 @@ use Illuminate\Http\Request;
  *     name="Matbuot xizmati",
  *     description="API Endpoints of press pages"
  * )
+ * @OA\Tag(
+ *     name="Mahalliy davlat hokimyati",
+ *     description="API Endpoints of local pages"
+ * )
  */
 class BaseController extends Controller
 {
