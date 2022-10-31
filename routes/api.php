@@ -59,3 +59,5 @@ Route::get('partners/{slug}', [\App\Http\Controllers\Api\PartnersController::cla
 //tashkilotlar
 Route::get('organizations', [\App\Http\Controllers\Api\OrganizationsController::class, 'getAll']);
 Route::get('organizations/{slug}', [\App\Http\Controllers\Api\OrganizationsController::class, 'getOne']);
+
+Route::get('press-page', [\App\Http\Controllers\Api\PressPagesController::class, 'getAll']);

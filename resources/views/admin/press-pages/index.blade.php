@@ -19,47 +19,48 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Contacts</li>
+                                <li class="breadcrumb-item active">Matbuot xizmati</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4> Contacts </h4>
-                        @if(!count($contacts)>0)
+                        <h4> Matbuot xizmati </h4>
+                        @if(!count($presspages)>0)
                         <div class="card-header-form">
-                            <a href="{{ url('/admin/contacts/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
+                            <a href="{{ url('/admin/press-pages/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
                         </div>
                         @endif
                     </div>
+
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Addres Uz</th><th>Phone Uz</th><th>Actions</th>
+                                        <th>#</th><th>Title Uz</th><th>Body Uz</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($contacts as $item)
+                                @foreach($presspages as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{!! $item->addres_uz !!}</td>
-                                        <td>{!! $item->phone_ru !!}</td>
+                                        <td>{{ $loop->iteration or $item->id }}</td>
+                                        <td>{{ $item->title_uz }}</td>
+                                        <td>{!! $item->body_uz !!}</td>
                                         <td>
-                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/contacts/' . $item->id) }}" title="View Contact"><i class="fas fa-eye"></i></a>
-                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/contacts/' . $item->id . '/edit') }}" title="Edit Contact"><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/press-pages/' . $item->id) }}" title="View PressPage"><i class="fas fa-eye"></i></a>
+                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/press-pages/' . $item->id . '/edit') }}" title="Edit PressPage"><i class="far fa-edit"></i></a>
 
-                                            <form method="POST" action="{{ url('/admin/contacts' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('/admin/press-pages' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete Contact" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete PressPage" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {{ $contacts->links() }} </div>
+                            <div class="pagination-wrapper"> {{ $presspages->links() }} </div>
                         </div>
 
                     </div>

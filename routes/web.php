@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\DocumentsController;
 use App\Http\Controllers\Admin\DecisionsController;
 use App\Http\Controllers\Admin\PartnersController;
 use App\Http\Controllers\Admin\OrganizationsController;
+use App\Http\Controllers\Admin\PressPagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,6 +80,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::post('partner/image-upload', [PartnersController::class, 'imageUpload'])->name('partnerImageUpload');
 
     Route::resource('organizations', OrganizationsController::class);
+    Route::resource('press-pages', PressPagesController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -87,5 +89,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
-
-

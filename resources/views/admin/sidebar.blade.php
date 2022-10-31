@@ -58,6 +58,9 @@
                 <a href="{{ route('admin.organizations.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Tashkilotlar</span></a>
             </li>
             <li class="dropdown ">
+                <a href="{{ route('admin.press-pages.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Matbuot xizmati</span></a>
+            </li>
+            <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</span></a>
             </li>
         </ul>

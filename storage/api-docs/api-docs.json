@@ -409,6 +409,21 @@
                 }
             }
         },
+        "/press-page": {
+            "get": {
+                "tags": [
+                    "Matbuot xizmati"
+                ],
+                "summary": "Get list of press page",
+                "description": "Get list of press page",
+                "operationId": "getPress",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/projects": {
             "get": {
                 "tags": [
@@ -625,6 +640,10 @@
         {
             "name": "Tashkilotlar",
             "description": "API Endpoints of organizations"
+        },
+        {
+            "name": "Matbuot xizmati",
+            "description": "API Endpoints of press pages"
         }
     ]
 }
