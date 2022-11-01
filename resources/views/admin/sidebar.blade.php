@@ -64,6 +64,9 @@
                 <a href="{{ route('admin.local-pages.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Mahalliy davlat hokimyati</span></a>
             </li>
             <li class="dropdown ">
+                <a href="{{ route('admin.old-documents.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Kuchini yo'qotgan xujjatlar</span></a>
+            </li>
+            <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</span></a>
             </li>
         </ul>

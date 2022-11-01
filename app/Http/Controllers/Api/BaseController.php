@@ -91,6 +91,11 @@ use Illuminate\Http\Request;
  *     name="Mahalliy davlat hokimyati",
  *     description="API Endpoints of local pages"
  * )
+ * @OA\Tag(
+ *     name="Kuchini yo'qotgan xujjatlar",
+ *     description="API Endpoints of old documents"
+ * )
+ *
  */
 class BaseController extends Controller
 {

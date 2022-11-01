@@ -292,6 +292,21 @@
                 }
             }
         },
+        "/old-documents": {
+            "get": {
+                "tags": [
+                    "Kuchini yo'qotgan xujjatlar"
+                ],
+                "summary": "Get list of OldDocuments",
+                "description": "Returns list of OldDocuments",
+                "operationId": "getOldDocuments",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/organizations": {
             "get": {
                 "tags": [
@@ -663,6 +678,10 @@
         {
             "name": "Mahalliy davlat hokimyati",
             "description": "API Endpoints of local pages"
+        },
+        {
+            "name": "Kuchini yo'qotgan xujjatlar",
+            "description": "API Endpoints of old documents"
         }
     ]
 }

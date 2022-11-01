@@ -62,3 +62,4 @@ Route::get('organizations/{slug}', [\App\Http\Controllers\Api\OrganizationsContr
 
 Route::get('press-page', [\App\Http\Controllers\Api\PressPagesController::class, 'getAll']);
 Route::get('local-page', [\App\Http\Controllers\Api\LocalPagesController::class, 'getAll']);
+Route::get('old-documents', [\App\Http\Controllers\Api\OldDocumentsController::class, 'getAll']);
