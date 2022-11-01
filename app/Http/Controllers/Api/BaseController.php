@@ -95,6 +95,10 @@ use Illuminate\Http\Request;
  *     name="Kuchini yo'qotgan xujjatlar",
  *     description="API Endpoints of old documents"
  * )
+ * @OA\Tag(
+ *     name="Davlat dasturlari",
+ *     description="API Endpoints of programs"
+ * )
  *
  */
 class BaseController extends Controller

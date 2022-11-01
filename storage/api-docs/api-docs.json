@@ -454,6 +454,21 @@
                 }
             }
         },
+        "/programs": {
+            "get": {
+                "tags": [
+                    "Davlat dasturlari"
+                ],
+                "summary": "Get list of programs",
+                "description": "Returns list of programs",
+                "operationId": "getPrograms",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/projects": {
             "get": {
                 "tags": [
@@ -682,6 +697,10 @@
         {
             "name": "Kuchini yo'qotgan xujjatlar",
             "description": "API Endpoints of old documents"
+        },
+        {
+            "name": "Davlat dasturlari",
+            "description": "API Endpoints of programs"
         }
     ]
 }

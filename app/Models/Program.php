@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class OldDocument extends Model
+class Program extends Model
 {
     use LogsActivity;
 
@@ -15,7 +15,7 @@ class OldDocument extends Model
      *
      * @var string
      */
-    protected $table = 'old_documents';
+    protected $table = 'programs';
 
     /**
     * The database primary key value.
@@ -29,14 +29,14 @@ class OldDocument extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'organ_uz', 'organ_ru', 'organ_en', 'date', 'file'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'file'];
 
     protected static function boot()
     {
         parent::boot();
         static::deleting(function ($model) {
-            if(file_exists('admin/files/old-documents/'.$model->image)){
-                unlink('admin/files/old-documents/'.$model->image);
+            if(file_exists('admin/files/programs/'.$model->image)){
+                unlink('admin/files/programs/'.$model->image);
             }
         });
     }
