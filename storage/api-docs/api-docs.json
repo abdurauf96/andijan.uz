@@ -513,6 +513,21 @@
                 }
             }
         },
+        "/reception-times": {
+            "get": {
+                "tags": [
+                    "Fuqarolarni qabul qilish vaqtlari"
+                ],
+                "summary": "Get list of reception-times",
+                "description": "Returns list of reception-times",
+                "operationId": "getReceptionTimes",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/rekvizits": {
             "get": {
                 "tags": [
@@ -720,6 +735,10 @@
         {
             "name": "Rekvizitlar",
             "description": "API Endpoints of rekvizits"
+        },
+        {
+            "name": "Fuqarolarni qabul qilish vaqtlari",
+            "description": "API Endpoints of reception times"
         }
     ]
 }

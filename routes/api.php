@@ -65,3 +65,4 @@ Route::get('local-page', [\App\Http\Controllers\Api\LocalPagesController::class,
 Route::get('old-documents', [\App\Http\Controllers\Api\OldDocumentsController::class, 'getAll']);
 Route::get('programs', [\App\Http\Controllers\Api\ProgramsController::class, 'getAll']);
 Route::get('rekvizits', [\App\Http\Controllers\Api\RekvizitsController::class, 'getAll']);
+Route::get('reception-times', [\App\Http\Controllers\Api\ReceptionTimesController::class, 'getAll']);
