@@ -35,8 +35,8 @@ class Program extends Model
     {
         parent::boot();
         static::deleting(function ($model) {
-            if(file_exists('admin/files/programs/'.$model->image)){
-                unlink('admin/files/programs/'.$model->image);
+            if(file_exists('admin/files/programs/'.$model->file)){
+                unlink('admin/files/programs/'.$model->file);
             }
         });
     }

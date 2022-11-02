@@ -64,3 +64,4 @@ Route::get('press-page', [\App\Http\Controllers\Api\PressPagesController::class,
 Route::get('local-page', [\App\Http\Controllers\Api\LocalPagesController::class, 'getAll']);
 Route::get('old-documents', [\App\Http\Controllers\Api\OldDocumentsController::class, 'getAll']);
 Route::get('programs', [\App\Http\Controllers\Api\ProgramsController::class, 'getAll']);
+Route::get('rekvizits', [\App\Http\Controllers\Api\RekvizitsController::class, 'getAll']);

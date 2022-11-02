@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\PressPagesController;
 use App\Http\Controllers\Admin\LocalPagesController;
 use App\Http\Controllers\Admin\OldDocumentsController;
 use App\Http\Controllers\Admin\ProgramsController;
+use App\Http\Controllers\Admin\RekvizitsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -87,6 +88,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('local-pages', LocalPagesController::class);
     Route::resource('old-documents', OldDocumentsController::class);
     Route::resource('programs', ProgramsController::class);
+    Route::resource('rekvizits', RekvizitsController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -95,6 +97,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
-
-
-

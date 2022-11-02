@@ -513,6 +513,21 @@
                 }
             }
         },
+        "/rekvizits": {
+            "get": {
+                "tags": [
+                    "Rekvizitlar"
+                ],
+                "summary": "Get list of rekvizits",
+                "description": "Returns list of rekvizits",
+                "operationId": "getRekvizits",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/main-services": {
             "get": {
                 "tags": [
@@ -701,6 +716,10 @@
         {
             "name": "Davlat dasturlari",
             "description": "API Endpoints of programs"
+        },
+        {
+            "name": "Rekvizitlar",
+            "description": "API Endpoints of rekvizits"
         }
     ]
 }

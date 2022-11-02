@@ -99,6 +99,10 @@ use Illuminate\Http\Request;
  *     name="Davlat dasturlari",
  *     description="API Endpoints of programs"
  * )
+ * @OA\Tag(
+ *     name="Rekvizitlar",
+ *     description="API Endpoints of rekvizits"
+ * )
  *
  */
 class BaseController extends Controller

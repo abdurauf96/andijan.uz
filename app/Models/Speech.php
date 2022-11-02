@@ -38,8 +38,8 @@ class Speech extends Model
             if(file_exists('admin/images/speeches/'.$model->image)){
                 unlink('admin/images/speeches/'.$model->image);
             }
-            if(file_exists('admin/videos/speeches/'.$model->image)){
-                unlink('admin/videos/speeches/'.$model->image);
+            if(file_exists('admin/videos/speeches/'.$model->file)){
+                unlink('admin/videos/speeches/'.$model->file);
             }
         });
     }
