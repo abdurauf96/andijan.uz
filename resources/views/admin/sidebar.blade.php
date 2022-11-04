@@ -73,7 +73,10 @@
                 <a href="{{ route('admin.reception-times.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Fuqarolarni qabul qilish jadvali</span></a>
             </li>
             <li class="dropdown ">
-                <a href="{{ route('admin.rekvizits.index') }}" class="nav-link"><i data-feather="monitor"></i><span></span></a>
+                <a href="{{ route('admin.rekvizits.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Rekvizitlar</span></a>
+            </li>
+            <li class="dropdown ">
+                <a href="{{ route('admin.plans.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Majlis o'tkazish rejalari</span></a>
             </li>
             <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</span></a>

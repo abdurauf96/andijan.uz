@@ -395,6 +395,21 @@
                 }
             }
         },
+        "/plans": {
+            "get": {
+                "tags": [
+                    "Majlis o'tkazish rejalari"
+                ],
+                "summary": "Get list of plans",
+                "description": "Get list of plans",
+                "operationId": "getPLans",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/posts": {
             "get": {
                 "tags": [
@@ -739,6 +754,10 @@
         {
             "name": "Fuqarolarni qabul qilish vaqtlari",
             "description": "API Endpoints of reception times"
+        },
+        {
+            "name": "Majlis o'tkazish rejalari",
+            "description": "API Endpoints of plans"
         }
     ]
 }

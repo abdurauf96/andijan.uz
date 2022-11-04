@@ -107,6 +107,10 @@ use Illuminate\Http\Request;
  *     name="Fuqarolarni qabul qilish vaqtlari",
  *     description="API Endpoints of reception times"
  * )
+ * @OA\Tag(
+ *     name="Majlis o'tkazish rejalari",
+ *     description="API Endpoints of plans"
+ * )
  *
  */
 class BaseController extends Controller
