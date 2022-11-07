@@ -12,8 +12,8 @@ class ServicesController extends Controller
      * @OA\Get(
      *      path="/main-services",
      *      operationId="getServices",
-     *      tags={"Services"},
-     *      summary="Get list of main services",
+     *      tags={"Bosh sahifa"},
+     *      summary="Asosiy xizmatlar",
      *      description="Returns list of main services",
      *      @OA\Response(
      *          response=200,
@@ -31,8 +31,8 @@ class ServicesController extends Controller
      * @OA\Get(
      *      path="/services/{slug}",
      *      operationId="getOneService",
-     *      tags={"Services"},
-     *      summary="Get one service by SLug",
+     *      tags={"Bosh sahifa"},
+     *      summary="Xizmatlar SLUG bo'yicha",
      *      description="Returns one service",
      *      @OA\Parameter(
      *          name="slug",
@@ -61,8 +61,8 @@ class ServicesController extends Controller
      * @OA\Get(
      *      path="/secondary-services",
      *      operationId="getSecondaryServices",
-     *      tags={"Services"},
-     *      summary="Get list of secondary services",
+     *      tags={"Bosh sahifa"},
+     *      summary="Qo'shimcha xizmatlar",
      *      description="Returns list of secondary services",
      *      @OA\Response(
      *          response=200,

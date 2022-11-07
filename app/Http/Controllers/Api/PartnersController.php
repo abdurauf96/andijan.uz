@@ -14,8 +14,8 @@ class PartnersController extends Controller
      * @OA\Get(
      *      path="/partners",
      *      operationId="getPartners",
-     *      tags={"Partners"},
-     *      summary="Get list of partners",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Hamkorlar",
      *      description="Returns list of partners",
      *      @OA\Response(
      *          response=200,
@@ -32,8 +32,8 @@ class PartnersController extends Controller
      * @OA\Get(
      *      path="/partners/{slug}",
      *      operationId="getOnePartner",
-     *      tags={"Partners"},
-     *      summary="Get one partner by Slug",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Hamkorlar SLUG bo'yicha",
      *      description="Returns one partner",
      *      @OA\Parameter(
      *          name="slug",

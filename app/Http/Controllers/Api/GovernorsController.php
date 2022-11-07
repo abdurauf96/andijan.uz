@@ -13,8 +13,8 @@ class GovernorsController extends Controller
      * @OA\Get(
      *      path="/governors",
      *      operationId="getGovernors",
-     *      tags={"Governors (Hokimlar)"},
-     *      summary="Get list of governors",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Hokimlar",
      *      description="Returns list of governors",
      *      @OA\Response(
      *          response=200,
@@ -31,8 +31,8 @@ class GovernorsController extends Controller
      * @OA\Get(
      *      path="/governors/{id}",
      *      operationId="getOneGovernor",
-     *      tags={"Governors (Hokimlar)"},
-     *      summary="Get one governor by ID",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="hokim ID bo'yicha",
      *      description="Returns one governor",
      *      @OA\Parameter(
      *          name="id",

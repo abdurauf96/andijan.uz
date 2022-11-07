@@ -13,8 +13,8 @@ class ArenasController extends Controller
      * @OA\Get(
      *      path="/arenas",
      *      operationId="getArenas",
-     *      tags={"Arenas"},
-     *      summary="Get list of arenas",
+     *      tags={"Bosh sahifa"},
+     *      summary="Sport obyektlari",
      *      description="Returns list of arenas",
      *      @OA\Response(
      *          response=200,
@@ -31,7 +31,7 @@ class ArenasController extends Controller
      * @OA\Get(
      *      path="/arenas/{slug}",
      *      operationId="getOneArena",
-     *      tags={"Arenas"},
+     *      tags={"Bosh sahifa"},
      *      summary="Get one arena by Slug",
      *      description="Returns one arena",
      *      @OA\Parameter(

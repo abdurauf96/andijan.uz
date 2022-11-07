@@ -14,7 +14,7 @@ class ProjectsController extends Controller
      * @OA\Get(
      *      path="/projects",
      *      operationId="getProjects",
-     *      tags={"Projects"},
+     *      tags={"Bosh sahifa"},
      *      summary="Get list of Projects",
      *      description="Returns list of Projects",
      *      @OA\Response(
@@ -32,7 +32,7 @@ class ProjectsController extends Controller
      * @OA\Get(
      *      path="/projects/{slug}",
      *      operationId="getOneProject",
-     *      tags={"Projects"},
+     *      tags={"Bosh sahifa"},
      *      summary="Get one project by slug",
      *      description="Returns one project",
      *      @OA\Parameter(

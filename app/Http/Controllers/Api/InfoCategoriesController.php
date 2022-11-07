@@ -13,8 +13,8 @@ class InfoCategoriesController extends Controller
      * @OA\Get(
      *      path="/info-categories",
      *      operationId="getInfoCategories",
-     *      tags={"InfoCategories"},
-     *      summary="Get list of InfoCategories",
+     *      tags={"Bosh sahifa"},
+     *      summary="Ma'lumotlar",
      *      description="Returns list of InfoCategories",
      *      @OA\Response(
      *          response=200,
@@ -24,7 +24,6 @@ class InfoCategoriesController extends Controller
      */
     public function getAll()
     {
-
         return new InfoCategoriesCollection(InfoCategory::paginate(10));
     }
 }

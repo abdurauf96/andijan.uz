@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
-use App\Models\Document;
+use App\Models\Discussion;
 use Illuminate\Http\Request;
 
-class DocumentsController extends Controller
+class DiscussionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class DocumentsController extends Controller
      */
     public function index(Request $request)
     {
-        $documents = Document::latest()->paginate(10);
-        return view('admin.documents.index', compact('documents'));
+        $discussions = Discussion::latest()->paginate(10);
+        return view('admin.discussions.index', compact('discussions'));
     }
 
     /**
@@ -28,7 +28,7 @@ class DocumentsController extends Controller
      */
     public function create()
     {
-        return view('admin.documents.create');
+        return view('admin.discussions.create');
     }
 
     /**
@@ -44,16 +44,10 @@ class DocumentsController extends Controller
 			'title_uz' => 'required'
 		]);
         $requestData = $request->all();
-        if($request->hasFile('image')){
-            $file=$request->file('image');
-            $image=time().$file->getClientOriginalName();
-            $path='admin/images/documents';
-            $file->move(public_path($path), $image);
-            $requestData['image']=$path.'/'.$image;
-        }
-        Document::create($requestData);
 
-        return redirect('admin/documents')->with('flash_message', 'Document added!');
+        Discussion::create($requestData);
+
+        return redirect('admin/discussions')->with('flash_message', 'Discussion added!');
     }
 
     /**
@@ -65,9 +59,9 @@ class DocumentsController extends Controller
      */
     public function show($id)
     {
-        $document = Document::findOrFail($id);
+        $discussion = Discussion::findOrFail($id);
 
-        return view('admin.documents.show', compact('document'));
+        return view('admin.discussions.show', compact('discussion'));
     }
 
     /**
@@ -79,9 +73,9 @@ class DocumentsController extends Controller
      */
     public function edit($id)
     {
-        $document = Document::findOrFail($id);
+        $discussion = Discussion::findOrFail($id);
 
-        return view('admin.documents.edit', compact('document'));
+        return view('admin.discussions.edit', compact('discussion'));
     }
 
     /**
@@ -98,17 +92,11 @@ class DocumentsController extends Controller
 			'title_uz' => 'required'
 		]);
         $requestData = $request->all();
-        if($request->hasFile('image')){
-            $file=$request->file('image');
-            $image=time().$file->getClientOriginalName();
-            $path='admin/images/documents';
-            $file->move(public_path($path), $image);
-            $requestData['image']=$path.'/'.$image;
-        }
-        $document = Document::findOrFail($id);
-        $document->update($requestData);
 
-        return redirect('admin/documents')->with('flash_message', 'Document updated!');
+        $discussion = Discussion::findOrFail($id);
+        $discussion->update($requestData);
+
+        return redirect('admin/discussions')->with('flash_message', 'Discussion updated!');
     }
 
     /**
@@ -120,8 +108,8 @@ class DocumentsController extends Controller
      */
     public function destroy($id)
     {
-        Document::destroy($id);
+        Discussion::destroy($id);
 
-        return redirect('admin/documents')->with('flash_message', 'Document deleted!');
+        return redirect('admin/discussions')->with('flash_message', 'Discussion deleted!');
     }
 }

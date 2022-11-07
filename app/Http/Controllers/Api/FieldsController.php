@@ -13,8 +13,8 @@ class FieldsController extends Controller
      * @OA\Get(
      *      path="/fields",
      *      operationId="getFields",
-     *      tags={"Fields"},
-     *      summary="Get list of fields",
+     *      tags={"Bosh sahifa"},
+     *      summary="Ustuvor tarmoqlar",
      *      description="Returns list of fields",
      *      @OA\Response(
      *          response=200,
@@ -31,7 +31,7 @@ class FieldsController extends Controller
      * @OA\Get(
      *      path="/fields/{slug}",
      *      operationId="getOneField",
-     *      tags={"Fields"},
+     *      tags={"Bosh sahifa"},
      *      summary="Get one field by Slug",
      *      description="Returns one field",
      *      @OA\Parameter(

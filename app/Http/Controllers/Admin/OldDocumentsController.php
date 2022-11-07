@@ -48,7 +48,7 @@ class OldDocumentsController extends Controller
             $file=$request->file('file');
             $path='admin/files/old-documents';
             $image=time().$file->getClientOriginalName();
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['file']=$path.'/'.$image;
         }
         OldDocument::create($requestData);
@@ -102,7 +102,7 @@ class OldDocumentsController extends Controller
             $file=$request->file('file');
             $path='admin/files/old-documents';
             $image=time().$file->getClientOriginalName();
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['file']=$path.'/'.$image;
         }
         $olddocument = OldDocument::findOrFail($id);

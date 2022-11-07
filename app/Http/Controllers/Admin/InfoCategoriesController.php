@@ -61,7 +61,7 @@ class InfoCategoriesController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/info-categories';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
 
@@ -117,7 +117,7 @@ class InfoCategoriesController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/info-categories';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
 

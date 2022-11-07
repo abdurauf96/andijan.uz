@@ -51,7 +51,7 @@ class LinksController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/links';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
 
@@ -107,7 +107,7 @@ class LinksController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/links';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
 

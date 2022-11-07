@@ -13,8 +13,8 @@ class LinksController extends Controller
      * @OA\Get(
      *      path="/sites",
      *      operationId="getLinks",
-     *      tags={"Useful Sites"},
-     *      summary="Get list of useful sites",
+     *      tags={"Bosh sahifa"},
+     *      summary="foydali saytlar",
      *      description="Returns list of useful sites",
      *      @OA\Response(
      *          response=200,

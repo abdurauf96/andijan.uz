@@ -13,8 +13,8 @@ class ContactController extends Controller
      * @OA\Get(
      *      path="/contact",
      *      operationId="getContact",
-     *      tags={"Contacts"},
-     *      summary="Get contacts",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Manzil va contactlar",
      *      description="Returns contact information",
      *
      *      @OA\Response(

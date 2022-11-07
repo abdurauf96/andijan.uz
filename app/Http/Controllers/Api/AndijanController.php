@@ -13,8 +13,8 @@ class AndijanController extends Controller
      * @OA\Get(
      *      path="/andijan",
      *      operationId="getAndijan",
-     *      tags={"Rahbariyat"},
-     *      summary="Get andijon rahbariyat",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Rahbariyat",
      *      description="Returns info about rahbariyat",
      *
      *      @OA\Response(

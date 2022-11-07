@@ -48,7 +48,7 @@ class RekvizitsController extends Controller
             $file=$request->file('file');
             $image=time().$file->getClientOriginalName();
             $path='admin/files/rekvizits';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['file']=$path.'/'.$image;
         }
         Rekvizit::create($requestData);
@@ -102,7 +102,7 @@ class RekvizitsController extends Controller
             $file=$request->file('file');
             $image=time().$file->getClientOriginalName();
             $path='admin/files/rekvizits';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['file']=$path.'/'.$image;
         }
         $rekvizit = Rekvizit::findOrFail($id);

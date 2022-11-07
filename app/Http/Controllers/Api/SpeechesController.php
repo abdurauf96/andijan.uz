@@ -13,8 +13,8 @@ class SpeechesController extends Controller
      * @OA\Get(
      *      path="/speeches",
      *      operationId="getSpeeches",
-     *      tags={"Hokim ma'ruzalari"},
-     *      summary="Get list of speeches",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Hokim ma'ruzalari",
      *      description="Returns list of speeches",
      *      @OA\Response(
      *          response=200,
@@ -31,8 +31,8 @@ class SpeechesController extends Controller
      * @OA\Get(
      *      path="/speeches/{id}",
      *      operationId="getOneSpeech",
-     *      tags={"Hokim ma'ruzalari"},
-     *      summary="Get one speech by ID",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Hokim ma'ruzalari by ID",
      *      description="Returns one speech",
      *      @OA\Parameter(
      *          name="id",

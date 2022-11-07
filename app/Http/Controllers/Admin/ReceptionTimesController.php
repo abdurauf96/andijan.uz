@@ -48,7 +48,7 @@ class ReceptionTimesController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/reception-times';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
         ReceptionTime::create($requestData);
@@ -102,7 +102,7 @@ class ReceptionTimesController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/reception-times';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
         $receptiontime = ReceptionTime::findOrFail($id);

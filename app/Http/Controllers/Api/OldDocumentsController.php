@@ -13,8 +13,8 @@ class OldDocumentsController extends Controller
      * @OA\Get(
      *      path="/old-documents",
      *      operationId="getOldDocuments",
-     *      tags={"Kuchini yo'qotgan xujjatlar"},
-     *      summary="Get list of OldDocuments",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Kuchini yo'qotgan xujjatlar ",
      *      description="Returns list of OldDocuments",
      *      @OA\Response(
      *          response=200,

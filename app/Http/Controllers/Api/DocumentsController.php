@@ -13,8 +13,8 @@ class DocumentsController extends Controller
      * @OA\Get(
      *      path="/documents",
      *      operationId="getDocuments",
-     *      tags={"Xujjatlar"},
-     *      summary="Get list of documents",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Xujjatlar",
      *      description="Returns list of documents",
      *      @OA\Response(
      *          response=200,

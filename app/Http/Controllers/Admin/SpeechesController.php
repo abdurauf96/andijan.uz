@@ -49,14 +49,14 @@ class SpeechesController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/speeches';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
         if($request->hasFile('file')){
             $file=$request->file('file');
             $video=time().'.'.$file->getClientOriginalExtension();
             $path='admin/videos/speeches';
-            $file->move($path, $video);
+            $file->move(public_path($path), $video);
             $requestData['file']=$path.'/'.$video;
         }
         Speech::create($requestData);
@@ -111,14 +111,14 @@ class SpeechesController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/speeches';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
         if($request->hasFile('file')){
             $file=$request->file('file');
             $video=time().'.'.$file->getClientOriginalExtension();
             $path='admin/videos/speeches';
-            $file->move($path, $video);
+            $file->move(public_path($path), $video);
             $requestData['file']=$path.'/'.$video;
         }
 

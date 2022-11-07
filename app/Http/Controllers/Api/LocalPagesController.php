@@ -13,8 +13,8 @@ class LocalPagesController extends Controller
      * @OA\Get(
      *      path="/local-page",
      *      operationId="getLocal",
-     *      tags={"Mahalliy davlat hokimyati"},
-     *      summary="Get list of local page",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Mahalliy davlat hokimyati ",
      *      description="Get list of local page",
      *      @OA\Response(
      *          response=200,

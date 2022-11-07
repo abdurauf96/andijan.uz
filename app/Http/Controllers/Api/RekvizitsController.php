@@ -13,8 +13,8 @@ class RekvizitsController extends Controller
      * @OA\Get(
      *      path="/rekvizits",
      *      operationId="getRekvizits",
-     *      tags={"Rekvizitlar"},
-     *      summary="Get list of rekvizits",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Rekvizitlar",
      *      description="Returns list of rekvizits",
      *      @OA\Response(
      *          response=200,

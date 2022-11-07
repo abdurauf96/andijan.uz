@@ -13,8 +13,8 @@ class CouncilsController extends Controller
      * @OA\Get(
      *      path="/councils",
      *      operationId="getCouncils",
-     *      tags={"Councils (Kengashlar)"},
-     *      summary="Get list of Councils",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Kengashlar",
      *      description="Returns list of Councils",
      *      @OA\Response(
      *          response=200,

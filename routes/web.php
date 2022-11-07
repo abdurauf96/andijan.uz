@@ -26,6 +26,7 @@ use App\Http\Controllers\Admin\ProgramsController;
 use App\Http\Controllers\Admin\RekvizitsController;
 use App\Http\Controllers\Admin\ReceptionTimesController;
 use App\Http\Controllers\Admin\PlansController;
+use App\Http\Controllers\Admin\DiscussionsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -93,6 +94,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('rekvizits', RekvizitsController::class);
     Route::resource('reception-times', ReceptionTimesController::class);
     Route::resource('plans', PlansController::class);
+    Route::resource('discussions', DiscussionsController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -101,3 +103,4 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+

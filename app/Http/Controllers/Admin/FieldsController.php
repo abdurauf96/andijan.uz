@@ -50,7 +50,7 @@ class FieldsController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/fields';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
 
@@ -106,7 +106,7 @@ class FieldsController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/fields';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
 

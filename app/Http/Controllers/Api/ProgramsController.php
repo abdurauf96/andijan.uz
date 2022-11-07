@@ -13,8 +13,8 @@ class ProgramsController extends Controller
      * @OA\Get(
      *      path="/programs",
      *      operationId="getPrograms",
-     *      tags={"Davlat dasturlari"},
-     *      summary="Get list of programs",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Davlat dasturlari",
      *      description="Returns list of programs",
      *      @OA\Response(
      *          response=200,

@@ -14,7 +14,7 @@ class PostsController extends Controller
      * @OA\Get(
      *      path="/posts",
      *      operationId="getPosts",
-     *      tags={"Posts"},
+     *      tags={"Bosh sahifa"},
      *      summary="Get list of posts",
      *      description="Returns list of posts",
      *      @OA\Response(
@@ -32,7 +32,7 @@ class PostsController extends Controller
      * @OA\Get(
      *      path="/posts/{slug}",
      *      operationId="getOnePost",
-     *      tags={"Posts"},
+     *      tags={"Bosh sahifa"},
      *      summary="Get one post by slug",
      *      description="Returns one post",
      *      @OA\Parameter(

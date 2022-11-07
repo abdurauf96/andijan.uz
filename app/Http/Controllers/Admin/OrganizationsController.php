@@ -48,14 +48,14 @@ class OrganizationsController extends Controller
             $file=$request->file('image');
             $path='admin/images/organizations';
             $image=time().$file->getClientOriginalName();
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
         if($request->hasFile('director_image')){
             $file=$request->file('director_image');
             $path='admin/images/organizations';
             $image=time().$file->getClientOriginalName();
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
         Organization::create($requestData);
@@ -109,14 +109,14 @@ class OrganizationsController extends Controller
             $file=$request->file('image');
             $path='admin/images/organizations';
             $image=time().$file->getClientOriginalName();
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
         if($request->hasFile('director_image')){
             $file=$request->file('director_image');
             $path='admin/images/organizations';
             $image=time().$file->getClientOriginalName();
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['director_image']=$path.'/'.$image;
         }
 

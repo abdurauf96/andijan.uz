@@ -13,8 +13,8 @@ class ReceptionTimesController extends Controller
      * @OA\Get(
      *      path="/reception-times",
      *      operationId="getReceptionTimes",
-     *      tags={"Fuqarolarni qabul qilish vaqtlari"},
-     *      summary="Get list of reception-times",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Fuqarolarni qabul qilish vaqtlari",
      *      description="Returns list of reception-times",
      *      @OA\Response(
      *          response=200,

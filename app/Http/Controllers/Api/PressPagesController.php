@@ -13,8 +13,8 @@ class PressPagesController extends Controller
      * @OA\Get(
      *      path="/press-page",
      *      operationId="getPress",
-     *      tags={"Matbuot xizmati"},
-     *      summary="Get list of press page",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Matbuot xizmati",
      *      description="Get list of press page",
      *      @OA\Response(
      *          response=200,

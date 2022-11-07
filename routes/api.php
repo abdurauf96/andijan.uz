@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/* Bosh sahifa */
 
 Route::get('posts', [\App\Http\Controllers\Api\PostsController::class, 'getAll']);
 Route::get('posts/{slug}', [\App\Http\Controllers\Api\PostsController::class, 'getOne']);
@@ -32,14 +33,6 @@ Route::get('sites', [\App\Http\Controllers\Api\LinksController::class, 'getAll']
 Route::get('main-services', [\App\Http\Controllers\Api\ServicesController::class, 'getAllMain']);
 Route::get('secondary-services', [\App\Http\Controllers\Api\ServicesController::class, 'getAllSecondary']);
 Route::get('services/{slug}', [\App\Http\Controllers\Api\ServicesController::class, 'getOne']);
-//hokimlar
-Route::get('governors', [\App\Http\Controllers\Api\GovernorsController::class, 'getAll']);
-Route::get('governors/{id}', [\App\Http\Controllers\Api\GovernorsController::class, 'getOne']);
-//hokim maruzalari
-Route::get('speeches', [\App\Http\Controllers\Api\SpeechesController::class, 'getAll']);
-Route::get('speeches/{id}', [\App\Http\Controllers\Api\SpeechesController::class, 'getOne']);
-
-Route::get('councils', [\App\Http\Controllers\Api\CouncilsController::class, 'getAll']);
 
 Route::get('districts/{id}', [\App\Http\Controllers\Api\DistrictsController::class, 'getOne']);
 
@@ -49,9 +42,23 @@ Route::get('arenas/{slug}', [\App\Http\Controllers\Api\ArenasController::class, 
 Route::get('fields', [\App\Http\Controllers\Api\FieldsController::class, 'getAll']);
 Route::get('fields/{slug}', [\App\Http\Controllers\Api\FieldsController::class, 'getOne']);
 
+
+/* viloyat hokimligi bo'limi; */
+
+//hokimlar
+Route::get('governors', [\App\Http\Controllers\Api\GovernorsController::class, 'getAll']);
+Route::get('governors/{id}', [\App\Http\Controllers\Api\GovernorsController::class, 'getOne']);
+//hokim maruzalari
+Route::get('speeches', [\App\Http\Controllers\Api\SpeechesController::class, 'getAll']);
+Route::get('speeches/{id}', [\App\Http\Controllers\Api\SpeechesController::class, 'getOne']);
+
+//kengashlar
+Route::get('councils', [\App\Http\Controllers\Api\CouncilsController::class, 'getAll']);
+
+//rahbariyat
 Route::get('andijan', [\App\Http\Controllers\Api\AndijanController::class, 'getOne']);
 Route::get('contact', [\App\Http\Controllers\Api\ContactController::class, 'getOne']);
-Route::get('documents', [\App\Http\Controllers\Api\DocumentsController::class, 'getAll']);
+Route::get('documents', [ \App\Http\Controllers\Api\DocumentsController::class, 'getAll']);
 Route::get('decisions', [\App\Http\Controllers\Api\DecisionsController::class, 'getAll']);
 //partners
 Route::get('partners', [\App\Http\Controllers\Api\PartnersController::class, 'getAll']);
@@ -67,3 +74,4 @@ Route::get('programs', [\App\Http\Controllers\Api\ProgramsController::class, 'ge
 Route::get('rekvizits', [\App\Http\Controllers\Api\RekvizitsController::class, 'getAll']);
 Route::get('reception-times', [\App\Http\Controllers\Api\ReceptionTimesController::class, 'getAll']);
 Route::get('plans', [\App\Http\Controllers\Api\PlansController::class, 'getAll']);
+Route::get('discussions', [\App\Http\Controllers\Api\DiscussionsController::class, 'getAll']);

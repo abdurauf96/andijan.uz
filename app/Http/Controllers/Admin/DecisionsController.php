@@ -48,7 +48,7 @@ class DecisionsController extends Controller
             $file=$request->file('file');
             $filename=time().$file->getClientOriginalName();
             $path='admin/files/decisions';
-            $file->move($path, $filename);
+            $file->move(public_path($path), $filename);
             $requestData['file']=$path.'/'.$filename;
         }
 
@@ -103,7 +103,7 @@ class DecisionsController extends Controller
             $file=$request->file('file');
             $filename=time().$file->getClientOriginalName();
             $path='admin/files/decisions';
-            $file->move($path, $filename);
+            $file->move(public_path($path), $filename);
             $requestData['file']=$path.'/'.$filename;
         }
         $decision = Decision::findOrFail($id);

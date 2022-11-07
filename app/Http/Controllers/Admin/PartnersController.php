@@ -49,7 +49,7 @@ class PartnersController extends Controller
             $file=$request->file('image');
             $path='admin/images/partners';
             $image=time().$file->getClientOriginalName();
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
         Partner::create($requestData);
@@ -104,7 +104,7 @@ class PartnersController extends Controller
             $file=$request->file('image');
             $path='admin/images/partners';
             $image=time().$file->getClientOriginalName();
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
 

@@ -51,7 +51,7 @@ class MembersController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/members';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$image;
         }
 
@@ -107,7 +107,7 @@ class MembersController extends Controller
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
             $path='admin/images/members';
-            $file->move($path, $image);
+            $file->move(public_path($path), $image);
             $requestData['image']=$image;
         }
 

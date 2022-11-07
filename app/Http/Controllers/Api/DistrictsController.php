@@ -13,7 +13,7 @@ class DistrictsController extends Controller
      * @OA\Get(
      *      path="/districts/{id}",
      *      operationId="getOneDistrict",
-     *      tags={"Districts"},
+     *      tags={"Bosh sahifa"},
      *      summary="Get one district by ID",
      *      description="Returns one district",
      *      @OA\Parameter(

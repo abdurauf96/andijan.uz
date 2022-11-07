@@ -14,8 +14,8 @@ class OrganizationsController extends Controller
      * @OA\Get(
      *      path="/organizations",
      *      operationId="getOrganizations",
-     *      tags={"Tashkilotlar"},
-     *      summary="Get list of organizations",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Tashkilotlar",
      *      description="Returns list of organizations",
      *      @OA\Response(
      *          response=200,
@@ -32,8 +32,8 @@ class OrganizationsController extends Controller
      * @OA\Get(
      *      path="/organizations/{slug}",
      *      operationId="getOneOrganization",
-     *      tags={"Tashkilotlar"},
-     *      summary="Get one organization by slug",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Tashkilotlar SLUG bo'yicha",
      *      description="Returns one organization",
      *      @OA\Parameter(
      *          name="slug",

@@ -14,9 +14,9 @@
         "/andijan": {
             "get": {
                 "tags": [
-                    "Rahbariyat"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get andijon rahbariyat",
+                "summary": "Rahbariyat",
                 "description": "Returns info about rahbariyat",
                 "operationId": "getAndijan",
                 "responses": {
@@ -29,9 +29,9 @@
         "/arenas": {
             "get": {
                 "tags": [
-                    "Arenas"
+                    "Bosh sahifa"
                 ],
-                "summary": "Get list of arenas",
+                "summary": "Sport obyektlari",
                 "description": "Returns list of arenas",
                 "operationId": "getArenas",
                 "responses": {
@@ -44,7 +44,7 @@
         "/arenas/{slug}": {
             "get": {
                 "tags": [
-                    "Arenas"
+                    "Bosh sahifa"
                 ],
                 "summary": "Get one arena by Slug",
                 "description": "Returns one arena",
@@ -73,9 +73,9 @@
         "/contact": {
             "get": {
                 "tags": [
-                    "Contacts"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get contacts",
+                "summary": "Manzil va contactlar",
                 "description": "Returns contact information",
                 "operationId": "getContact",
                 "responses": {
@@ -88,9 +88,9 @@
         "/councils": {
             "get": {
                 "tags": [
-                    "Councils (Kengashlar)"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of Councils",
+                "summary": "Kengashlar",
                 "description": "Returns list of Councils",
                 "operationId": "getCouncils",
                 "responses": {
@@ -103,11 +103,26 @@
         "/decisions": {
             "get": {
                 "tags": [
-                    "Qarorlar"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of decisions",
+                "summary": "Qarorlar",
                 "description": "Returns list of decisions",
                 "operationId": "getDecisions",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/discussions": {
+            "get": {
+                "tags": [
+                    "Viloyat hokimligi"
+                ],
+                "summary": "Hujjatlar muhokamasi",
+                "description": "Returns list of discussions",
+                "operationId": "getDiscussions",
                 "responses": {
                     "200": {
                         "description": "Successful operation"
@@ -118,7 +133,7 @@
         "/districts/{id}": {
             "get": {
                 "tags": [
-                    "Districts"
+                    "Bosh sahifa"
                 ],
                 "summary": "Get one district by ID",
                 "description": "Returns one district",
@@ -147,9 +162,9 @@
         "/documents": {
             "get": {
                 "tags": [
-                    "Xujjatlar"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of documents",
+                "summary": "Xujjatlar",
                 "description": "Returns list of documents",
                 "operationId": "getDocuments",
                 "responses": {
@@ -162,9 +177,9 @@
         "/fields": {
             "get": {
                 "tags": [
-                    "Fields"
+                    "Bosh sahifa"
                 ],
-                "summary": "Get list of fields",
+                "summary": "Ustuvor tarmoqlar",
                 "description": "Returns list of fields",
                 "operationId": "getFields",
                 "responses": {
@@ -177,7 +192,7 @@
         "/fields/{slug}": {
             "get": {
                 "tags": [
-                    "Fields"
+                    "Bosh sahifa"
                 ],
                 "summary": "Get one field by Slug",
                 "description": "Returns one field",
@@ -206,9 +221,9 @@
         "/governors": {
             "get": {
                 "tags": [
-                    "Governors (Hokimlar)"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of governors",
+                "summary": "Hokimlar",
                 "description": "Returns list of governors",
                 "operationId": "getGovernors",
                 "responses": {
@@ -221,9 +236,9 @@
         "/governors/{id}": {
             "get": {
                 "tags": [
-                    "Governors (Hokimlar)"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get one governor by ID",
+                "summary": "hokim ID bo'yicha",
                 "description": "Returns one governor",
                 "operationId": "getOneGovernor",
                 "parameters": [
@@ -250,9 +265,9 @@
         "/info-categories": {
             "get": {
                 "tags": [
-                    "InfoCategories"
+                    "Bosh sahifa"
                 ],
-                "summary": "Get list of InfoCategories",
+                "summary": "Ma'lumotlar",
                 "description": "Returns list of InfoCategories",
                 "operationId": "getInfoCategories",
                 "responses": {
@@ -265,9 +280,9 @@
         "/sites": {
             "get": {
                 "tags": [
-                    "Useful Sites"
+                    "Bosh sahifa"
                 ],
-                "summary": "Get list of useful sites",
+                "summary": "foydali saytlar",
                 "description": "Returns list of useful sites",
                 "operationId": "getLinks",
                 "responses": {
@@ -280,9 +295,9 @@
         "/local-page": {
             "get": {
                 "tags": [
-                    "Mahalliy davlat hokimyati"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of local page",
+                "summary": "Mahalliy davlat hokimyati ",
                 "description": "Get list of local page",
                 "operationId": "getLocal",
                 "responses": {
@@ -295,9 +310,9 @@
         "/old-documents": {
             "get": {
                 "tags": [
-                    "Kuchini yo'qotgan xujjatlar"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of OldDocuments",
+                "summary": "Kuchini yo'qotgan xujjatlar ",
                 "description": "Returns list of OldDocuments",
                 "operationId": "getOldDocuments",
                 "responses": {
@@ -310,9 +325,9 @@
         "/organizations": {
             "get": {
                 "tags": [
-                    "Tashkilotlar"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of organizations",
+                "summary": "Tashkilotlar",
                 "description": "Returns list of organizations",
                 "operationId": "getOrganizations",
                 "responses": {
@@ -325,9 +340,9 @@
         "/organizations/{slug}": {
             "get": {
                 "tags": [
-                    "Tashkilotlar"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get one organization by slug",
+                "summary": "Tashkilotlar SLUG bo'yicha",
                 "description": "Returns one organization",
                 "operationId": "getOneOrganization",
                 "parameters": [
@@ -354,9 +369,9 @@
         "/partners": {
             "get": {
                 "tags": [
-                    "Partners"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of partners",
+                "summary": "Hamkorlar",
                 "description": "Returns list of partners",
                 "operationId": "getPartners",
                 "responses": {
@@ -369,9 +384,9 @@
         "/partners/{slug}": {
             "get": {
                 "tags": [
-                    "Partners"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get one partner by Slug",
+                "summary": "Hamkorlar SLUG bo'yicha",
                 "description": "Returns one partner",
                 "operationId": "getOnePartner",
                 "parameters": [
@@ -398,9 +413,9 @@
         "/plans": {
             "get": {
                 "tags": [
-                    "Majlis o'tkazish rejalari"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of plans",
+                "summary": "Majlis o'tkazish rejalari",
                 "description": "Get list of plans",
                 "operationId": "getPLans",
                 "responses": {
@@ -413,7 +428,7 @@
         "/posts": {
             "get": {
                 "tags": [
-                    "Posts"
+                    "Bosh sahifa"
                 ],
                 "summary": "Get list of posts",
                 "description": "Returns list of posts",
@@ -428,7 +443,7 @@
         "/posts/{slug}": {
             "get": {
                 "tags": [
-                    "Posts"
+                    "Bosh sahifa"
                 ],
                 "summary": "Get one post by slug",
                 "description": "Returns one post",
@@ -457,9 +472,9 @@
         "/press-page": {
             "get": {
                 "tags": [
-                    "Matbuot xizmati"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of press page",
+                "summary": "Matbuot xizmati",
                 "description": "Get list of press page",
                 "operationId": "getPress",
                 "responses": {
@@ -472,9 +487,9 @@
         "/programs": {
             "get": {
                 "tags": [
-                    "Davlat dasturlari"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of programs",
+                "summary": "Davlat dasturlari",
                 "description": "Returns list of programs",
                 "operationId": "getPrograms",
                 "responses": {
@@ -487,7 +502,7 @@
         "/projects": {
             "get": {
                 "tags": [
-                    "Projects"
+                    "Bosh sahifa"
                 ],
                 "summary": "Get list of Projects",
                 "description": "Returns list of Projects",
@@ -502,7 +517,7 @@
         "/projects/{slug}": {
             "get": {
                 "tags": [
-                    "Projects"
+                    "Bosh sahifa"
                 ],
                 "summary": "Get one project by slug",
                 "description": "Returns one project",
@@ -531,9 +546,9 @@
         "/reception-times": {
             "get": {
                 "tags": [
-                    "Fuqarolarni qabul qilish vaqtlari"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of reception-times",
+                "summary": "Fuqarolarni qabul qilish vaqtlari",
                 "description": "Returns list of reception-times",
                 "operationId": "getReceptionTimes",
                 "responses": {
@@ -546,9 +561,9 @@
         "/rekvizits": {
             "get": {
                 "tags": [
-                    "Rekvizitlar"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of rekvizits",
+                "summary": "Rekvizitlar",
                 "description": "Returns list of rekvizits",
                 "operationId": "getRekvizits",
                 "responses": {
@@ -561,9 +576,9 @@
         "/main-services": {
             "get": {
                 "tags": [
-                    "Services"
+                    "Bosh sahifa"
                 ],
-                "summary": "Get list of main services",
+                "summary": "Asosiy xizmatlar",
                 "description": "Returns list of main services",
                 "operationId": "getServices",
                 "responses": {
@@ -576,9 +591,9 @@
         "/services/{slug}": {
             "get": {
                 "tags": [
-                    "Services"
+                    "Bosh sahifa"
                 ],
-                "summary": "Get one service by SLug",
+                "summary": "Xizmatlar SLUG bo'yicha",
                 "description": "Returns one service",
                 "operationId": "getOneService",
                 "parameters": [
@@ -605,9 +620,9 @@
         "/secondary-services": {
             "get": {
                 "tags": [
-                    "Services"
+                    "Bosh sahifa"
                 ],
-                "summary": "Get list of secondary services",
+                "summary": "Qo'shimcha xizmatlar",
                 "description": "Returns list of secondary services",
                 "operationId": "getSecondaryServices",
                 "responses": {
@@ -620,9 +635,9 @@
         "/speeches": {
             "get": {
                 "tags": [
-                    "Hokim ma'ruzalari"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get list of speeches",
+                "summary": "Hokim ma'ruzalari",
                 "description": "Returns list of speeches",
                 "operationId": "getSpeeches",
                 "responses": {
@@ -635,9 +650,9 @@
         "/speeches/{id}": {
             "get": {
                 "tags": [
-                    "Hokim ma'ruzalari"
+                    "Viloyat hokimligi"
                 ],
-                "summary": "Get one speech by ID",
+                "summary": "Hokim ma'ruzalari by ID",
                 "description": "Returns one speech",
                 "operationId": "getOneSpeech",
                 "parameters": [
@@ -664,100 +679,12 @@
     },
     "tags": [
         {
-            "name": "Posts",
-            "description": "API Endpoints of Posts"
+            "name": "Bosh sahifa",
+            "description": "Bosh sahifaga qarashli API Endpointlar"
         },
         {
-            "name": "InfoCategories",
-            "description": "API Endpoints of InfoCategories"
-        },
-        {
-            "name": "Projects",
-            "description": "API Endpoints of Projects"
-        },
-        {
-            "name": "Useful Sites",
-            "description": "API Endpoints of useful sites"
-        },
-        {
-            "name": "Services",
-            "description": "API Endpoints of services"
-        },
-        {
-            "name": "Districts",
-            "description": "API Endpoints of districts"
-        },
-        {
-            "name": "Arenas",
-            "description": "API Endpoints of arenas"
-        },
-        {
-            "name": "Fields",
-            "description": "API Endpoints of fields"
-        },
-        {
-            "name": "Governors (Hokimlar)",
-            "description": "API Endpoints of governors (hokimlar)"
-        },
-        {
-            "name": "Councils (Kengashlar)",
-            "description": "API Endpoints of councils (Kengashlar)"
-        },
-        {
-            "name": "Hokim ma'ruzalari",
-            "description": "API Endpoints of speeches (Hokim ma'ruzalari)"
-        },
-        {
-            "name": "Rahbariyat",
-            "description": "API Endpoints of andijan"
-        },
-        {
-            "name": "Contacts",
-            "description": "API Endpoints of contacts"
-        },
-        {
-            "name": "Xujjatlar",
-            "description": "API Endpoints of documents"
-        },
-        {
-            "name": "Qarorlar",
-            "description": "API Endpoints of decisions"
-        },
-        {
-            "name": "Partners",
-            "description": "API Endpoints of partners"
-        },
-        {
-            "name": "Tashkilotlar",
-            "description": "API Endpoints of organizations"
-        },
-        {
-            "name": "Matbuot xizmati",
-            "description": "API Endpoints of press pages"
-        },
-        {
-            "name": "Mahalliy davlat hokimyati",
-            "description": "API Endpoints of local pages"
-        },
-        {
-            "name": "Kuchini yo'qotgan xujjatlar",
-            "description": "API Endpoints of old documents"
-        },
-        {
-            "name": "Davlat dasturlari",
-            "description": "API Endpoints of programs"
-        },
-        {
-            "name": "Rekvizitlar",
-            "description": "API Endpoints of rekvizits"
-        },
-        {
-            "name": "Fuqarolarni qabul qilish vaqtlari",
-            "description": "API Endpoints of reception times"
-        },
-        {
-            "name": "Majlis o'tkazish rejalari",
-            "description": "API Endpoints of plans"
+            "name": "Viloyat hokimligi",
+            "description": "Viloyat hokimligi bo'limi uchun API Endpointlar"
         }
     ]
 }

@@ -13,8 +13,8 @@ class PlansController extends Controller
      * @OA\Get(
      *      path="/plans",
      *      operationId="getPLans",
-     *      tags={"Majlis o'tkazish rejalari"},
-     *      summary="Get list of plans",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Majlis o'tkazish rejalari",
      *      description="Get list of plans",
      *      @OA\Response(
      *          response=200,

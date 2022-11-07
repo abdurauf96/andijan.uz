@@ -13,8 +13,8 @@ class DecisionsController extends Controller
      * @OA\Get(
      *      path="/decisions",
      *      operationId="getDecisions",
-     *      tags={"Qarorlar"},
-     *      summary="Get list of decisions",
+     *      tags={"Viloyat hokimligi"},
+     *      summary="Qarorlar",
      *      description="Returns list of decisions",
      *      @OA\Response(
      *          response=200,
