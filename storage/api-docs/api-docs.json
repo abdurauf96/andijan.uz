@@ -440,6 +440,36 @@
                 }
             }
         },
+        "/posts/special": {
+            "get": {
+                "tags": [
+                    "Bosh sahifa"
+                ],
+                "summary": "Get list of special posts",
+                "description": "Returns 3 special posts",
+                "operationId": "getSpecialPosts",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/posts/andijan": {
+            "get": {
+                "tags": [
+                    "Bosh sahifa"
+                ],
+                "summary": "Get list of andijan posts",
+                "description": "Returns only andijan posts",
+                "operationId": "getAndijanPosts",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/posts/{slug}": {
             "get": {
                 "tags": [

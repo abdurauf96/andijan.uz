@@ -45,6 +45,7 @@
                                     <tr><th> Body En </th><td> {!! $post->body_en !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $post->image }}" alt=""> </td></tr>
                                     <tr><th> Ko'rishlar soni </th><td> {{ $post->view }} ta </td></tr>
+                                    <tr><th> Yangilik turi </th><td> @if($post->type==1) Andijon @elseif($post->type==2) Muxim @else Odatiy @endif </td></tr>
                                     <tr><th> Slug </th><td> {{ $post->slug }} </td></tr>
                                     <tr><th> Meta Description </th><td> {{ $post->meta_description }} </td></tr>
                                     <tr><th> Meta Keywords </th><td> {{ $post->meta_keywords }} </td></tr>

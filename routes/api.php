@@ -21,7 +21,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 /* Bosh sahifa */
 
 Route::get('posts', [\App\Http\Controllers\Api\PostsController::class, 'getAll']);
+Route::get('posts/special', [\App\Http\Controllers\Api\PostsController::class, 'getSpecialPosts']);
+Route::get('posts/andijan', [\App\Http\Controllers\Api\PostsController::class, 'getAndijanPosts']);
 Route::get('posts/{slug}', [\App\Http\Controllers\Api\PostsController::class, 'getOne']);
+
 Route::get('info-categories', [\App\Http\Controllers\Api\InfoCategoriesController::class, 'getAll']);
 
 Route::get('projects', [\App\Http\Controllers\Api\ProjectsController::class, 'getAll']);

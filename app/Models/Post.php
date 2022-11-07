@@ -24,13 +24,15 @@ class Post extends Model
     */
     protected $primaryKey = 'id';
 
+    const ANDIJAN=1;
+    const SPECIAL=2;
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
     protected $fillable = ['title_uz', 'title_ru', 'title_en', 'description_uz', 'description_ru', 'description_en',
-        'body_uz', 'body_ru', 'body_en', 'slug', 'meta_keywords', 'meta_description', 'image'];
+        'body_uz', 'body_ru', 'body_en', 'slug', 'meta_keywords', 'meta_description', 'image','type'];
 
     public static $searchFields=['title_uz', 'title_ru', 'title_en', 'description_uz', 'description_ru', 'description_en',
         'body_uz', 'body_ru', 'body_en'];
@@ -38,6 +40,10 @@ class Post extends Model
     protected $attributes=[
         'view'=>0
     ];
+
+    public function scopeType($query, $type){
+        return $query->where('type', $type);
+    }
 
     protected static function boot()
     {
