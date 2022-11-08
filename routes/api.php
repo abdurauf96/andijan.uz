@@ -81,3 +81,4 @@ Route::get('discussions', [\App\Http\Controllers\Api\DiscussionsController::clas
 
 /* Viloyat haqida bo'limi */
 Route::get('indicators', [\App\Http\Controllers\Api\IndicatorsController::class, 'getAll']);
+Route::get('parks', [\App\Http\Controllers\Api\ParksController::class, 'getAll']);

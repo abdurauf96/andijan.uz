@@ -70,6 +70,7 @@
                         data-feather="briefcase"></i><span>Viloyat haqida </span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.indicators.index') }}">Iqtisodiy ko'rsatkichlar</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.parks.index') }}">Istirohat bog’ari</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

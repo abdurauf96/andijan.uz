@@ -381,6 +381,21 @@
                 }
             }
         },
+        "/parks": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Madaniyat va Istirohat bog’lari",
+                "description": "Returns list of parks",
+                "operationId": "getParks",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/partners": {
             "get": {
                 "tags": [
