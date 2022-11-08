@@ -38,8 +38,8 @@ class Partner extends Model
             $model->slug = \Str::slug($model->title_uz);
         });
         static::deleting(function ($model) {
-            if(file_exists('/'.$model->image)){
-                unlink('/'.$model->image);
+            if(file_exists(public_path($model->image))){
+                unlink(public_path($model->image));
             }
         });
     }

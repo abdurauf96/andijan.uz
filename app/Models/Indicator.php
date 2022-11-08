@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class ReceptionTime extends Model
+class Indicator extends Model
 {
     use LogsActivity;
 
@@ -15,7 +15,7 @@ class ReceptionTime extends Model
      *
      * @var string
      */
-    protected $table = 'reception_times';
+    protected $table = 'indicators';
 
     /**
     * The database primary key value.
@@ -29,14 +29,14 @@ class ReceptionTime extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'image'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'file'];
 
     protected static function boot()
     {
         parent::boot();
         static::deleting(function ($model) {
-            if(file_exists(public_path($model->image))){
-                unlink(public_path($model->image));
+            if(file_exists(public_path($model->file))){
+                unlink(public_path($model->file));
             }
         });
     }

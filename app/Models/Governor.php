@@ -36,8 +36,8 @@ class Governor extends Model
         parent::boot();
 
         static::deleting(function ($model) {
-            if(file_exists('admin/images/governors/'.$model->image)){
-                unlink('admin/images/governors/'.$model->image);
+            if(file_exists(public_path($model->image))){
+                unlink(public_path($model->image));
             }
         });
     }

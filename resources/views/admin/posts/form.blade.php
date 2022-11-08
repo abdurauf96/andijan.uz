@@ -56,7 +56,7 @@
 <div class="form-group{{ $errors->has('image') ? 'has-error' : ''}}">
     <label for="image" class="control-label">{{ 'Yangilik turi' }}</label>
     <select name="type" class="form-control">
-        <option>Odatiy</option>
+        <option value="">Odatiy</option>
         <option @isset($post) {{ $post->type ==1 ? 'selected' : '' }} @endisset value="1">Andijon</option>
         <option @isset($post) {{ $post->type ==2 ? 'selected' : '' }} @endisset value="2">Muxim</option>
     </select>

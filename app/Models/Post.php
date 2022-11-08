@@ -38,7 +38,7 @@ class Post extends Model
         'body_uz', 'body_ru', 'body_en'];
 
     protected $attributes=[
-        'view'=>0
+        'view'=>0,
     ];
 
     public function scopeType($query, $type){
@@ -52,8 +52,8 @@ class Post extends Model
             $model->slug = \Str::slug($model->title_uz);
         });
         static::deleting(function ($model) {
-            if(file_exists('admin/images/posts/'.$model->image)){
-                unlink('admin/images/posts/'.$model->image);
+            if(file_exists(public_path($model->image))){
+                unlink(public_path($model->image));
             }
         });
     }

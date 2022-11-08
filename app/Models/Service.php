@@ -38,8 +38,8 @@ class Service extends Model
             $model->slug = \Str::slug($model->title_uz);
         });
         static::deleting(function ($model) {
-            if(file_exists('admin/images/services/'.$model->image)){
-                unlink('admin/images/services/'.$model->image);
+            if(file_exists(public_path($model->image))){
+                unlink(public_path($model->image));
             }
         });
     }

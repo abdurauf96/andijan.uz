@@ -35,8 +35,8 @@ class Document extends Model
     {
         parent::boot();
         static::deleting(function ($model) {
-            if(file_exists('admin/images/documents/'.$model->image)){
-                unlink('admin/images/documents/'.$model->image);
+            if(file_exists(public_path($model->image))){
+                unlink(public_path($model->image));
             }
         });
     }

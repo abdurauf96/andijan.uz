@@ -35,8 +35,8 @@ class OldDocument extends Model
     {
         parent::boot();
         static::deleting(function ($model) {
-            if(file_exists('admin/files/old-documents/'.$model->file)){
-                unlink('admin/files/old-documents/'.$model->file);
+            if(file_exists(public_path($model->file))){
+                unlink(public_path($model->file));
             }
         });
     }

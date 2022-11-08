@@ -35,8 +35,8 @@ class Decision extends Model
     {
         parent::boot();
         static::deleting(function ($model) {
-            if(file_exists('admin/files/decisions/'.$model->file)){
-                unlink('admin/files/decisions/'.$model->file);
+            if(file_exists(public_path($model->file))){
+                unlink(public_path($model->file));
             }
         });
     }

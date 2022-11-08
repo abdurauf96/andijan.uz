@@ -262,6 +262,21 @@
                 }
             }
         },
+        "/indicators": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Iqtisodiy ko'rsatkichlar",
+                "description": "Returns list of indicators",
+                "operationId": "getIndicators",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/info-categories": {
             "get": {
                 "tags": [
@@ -715,6 +730,10 @@
         {
             "name": "Viloyat hokimligi",
             "description": "Viloyat hokimligi bo'limi uchun API Endpointlar"
+        },
+        {
+            "name": "Viloyat haqida",
+            "description": "Viloyat haqida bo'limi uchun API Endpointlar"
         }
     ]
 }

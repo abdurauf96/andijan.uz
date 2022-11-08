@@ -78,3 +78,6 @@ Route::get('rekvizits', [\App\Http\Controllers\Api\RekvizitsController::class, '
 Route::get('reception-times', [\App\Http\Controllers\Api\ReceptionTimesController::class, 'getAll']);
 Route::get('plans', [\App\Http\Controllers\Api\PlansController::class, 'getAll']);
 Route::get('discussions', [\App\Http\Controllers\Api\DiscussionsController::class, 'getAll']);
+
+/* Viloyat haqida bo'limi */
+Route::get('indicators', [\App\Http\Controllers\Api\IndicatorsController::class, 'getAll']);

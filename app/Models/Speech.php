@@ -35,11 +35,11 @@ class Speech extends Model
     {
         parent::boot();
         static::deleting(function ($model) {
-            if(file_exists('admin/images/speeches/'.$model->image)){
-                unlink('admin/images/speeches/'.$model->image);
+            if(file_exists(public_path($model->image))){
+                unlink(public_path($model->image));
             }
-            if(file_exists('admin/videos/speeches/'.$model->file)){
-                unlink('admin/videos/speeches/'.$model->file);
+            if(file_exists(public_path($model->file))){
+                unlink(public_path($model->file));
             }
         });
     }

@@ -38,8 +38,8 @@ class InfoCategory extends Model
             $model->slug = \Str::slug($model->title_uz);
         });
         static::deleting(function ($model) {
-            if(file_exists('admin/images/info-categories/'.$model->image)){
-                unlink('admin/images/info-categories/'.$model->image);
+            if(file_exists(public_path($model->image))){
+                unlink(public_path($model->image));
             }
         });
     }
