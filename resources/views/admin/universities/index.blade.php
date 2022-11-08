@@ -19,14 +19,14 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">%%crudNameCap%%</li>
+                                <li class="breadcrumb-item active">Universities</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4> %%crudNameCap%% </h4>
+                        <h4> Universities </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/%%routeGroup%%%%viewName%%/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
+                            <a href="{{ url('/admin/universities/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
                         </div>
                     </div>
 
@@ -35,29 +35,29 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>%%formHeadingHtml%%<th>Actions</th>
+                                        <th>#</th><th>Title Uz</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($%%crudName%% as $item)
+                                @foreach($universities as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        %%formBodyHtml%%
+                                        <td>{{ $item->title_uz }}</td>
                                         <td>
-                                            <a class="btn btn-icon btn-primary" href="{{ url('/%%routeGroup%%%%viewName%%/' . $item->%%primaryKey%%) }}" title="View %%modelName%%"><i class="fas fa-eye"></i></a>
-                                            <a class="btn btn-icon btn-info" href="{{ url('/%%routeGroup%%%%viewName%%/' . $item->%%primaryKey%% . '/edit') }}" title="Edit %%modelName%%"><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/universities/' . $item->id) }}" title="View University"><i class="fas fa-eye"></i></a>
+                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/universities/' . $item->id . '/edit') }}" title="Edit University"><i class="far fa-edit"></i></a>
 
-                                            <form method="POST" action="{{ url('/%%routeGroup%%%%viewName%%' . '/' . $item->%%primaryKey%%) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('/admin/universities' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete %%modelName%%" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete University" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {{ $%%crudName%%->links() }} </div>
+                            <div class="pagination-wrapper"> {{ $universities->links() }} </div>
                         </div>
 
                     </div>

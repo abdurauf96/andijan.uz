@@ -735,6 +735,21 @@
                     }
                 }
             }
+        },
+        "/universities": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Oliy o’quv yurtlari",
+                "description": "Returns list of universities",
+                "operationId": "getUniversities",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
         }
     },
     "tags": [

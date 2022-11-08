@@ -29,6 +29,7 @@ use App\Http\Controllers\Admin\PlansController;
 use App\Http\Controllers\Admin\DiscussionsController;
 use App\Http\Controllers\Admin\IndicatorsController;
 use App\Http\Controllers\Admin\ParksController;
+use App\Http\Controllers\Admin\UniversitiesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -99,6 +100,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('discussions', DiscussionsController::class);
     Route::resource('indicators', IndicatorsController::class);
     Route::resource('parks', ParksController::class);
+    Route::resource('universities', UniversitiesController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -107,5 +109,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
-
-

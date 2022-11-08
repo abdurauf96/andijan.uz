@@ -1,14 +1,14 @@
 <?php
 
-namespace DummyNamespace;
+namespace App\Http\Controllers\Admin;
 
-use DummyRootNamespaceHttp\Requests;
-use DummyRootNamespaceHttp\Controllers\Controller;
+use App\Http\Controllers\Controller;
+use App\Http\Requests;
 
-use DummyRootNamespace{{modelNamespace}}{{modelName}};
+use App\Models\University;
 use Illuminate\Http\Request;
 
-class DummyClass extends Controller
+class UniversitiesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class DummyClass extends Controller
      */
     public function index(Request $request)
     {
-        ${{crudName}} = {{modelName}}::latest()->paginate(10);
-        return view('{{viewPath}}{{viewName}}.index', compact('{{crudName}}'));
+        $universities = University::latest()->paginate(10);
+        return view('admin.universities.index', compact('universities'));
     }
 
     /**
@@ -28,7 +28,7 @@ class DummyClass extends Controller
      */
     public function create()
     {
-        return view('{{viewPath}}{{viewName}}.create');
+        return view('admin.universities.create');
     }
 
     /**
@@ -40,12 +40,14 @@ class DummyClass extends Controller
      */
     public function store(Request $request)
     {
-        {{validationRules}}
+        $this->validate($request, [
+			'title_uz' => 'required'
+		]);
         $requestData = $request->all();
-        {{fileSnippet}}
-        {{modelName}}::create($requestData);
 
-        return redirect('{{routeGroup}}{{viewName}}')->with('flash_message', '{{modelName}} added!');
+        University::create($requestData);
+
+        return redirect('admin/universities')->with('flash_message', 'University added!');
     }
 
     /**
@@ -57,9 +59,9 @@ class DummyClass extends Controller
      */
     public function show($id)
     {
-        ${{crudNameSingular}} = {{modelName}}::findOrFail($id);
+        $university = University::findOrFail($id);
 
-        return view('{{viewPath}}{{viewName}}.show', compact('{{crudNameSingular}}'));
+        return view('admin.universities.show', compact('university'));
     }
 
     /**
@@ -71,9 +73,9 @@ class DummyClass extends Controller
      */
     public function edit($id)
     {
-        ${{crudNameSingular}} = {{modelName}}::findOrFail($id);
+        $university = University::findOrFail($id);
 
-        return view('{{viewPath}}{{viewName}}.edit', compact('{{crudNameSingular}}'));
+        return view('admin.universities.edit', compact('university'));
     }
 
     /**
@@ -86,13 +88,15 @@ class DummyClass extends Controller
      */
     public function update(Request $request, $id)
     {
-        {{validationRules}}
+        $this->validate($request, [
+			'title_uz' => 'required'
+		]);
         $requestData = $request->all();
-        {{fileSnippet}}
-        ${{crudNameSingular}} = {{modelName}}::findOrFail($id);
-        ${{crudNameSingular}}->update($requestData);
 
-        return redirect('{{routeGroup}}{{viewName}}')->with('flash_message', '{{modelName}} updated!');
+        $university = University::findOrFail($id);
+        $university->update($requestData);
+
+        return redirect('admin/universities')->with('flash_message', 'University updated!');
     }
 
     /**
@@ -104,8 +108,8 @@ class DummyClass extends Controller
      */
     public function destroy($id)
     {
-        {{modelName}}::destroy($id);
+        University::destroy($id);
 
-        return redirect('{{routeGroup}}{{viewName}}')->with('flash_message', '{{modelName}} deleted!');
+        return redirect('admin/universities')->with('flash_message', 'University deleted!');
     }
 }
