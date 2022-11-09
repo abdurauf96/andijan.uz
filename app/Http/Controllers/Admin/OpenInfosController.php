@@ -5,11 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
-use App\Models\Council;
-use App\Models\Member;
+use App\Models\OpenInfo;
 use Illuminate\Http\Request;
 
-class MembersController extends Controller
+class OpenInfosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +17,8 @@ class MembersController extends Controller
      */
     public function index(Request $request)
     {
-        $members = Member::latest()->paginate(10);
-        return view('admin.members.index', compact('members'));
+        $openinfos = OpenInfo::latest()->paginate(10);
+        return view('admin.open-infos.index', compact('openinfos'));
     }
 
     /**
@@ -29,8 +28,7 @@ class MembersController extends Controller
      */
     public function create()
     {
-        $councils = Council::all();
-        return view('admin.members.create', compact('councils'));
+        return view('admin.open-infos.create');
     }
 
     /**
@@ -43,21 +41,13 @@ class MembersController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'name_uz' => 'required'
+			'title_uz' => 'required'
 		]);
         $requestData = $request->all();
+        
+        OpenInfo::create($requestData);
 
-        if($request->hasFile('image')){
-            $file=$request->file('image');
-            $image=time().$file->getClientOriginalName();
-            $path='admin/images/members';
-            $file->move(public_path($path), $image);
-            $requestData['image']=$path.'/'.$image;
-        }
-
-        Member::create($requestData);
-
-        return redirect('admin/members')->with('flash_message', 'Member added!');
+        return redirect('admin/open-infos')->with('flash_message', 'OpenInfo added!');
     }
 
     /**
@@ -69,9 +59,9 @@ class MembersController extends Controller
      */
     public function show($id)
     {
-        $member = Member::findOrFail($id);
+        $openinfo = OpenInfo::findOrFail($id);
 
-        return view('admin.members.show', compact('member'));
+        return view('admin.open-infos.show', compact('openinfo'));
     }
 
     /**
@@ -83,9 +73,9 @@ class MembersController extends Controller
      */
     public function edit($id)
     {
-        $member = Member::findOrFail($id);
-        $councils = Council::all();
-        return view('admin.members.edit', compact('member', 'councils'));
+        $openinfo = OpenInfo::findOrFail($id);
+
+        return view('admin.open-infos.edit', compact('openinfo'));
     }
 
     /**
@@ -99,22 +89,14 @@ class MembersController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-			'name_uz' => 'required'
+			'title_uz' => 'required'
 		]);
         $requestData = $request->all();
+        
+        $openinfo = OpenInfo::findOrFail($id);
+        $openinfo->update($requestData);
 
-        if($request->hasFile('image')){
-            $file=$request->file('image');
-            $image=time().$file->getClientOriginalName();
-            $path='admin/images/members';
-            $file->move(public_path($path), $image);
-            $requestData['image']=$path.'/'.$image;
-        }
-
-        $member = Member::findOrFail($id);
-        $member->update($requestData);
-
-        return redirect('admin/members')->with('flash_message', 'Member updated!');
+        return redirect('admin/open-infos')->with('flash_message', 'OpenInfo updated!');
     }
 
     /**
@@ -126,8 +108,8 @@ class MembersController extends Controller
      */
     public function destroy($id)
     {
-        Member::destroy($id);
+        OpenInfo::destroy($id);
 
-        return redirect('admin/members')->with('flash_message', 'Member deleted!');
+        return redirect('admin/open-infos')->with('flash_message', 'OpenInfo deleted!');
     }
 }

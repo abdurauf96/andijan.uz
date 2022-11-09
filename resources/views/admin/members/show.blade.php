@@ -34,7 +34,16 @@
                                     <tr>
                                         <th>ID</th><td>{{ $member->id }}</td>
                                     </tr>
-                                    <tr><th> Name Uz </th><td> {{ $member->name_uz }} </td></tr><tr><th> Name Ru </th><td> {{ $member->name_ru }} </td></tr><tr><th> Name En </th><td> {{ $member->name_en }} </td></tr>
+                                    <tr><th> Name Uz </th><td> {{ $member->name_uz }} </td></tr>
+                                    <tr><th> Name Ru </th><td> {{ $member->name_ru }} </td></tr>
+                                    <tr><th> Name En </th><td> {{ $member->name_en }} </td></tr>
+                                    <tr><th> Description Uz </th><td> {{ $member->description_uz }} </td></tr>
+                                    <tr><th> Description Ru </th><td> {{ $member->description_ru }} </td></tr>
+                                    <tr><th> Description En </th><td> {{ $member->description_en }} </td></tr>
+                                    <tr><th> Kengash </th><td> {{ $member->council->title_uz }} </td></tr>
+                                    <tr><th> Phone </th><td> {{ $member->phone }} </td></tr>
+                                    <tr><th> EMail </th><td> {{ $member->email }} </td></tr>
+                                    <tr><th> Image </th><td><img src="/{{ $member->image }}" width="100" alt="">  </td></tr>
                                 </tbody>
                             </table>
                         </div>

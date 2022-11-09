@@ -84,3 +84,6 @@ Route::get('indicators', [\App\Http\Controllers\Api\IndicatorsController::class,
 Route::get('parks', [\App\Http\Controllers\Api\ParksController::class, 'getAll']);
 Route::get('universities', [\App\Http\Controllers\Api\UniversitiesController::class, 'getAll']);
 Route::get('buildings', [\App\Http\Controllers\Api\BuildingsController::class, 'getAll']);
+//openinfos
+Route::get('open-infos', [\App\Http\Controllers\Api\OpenInfosController::class, 'getAll']);
+Route::get('open-infos/{slug}', [\App\Http\Controllers\Api\OpenInfosController::class, 'getOne']);

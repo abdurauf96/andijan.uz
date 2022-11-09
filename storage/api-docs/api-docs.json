@@ -352,6 +352,50 @@
                 }
             }
         },
+        "/open-infos": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Ochiq malumotlar",
+                "description": "Returns list of open infos",
+                "operationId": "getOPenInfos",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/open-infos/{slug}": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Ochiq malumotlar SLUG bo'yicha",
+                "description": "Returns one open-infos",
+                "operationId": "getOneOpenInfo",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "ochiq malumot Slug",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if open-info not found"
+                    }
+                }
+            }
+        },
         "/organizations": {
             "get": {
                 "tags": [
