@@ -72,6 +72,7 @@
                     <li><a class="nav-link" href="{{ route('admin.indicators.index') }}">Iqtisodiy ko'rsatkichlar</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.parks.index') }}">Istirohat bog’ari</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.universities.index') }}">Oliy o’quv yurtlari</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.buildings.index') }}">Bino va Inshootlar</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

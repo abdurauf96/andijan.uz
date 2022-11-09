@@ -70,6 +70,21 @@
                 }
             }
         },
+        "/buildings": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Bino Va Inshootlar",
+                "description": "Returns list of buildings",
+                "operationId": "getBuildings",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/contact": {
             "get": {
                 "tags": [

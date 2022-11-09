@@ -83,3 +83,4 @@ Route::get('discussions', [\App\Http\Controllers\Api\DiscussionsController::clas
 Route::get('indicators', [\App\Http\Controllers\Api\IndicatorsController::class, 'getAll']);
 Route::get('parks', [\App\Http\Controllers\Api\ParksController::class, 'getAll']);
 Route::get('universities', [\App\Http\Controllers\Api\UniversitiesController::class, 'getAll']);
+Route::get('buildings', [\App\Http\Controllers\Api\BuildingsController::class, 'getAll']);
