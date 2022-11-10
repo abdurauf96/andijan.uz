@@ -58,6 +58,5 @@ class OpenInfosController extends Controller
 
         return $openInfo ? new OpenInfoResource($openInfo) : response()->json('Open Info not found', 404);
 
-
     }
 }

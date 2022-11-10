@@ -74,6 +74,7 @@
                     <li><a class="nav-link" href="{{ route('admin.universities.index') }}">Oliy o’quv yurtlari</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.buildings.index') }}">Bino va Inshootlar</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.open-infos.index') }}">Ochiq ma'lumotlar</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.investments.index') }}">Investitsiyalar</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

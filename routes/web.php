@@ -32,6 +32,7 @@ use App\Http\Controllers\Admin\ParksController;
 use App\Http\Controllers\Admin\UniversitiesController;
 use App\Http\Controllers\Admin\BuildingsController;
 use App\Http\Controllers\Admin\OpenInfosController;
+use App\Http\Controllers\Admin\InvestmentsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -105,6 +106,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('universities', UniversitiesController::class);
     Route::resource('buildings', BuildingsController::class);
     Route::resource('open-infos', OpenInfosController::class);
+    Route::resource('investments', InvestmentsController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -113,5 +115,6 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+
 
 

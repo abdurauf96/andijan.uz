@@ -307,6 +307,50 @@
                 }
             }
         },
+        "/investments": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Investitsiyalar",
+                "description": "Returns list of investments",
+                "operationId": "getInvestMents",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/investments/{slug}": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Investitsiyalar SLUG bo'yicha",
+                "description": "Returns one investments",
+                "operationId": "getOneInvestment",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "investment Slug",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if investments not found"
+                    }
+                }
+            }
+        },
         "/sites": {
             "get": {
                 "tags": [
