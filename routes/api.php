@@ -94,3 +94,5 @@ Route::get('investments/{slug}', [\App\Http\Controllers\Api\InvestmentsControlle
 //tourisms
 Route::get('tourisms', [\App\Http\Controllers\Api\TourismsController::class, 'getAll']);
 Route::get('tourisms/{slug}', [\App\Http\Controllers\Api\TourismsController::class, 'getOne']);
+
+Route::get('vacancies', [\App\Http\Controllers\Api\VacanciesController::class, 'getAll']);

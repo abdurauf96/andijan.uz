@@ -897,6 +897,21 @@
                     }
                 }
             }
+        },
+        "/vacancies": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Bo'sh ish o'rinlari",
+                "description": "Returns list of vacancies",
+                "operationId": "getVacancies",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
         }
     },
     "tags": [

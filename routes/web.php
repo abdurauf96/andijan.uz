@@ -34,6 +34,7 @@ use App\Http\Controllers\Admin\BuildingsController;
 use App\Http\Controllers\Admin\OpenInfosController;
 use App\Http\Controllers\Admin\InvestmentsController;
 use App\Http\Controllers\Admin\TourismsController;
+use App\Http\Controllers\Admin\VacanciesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -111,6 +112,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::post('investments/image-upload', [InvestmentsController::class, 'imageUpload'])->name('investmentImageUpload');
     Route::resource('tourisms', TourismsController::class);
     Route::post('tourisms/image-upload', [TourismsController::class, 'imageUpload'])->name('tourismImageUpload');
+    Route::resource('vacancies', VacanciesController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -119,6 +121,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+
 
 
 
