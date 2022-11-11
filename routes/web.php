@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\GeneralInfosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\InfoCategoriesController;
@@ -108,11 +109,17 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('universities', UniversitiesController::class);
     Route::resource('buildings', BuildingsController::class);
     Route::resource('open-infos', OpenInfosController::class);
+
     Route::resource('investments', InvestmentsController::class);
     Route::post('investments/image-upload', [InvestmentsController::class, 'imageUpload'])->name('investmentImageUpload');
+
     Route::resource('tourisms', TourismsController::class);
     Route::post('tourisms/image-upload', [TourismsController::class, 'imageUpload'])->name('tourismImageUpload');
+
     Route::resource('vacancies', VacanciesController::class);
+
+    Route::resource('general-infos', GeneralInfosController::class);
+    Route::post('general-infos/image-upload', [GeneralInfosController::class, 'imageUpload'])->name('generalInfoImageUpload');
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -121,8 +128,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
-
-
-
-
-

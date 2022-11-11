@@ -233,6 +233,21 @@
                 }
             }
         },
+        "/general-info": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Umumiy ma'lumotlar",
+                "description": "Returns one general-infos",
+                "operationId": "getGeneralinfos",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/governors": {
             "get": {
                 "tags": [

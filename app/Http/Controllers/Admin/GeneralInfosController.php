@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
-use App\Models\Tourism;
+use App\Models\GeneralInfo;
 use Illuminate\Http\Request;
 
-class TourismsController extends Controller
+class GeneralInfosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class TourismsController extends Controller
      */
     public function index(Request $request)
     {
-        $tourisms = Tourism::latest()->paginate(10);
-        return view('admin.tourisms.index', compact('tourisms'));
+        $generalinfos = GeneralInfo::latest()->paginate(10);
+        return view('admin.general-infos.index', compact('generalinfos'));
     }
 
     /**
@@ -28,7 +28,7 @@ class TourismsController extends Controller
      */
     public function create()
     {
-        return view('admin.tourisms.create');
+        return view('admin.general-infos.create');
     }
 
     /**
@@ -40,20 +40,12 @@ class TourismsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-			'title_uz' => 'required'
-		]);
-        $requestData = $request->all();
-        if($request->hasFile('image')){
-            $file=$request->file('image');
-            $image=time().$file->getClientOriginalName();
-            $path='admin/images/tourisms';
-            $file->move(public_path($path), $image);
-            $requestData['image']=$path.'/'.$image;
-        }
-        Tourism::create($requestData);
 
-        return redirect('admin/tourisms')->with('flash_message', 'Tourism added!');
+        $requestData = $request->all();
+
+        GeneralInfo::create($requestData);
+
+        return redirect('admin/general-infos')->with('flash_message', 'GeneralInfo added!');
     }
 
     /**
@@ -65,9 +57,9 @@ class TourismsController extends Controller
      */
     public function show($id)
     {
-        $tourism = Tourism::findOrFail($id);
+        $generalinfo = GeneralInfo::findOrFail($id);
 
-        return view('admin.tourisms.show', compact('tourism'));
+        return view('admin.general-infos.show', compact('generalinfo'));
     }
 
     /**
@@ -79,9 +71,9 @@ class TourismsController extends Controller
      */
     public function edit($id)
     {
-        $tourism = Tourism::findOrFail($id);
+        $generalinfo = GeneralInfo::findOrFail($id);
 
-        return view('admin.tourisms.edit', compact('tourism'));
+        return view('admin.general-infos.edit', compact('generalinfo'));
     }
 
     /**
@@ -94,21 +86,13 @@ class TourismsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-			'title_uz' => 'required'
-		]);
-        $requestData = $request->all();
-        if($request->hasFile('image')){
-            $file=$request->file('image');
-            $image=time().$file->getClientOriginalName();
-            $path='admin/images/tourisms';
-            $file->move(public_path($path), $image);
-            $requestData['image']=$path.'/'.$image;
-        }
-        $tourism = Tourism::findOrFail($id);
-        $tourism->update($requestData);
 
-        return redirect('admin/tourisms')->with('flash_message', 'Tourism updated!');
+        $requestData = $request->all();
+
+        $generalinfo = GeneralInfo::findOrFail($id);
+        $generalinfo->update($requestData);
+
+        return redirect('admin/general-infos')->with('flash_message', 'GeneralInfo updated!');
     }
 
     /**
@@ -120,9 +104,9 @@ class TourismsController extends Controller
      */
     public function destroy($id)
     {
-        Tourism::destroy($id);
+        GeneralInfo::destroy($id);
 
-        return redirect('admin/tourisms')->with('flash_message', 'Tourism deleted!');
+        return redirect('admin/general-infos')->with('flash_message', 'GeneralInfo deleted!');
     }
 
     public function imageUpload(Request $request)
@@ -132,9 +116,9 @@ class TourismsController extends Controller
             $fileName = pathinfo($originName, PATHINFO_FILENAME);
             $extension = $request->file('upload')->getClientOriginalExtension();
             $fileName = $fileName.'_'.time().'.'.$extension;
-            $request->file('upload')->move(public_path('admin/images/tourisms/'), $fileName);
+            $request->file('upload')->move(public_path('admin/images/general-infos/'), $fileName);
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('admin/images/tourisms/'.$fileName);
+            $url = asset('admin/images/general-infos/'.$fileName);
             $msg = 'Image successfully uploaded';
             $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
 
@@ -142,5 +126,4 @@ class TourismsController extends Controller
             echo $response;
         }
     }
-
 }
