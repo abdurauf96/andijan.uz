@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
-use App\Models\Investment;
+use App\Models\Tourism;
 use Illuminate\Http\Request;
 
-class InvestmentsController extends Controller
+class TourismsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class InvestmentsController extends Controller
      */
     public function index(Request $request)
     {
-        $investments = Investment::latest()->paginate(10);
-        return view('admin.investments.index', compact('investments'));
+        $tourisms = Tourism::latest()->paginate(10);
+        return view('admin.tourisms.index', compact('tourisms'));
     }
 
     /**
@@ -28,7 +28,7 @@ class InvestmentsController extends Controller
      */
     public function create()
     {
-        return view('admin.investments.create');
+        return view('admin.tourisms.create');
     }
 
     /**
@@ -47,13 +47,13 @@ class InvestmentsController extends Controller
         if($request->hasFile('image')){
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
-            $path='admin/images/investments';
+            $path='admin/images/tourisms';
             $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
-        Investment::create($requestData);
+        Tourism::create($requestData);
 
-        return redirect('admin/investments')->with('flash_message', 'Investment added!');
+        return redirect('admin/tourisms')->with('flash_message', 'Tourism added!');
     }
 
     /**
@@ -65,9 +65,9 @@ class InvestmentsController extends Controller
      */
     public function show($id)
     {
-        $investment = Investment::findOrFail($id);
+        $tourism = Tourism::findOrFail($id);
 
-        return view('admin.investments.show', compact('investment'));
+        return view('admin.tourisms.show', compact('tourism'));
     }
 
     /**
@@ -79,9 +79,9 @@ class InvestmentsController extends Controller
      */
     public function edit($id)
     {
-        $investment = Investment::findOrFail($id);
+        $tourism = Tourism::findOrFail($id);
 
-        return view('admin.investments.edit', compact('investment'));
+        return view('admin.tourisms.edit', compact('tourism'));
     }
 
     /**
@@ -101,14 +101,14 @@ class InvestmentsController extends Controller
         if($request->hasFile('image')){
             $file=$request->file('image');
             $image=time().$file->getClientOriginalName();
-            $path='admin/images/investments';
+            $path='admin/images/tourisms';
             $file->move(public_path($path), $image);
             $requestData['image']=$path.'/'.$image;
         }
-        $investment = Investment::findOrFail($id);
-        $investment->update($requestData);
+        $tourism = Tourism::findOrFail($id);
+        $tourism->update($requestData);
 
-        return redirect('admin/investments')->with('flash_message', 'Investment updated!');
+        return redirect('admin/tourisms')->with('flash_message', 'Tourism updated!');
     }
 
     /**
@@ -120,26 +120,8 @@ class InvestmentsController extends Controller
      */
     public function destroy($id)
     {
-        Investment::destroy($id);
+        Tourism::destroy($id);
 
-        return redirect('admin/investments')->with('flash_message', 'Investment deleted!');
-    }
-
-    public function imageUpload(Request $request)
-    {
-        if($request->hasFile('upload')) {
-            $originName = $request->file('upload')->getClientOriginalName();
-            $fileName = pathinfo($originName, PATHINFO_FILENAME);
-            $extension = $request->file('upload')->getClientOriginalExtension();
-            $fileName = $fileName.'_'.time().'.'.$extension;
-            $request->file('upload')->move(public_path('admin/images/investments/'), $fileName);
-            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('admin/images/investments/'.$fileName);
-            $msg = 'Image successfully uploaded';
-            $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
-
-            @header('Content-type: text/html; charset=utf-8');
-            echo $response;
-        }
+        return redirect('admin/tourisms')->with('flash_message', 'Tourism deleted!');
     }
 }

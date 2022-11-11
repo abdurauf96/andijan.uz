@@ -839,6 +839,50 @@
                 }
             }
         },
+        "/tourisms": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Turizm",
+                "description": "Returns list of tourisms",
+                "operationId": "getTourisms",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/tourisms/{slug}": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Turizm SLUG bo'yicha",
+                "description": "Returns one tourism",
+                "operationId": "getOneTourism",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "tourism Slug",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if tourisms not found"
+                    }
+                }
+            }
+        },
         "/universities": {
             "get": {
                 "tags": [

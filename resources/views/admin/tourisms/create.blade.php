@@ -10,15 +10,15 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"> Dashboard</a></li>
-                                <li class="breadcrumb-item "><a href="{{ url('/admin/investments') }}">Investments</a></li>
+                                <li class="breadcrumb-item "><a href="{{ url('/admin/tourisms') }}">Tourisms</a></li>
                                 <li class="breadcrumb-item active" aria-current="page"> Create</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4>Create New Investment </h4>
+                        <h4>Create New Tourism </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/admin/investments') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                            <a href="{{ url('/admin/tourisms') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -29,10 +29,10 @@
                                 @endforeach
                             </ul>
                         @endif
-                        <form method="POST" action="{{ url('/admin/investments') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/admin/tourisms') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             @csrf
 
-                            @include ('admin.investments.form', ['formMode' => 'create'])
+                            @include ('admin.tourisms.form', ['formMode' => 'create'])
 
                         </form>
 
@@ -46,15 +46,15 @@
     <script src="/admin/assets/bundles/ckeditor/ckeditor.js"></script>
     <script type="text/javascript">
         CKEDITOR.replace( 'body_uz',{
-            filebrowserUploadUrl: "{{route('admin.investmentImageUpload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadUrl: "{{route('admin.tourismImageUpload', ['_token' => csrf_token() ])}}",
             filebrowserUploadMethod: 'form'
         });
         CKEDITOR.replace( 'body_ru', {
-            filebrowserUploadUrl: "{{route('admin.investmentImageUpload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadUrl: "{{route('admin.tourismImageUpload', ['_token' => csrf_token() ])}}",
             filebrowserUploadMethod: 'form'
         });
         CKEDITOR.replace( 'body_en', {
-            filebrowserUploadUrl: "{{route('admin.investmentImageUpload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadUrl: "{{route('admin.tourismImageUpload', ['_token' => csrf_token() ])}}",
             filebrowserUploadMethod: 'form'
         });
     </script>

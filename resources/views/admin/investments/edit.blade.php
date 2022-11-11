@@ -46,8 +46,17 @@
 @section('js')
     <script src="/admin/assets/bundles/ckeditor/ckeditor.js"></script>
     <script type="text/javascript">
-        CKEDITOR.replace( 'body_uz');
-        CKEDITOR.replace( 'body_ru',);
-        CKEDITOR.replace( 'body_en');
+        CKEDITOR.replace( 'body_uz',{
+            filebrowserUploadUrl: "{{route('admin.investmentImageUpload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
+        CKEDITOR.replace( 'body_ru', {
+            filebrowserUploadUrl: "{{route('admin.investmentImageUpload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
+        CKEDITOR.replace( 'body_en', {
+            filebrowserUploadUrl: "{{route('admin.investmentImageUpload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
     </script>
 @endsection

@@ -91,3 +91,6 @@ Route::get('open-infos/{slug}', [\App\Http\Controllers\Api\OpenInfosController::
 //investments
 Route::get('investments', [\App\Http\Controllers\Api\InvestmentsController::class, 'getAll']);
 Route::get('investments/{slug}', [\App\Http\Controllers\Api\InvestmentsController::class, 'getOne']);
+//tourisms
+Route::get('tourisms', [\App\Http\Controllers\Api\TourismsController::class, 'getAll']);
+Route::get('tourisms/{slug}', [\App\Http\Controllers\Api\TourismsController::class, 'getOne']);
