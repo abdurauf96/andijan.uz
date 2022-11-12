@@ -248,6 +248,50 @@
                 }
             }
         },
+        "/governments": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "Hukumat",
+                "description": "Returns list of governments",
+                "operationId": "getGovernments",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/governments/{slug}": {
+            "get": {
+                "tags": [
+                    "Viloyat haqida"
+                ],
+                "summary": "hukumat slug bo'yicha",
+                "description": "Returns one government",
+                "operationId": "getOneGovernment",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "government SLUG",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if government not found"
+                    }
+                }
+            }
+        },
         "/governors": {
             "get": {
                 "tags": [
@@ -596,6 +640,21 @@
                 "summary": "Get list of special posts",
                 "description": "Returns 3 special posts",
                 "operationId": "getSpecialPosts",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/posts/randomly": {
+            "get": {
+                "tags": [
+                    "Bosh sahifa"
+                ],
+                "summary": "Get list of posts randomly",
+                "description": "Returns 8 posts randomly",
+                "operationId": "getRandomlyPosts",
                 "responses": {
                     "200": {
                         "description": "Successful operation"

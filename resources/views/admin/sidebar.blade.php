@@ -78,6 +78,7 @@
                     <li><a class="nav-link" href="{{ route('admin.tourisms.index') }}">Turizm</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.vacancies.index') }}">Bo’sh ish o’rinlari</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.general-infos.index') }}">Umumiy ma'lumotlar</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.governments.index') }}">Hukumat</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

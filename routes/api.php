@@ -23,6 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('posts', [\App\Http\Controllers\Api\PostsController::class, 'getAll']);
 Route::get('posts/special', [\App\Http\Controllers\Api\PostsController::class, 'getSpecialPosts']);
 Route::get('posts/andijan', [\App\Http\Controllers\Api\PostsController::class, 'getAndijanPosts']);
+Route::get('posts/randomly', [\App\Http\Controllers\Api\PostsController::class, 'getPostsRandomly']);
 Route::get('posts/{slug}', [\App\Http\Controllers\Api\PostsController::class, 'getOne']);
 
 Route::get('info-categories', [\App\Http\Controllers\Api\InfoCategoriesController::class, 'getAll']);
@@ -97,3 +98,6 @@ Route::get('tourisms/{slug}', [\App\Http\Controllers\Api\TourismsController::cla
 
 Route::get('vacancies', [\App\Http\Controllers\Api\VacanciesController::class, 'getAll']);
 Route::get('general-info', [\App\Http\Controllers\Api\GeneralInfosController::class, 'getAll']);
+//governments
+Route::get('governments', [\App\Http\Controllers\Api\GovernmentsController::class, 'getAll']);
+Route::get('governments/{slug}', [\App\Http\Controllers\Api\GovernmentsController::class, 'getOne']);

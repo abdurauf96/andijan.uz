@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\GeneralInfosController;
+use App\Http\Controllers\Admin\GovernmentsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\InfoCategoriesController;
@@ -120,6 +121,9 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('general-infos', GeneralInfosController::class);
     Route::post('general-infos/image-upload', [GeneralInfosController::class, 'imageUpload'])->name('generalInfoImageUpload');
+
+    Route::resource('governments', GovernmentsController::class);
+    Route::post('governments/image-upload', [GovernmentsController::class, 'imageUpload'])->name('governmentImageUpload');
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');

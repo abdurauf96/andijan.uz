@@ -48,6 +48,24 @@ class PostsController extends Controller
 
     /**
      * @OA\Get(
+     *      path="/posts/randomly",
+     *      operationId="getRandomlyPosts",
+     *      tags={"Bosh sahifa"},
+     *      summary="Get list of posts randomly",
+     *      description="Returns 8 posts randomly",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
+    public function getPostsRandomly()
+    {
+        return new PostCollection(Post::inRandomOrder()->limit(8)->get());
+    }
+
+    /**
+     * @OA\Get(
      *      path="/posts/andijan",
      *      operationId="getAndijanPosts",
      *      tags={"Bosh sahifa"},
