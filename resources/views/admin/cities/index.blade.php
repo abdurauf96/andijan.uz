@@ -19,14 +19,14 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Districts</li>
+                                <li class="breadcrumb-item active">Tumanlar</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4> Districts </h4>
+                        <h4> Tuman va shaharlar </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/districts/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
+                            <a href="{{ url('/admin/cities/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
                         </div>
                     </div>
 
@@ -35,29 +35,29 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title Uz</th><th>Title Ru</th><th>Title En</th><th>Actions</th>
+                                        <th>#</th><th>Title Uz</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($districts as $item)
+                                @foreach($cities as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title_uz }}</td><td>{{ $item->title_ru }}</td><td>{{ $item->title_en }}</td>
+                                        <td>{{ $item->title_uz }}</td>
                                         <td>
-                                            <a class="btn btn-icon btn-primary" href="{{ url('/districts/' . $item->id) }}" title="View District"><i class="fas fa-eye"></i></a>
-                                            <a class="btn btn-icon btn-info" href="{{ url('/districts/' . $item->id . '/edit') }}" title="Edit District"><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/cities/' . $item->id) }}" title="View City"><i class="fas fa-eye"></i></a>
+                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/cities/' . $item->id . '/edit') }}" title="Edit City"><i class="far fa-edit"></i></a>
 
-                                            <form method="POST" action="{{ url('/districts' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('/admin/cities' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete District" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete City" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {{ $districts->links() }} </div>
+                            <div class="pagination-wrapper"> {{ $cities->links() }} </div>
                         </div>
 
                     </div>

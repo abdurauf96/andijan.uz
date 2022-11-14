@@ -10,15 +10,15 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"> Dashboard</a></li>
-                                <li class="breadcrumb-item "><a href="{{ url('/districts') }}">Districts</a></li>
+                                <li class="breadcrumb-item "><a href="{{ url('/admin/cities') }}">Cities</a></li>
                                 <li class="breadcrumb-item active" aria-current="page"> Create</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4>Create New District </h4>
+                        <h4>Create New City </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/districts') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                            <a href="{{ url('/admin/cities') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -29,10 +29,10 @@
                                 @endforeach
                             </ul>
                         @endif
-                        <form method="POST" action="{{ url('/districts') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/admin/cities') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             @csrf
 
-                            @include ('admin.districts.form', ['formMode' => 'create'])
+                            @include ('admin.cities.form', ['formMode' => 'create'])
 
                         </form>
 
@@ -41,4 +41,15 @@
             </div>
         </div>
     </div>
+@endsection
+@section('js')
+    <script src="/admin/assets/bundles/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript">
+        CKEDITOR.replace( 'body_uz');
+        CKEDITOR.replace( 'body_ru',);
+        CKEDITOR.replace( 'body_en');
+        CKEDITOR.replace( 'hokim_text_uz');
+        CKEDITOR.replace( 'hokim_text_ru',);
+        CKEDITOR.replace( 'hokim_text_en');
+    </script>
 @endsection

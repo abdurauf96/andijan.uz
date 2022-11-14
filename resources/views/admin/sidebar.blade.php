@@ -82,6 +82,9 @@
                 </ul>
             </li>
             <li class="dropdown ">
+                <a href="{{ route('admin.cities.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Shahar va tumanlar</a>
+            </li>
+            <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</a>
             </li>
         </ul>

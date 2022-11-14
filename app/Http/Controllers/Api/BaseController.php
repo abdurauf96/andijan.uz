@@ -27,6 +27,10 @@ use Illuminate\Http\Request;
  *     name="Viloyat haqida",
  *     description="Viloyat haqida bo'limi uchun API Endpointlar"
  * )
+ * @OA\Tag(
+ *     name="Tuman va shaharlar",
+ *     description="Tuman va shaharlar"
+ * )
  *
  */
 class BaseController extends Controller

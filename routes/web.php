@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CitiesController;
 use App\Http\Controllers\Admin\GeneralInfosController;
 use App\Http\Controllers\Admin\GovernmentsController;
 use Illuminate\Support\Facades\Route;
@@ -124,6 +125,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('governments', GovernmentsController::class);
     Route::post('governments/image-upload', [GovernmentsController::class, 'imageUpload'])->name('governmentImageUpload');
+    Route::resource('cities', CitiesController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');

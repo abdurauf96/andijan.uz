@@ -85,6 +85,50 @@
                 }
             }
         },
+        "/cities": {
+            "get": {
+                "tags": [
+                    "Tuman va shaharlar"
+                ],
+                "summary": "Tuman va shaharlar ",
+                "description": "Returns list of cities",
+                "operationId": "getCities",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/cities/{slug}": {
+            "get": {
+                "tags": [
+                    "Tuman va shaharlar"
+                ],
+                "summary": "Tumanlar Slug bo'yicha",
+                "description": "Returns one city",
+                "operationId": "getOneCity",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "City Slug",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if city not found"
+                    }
+                }
+            }
+        },
         "/contact": {
             "get": {
                 "tags": [
@@ -1000,6 +1044,10 @@
         {
             "name": "Viloyat haqida",
             "description": "Viloyat haqida bo'limi uchun API Endpointlar"
+        },
+        {
+            "name": "Tuman va shaharlar",
+            "description": "Tuman va shaharlar"
         }
     ]
 }
