@@ -41,6 +41,13 @@
         <option @isset($service) {{ $service->type==2 ? 'selected' : '' }} @endisset value="2">Qo'shimcha</option>
     </select>
 </div>
+
+<div class="form-group{{ $errors->has('link') ? 'has-error' : ''}}">
+    <label for="link" class="control-label">{{ 'Link' }}</label>
+    <input class="form-control" name="link" type="text"  value="{{ $service->link ?? ''}}" >
+    {!! $errors->first('link', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('image') ? 'has-error' : ''}}">
     <label for="image" class="control-label">{{ 'Image' }}</label>
     <input class="form-control" name="image" type="file" id="image" value="{{ $service->image ?? ''}}" >
