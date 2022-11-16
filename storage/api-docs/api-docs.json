@@ -11,6 +11,21 @@
         }
     ],
     "paths": {
+        "/agendas": {
+            "get": {
+                "tags": [
+                    "Mahalliy kengash"
+                ],
+                "summary": "Sessiya kun tartibi",
+                "description": "Returns list of agendas",
+                "operationId": "getAgendas",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/andijan": {
             "get": {
                 "tags": [
@@ -1048,6 +1063,10 @@
         {
             "name": "Tuman va shaharlar",
             "description": "Tuman va shaharlar"
+        },
+        {
+            "name": "Mahalliy kengash",
+            "description": "Sessiya kun tartibi"
         }
     ]
 }

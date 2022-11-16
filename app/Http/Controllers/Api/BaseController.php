@@ -31,6 +31,10 @@ use Illuminate\Http\Request;
  *     name="Tuman va shaharlar",
  *     description="Tuman va shaharlar"
  * )
+ * @OA\Tag(
+ *     name="Mahalliy kengash",
+ *     description="Sessiya kun tartibi"
+ * )
  *
  */
 class BaseController extends Controller

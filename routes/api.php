@@ -105,3 +105,5 @@ Route::get('governments/{slug}', [\App\Http\Controllers\Api\GovernmentsControlle
 //governments
 Route::get('cities', [\App\Http\Controllers\Api\CitiesController::class, 'getAll']);
 Route::get('cities/{slug}', [\App\Http\Controllers\Api\CitiesController::class, 'getOne']);
+//sessiya kun tartibi
+Route::get('agendas', [\App\Http\Controllers\Api\AgendasController::class, 'getAll']);
