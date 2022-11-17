@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\Admin\AgendasController;
 use App\Http\Controllers\Admin\CitiesController;
+use App\Http\Controllers\Admin\ComissionMembersController;
+use App\Http\Controllers\Admin\ComissionsController;
 use App\Http\Controllers\Admin\GeneralInfosController;
 use App\Http\Controllers\Admin\GovernmentsController;
+use App\Http\Controllers\Admin\MeetingsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\InfoCategoriesController;
@@ -128,6 +131,11 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::post('governments/image-upload', [GovernmentsController::class, 'imageUpload'])->name('governmentImageUpload');
     Route::resource('cities', CitiesController::class);
     Route::resource('agendas', AgendasController::class);
+    Route::resource('meetings', MeetingsController::class);
+
+
+    Route::resource('comissions', ComissionsController::class);
+    Route::resource('comission-members', ComissionMembersController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -136,3 +144,4 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+

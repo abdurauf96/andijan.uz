@@ -89,6 +89,9 @@
                         data-feather="briefcase"></i><span>Mahalliy kengash </span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.agendas.index') }}">Sessiya kun tartibi</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.meetings.index') }}">Senat yalpi majlislari</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.comissions.index') }}">Doimiy komissiyalar</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.comission-members.index') }}">Doimiy komissiyalar a'zolari</a> </li>
 
                 </ul>
             </li>

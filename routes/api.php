@@ -107,3 +107,5 @@ Route::get('cities', [\App\Http\Controllers\Api\CitiesController::class, 'getAll
 Route::get('cities/{slug}', [\App\Http\Controllers\Api\CitiesController::class, 'getOne']);
 //sessiya kun tartibi
 Route::get('agendas', [\App\Http\Controllers\Api\AgendasController::class, 'getAll']);
+Route::get('meetings', [\App\Http\Controllers\Api\MeetingsController::class, 'getAll']);
+Route::get('comissions', [\App\Http\Controllers\Api\ComissionsController::class, 'getAll']);

@@ -144,6 +144,21 @@
                 }
             }
         },
+        "/comissions": {
+            "get": {
+                "tags": [
+                    "Mahalliy kengash"
+                ],
+                "summary": "Doimiy komissiyalar",
+                "description": "Returns list of comissions",
+                "operationId": "getComissions",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/contact": {
             "get": {
                 "tags": [
@@ -492,6 +507,21 @@
                 "summary": "Mahalliy davlat hokimyati ",
                 "description": "Get list of local page",
                 "operationId": "getLocal",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/meetings": {
+            "get": {
+                "tags": [
+                    "Mahalliy kengash"
+                ],
+                "summary": "Senat yalpi majlislari",
+                "description": "Returns list of meetings",
+                "operationId": "getMeetings",
                 "responses": {
                     "200": {
                         "description": "Successful operation"
