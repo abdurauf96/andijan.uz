@@ -899,6 +899,21 @@
                 }
             }
         },
+        "/senators": {
+            "get": {
+                "tags": [
+                    "Mahalliy kengash"
+                ],
+                "summary": "Senatorlar",
+                "description": "Returns list of senators",
+                "operationId": "getSenators",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/main-services": {
             "get": {
                 "tags": [

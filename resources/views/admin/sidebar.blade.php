@@ -92,6 +92,7 @@
                     <li><a class="nav-link" href="{{ route('admin.meetings.index') }}">Senat yalpi majlislari</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.comissions.index') }}">Doimiy komissiyalar</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.comission-members.index') }}">Doimiy komissiyalar a'zolari</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.senators.index') }}">Senatorlar</a> </li>
 
                 </ul>
             </li>
