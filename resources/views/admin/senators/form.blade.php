@@ -41,6 +41,51 @@
     {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
 </div>
 
+<div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
+    <label for="body_uz" class="control-label">{{ 'Senator haqida Uz' }}</label>
+    <textarea class="form-control" rows="5" name="body_uz" type="textarea" id="body_uz" >{{ $senator->body_uz ?? ''}}</textarea>
+
+    {!! $errors->first('body_uz', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_ru') ? 'has-error' : ''}}">
+    <label for="body_ru" class="control-label">{{ 'Senator haqida Ru' }}</label>
+    <textarea class="form-control" rows="5" name="body_ru" type="textarea" id="body_ru" >{{ $senator->body_ru ?? ''}}</textarea>
+
+    {!! $errors->first('body_ru', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Senator haqida En' }}</label>
+    <textarea class="form-control" rows="5" name="body_en" type="textarea" id="body_en" >{{ $senator->body_en ?? ''}}</textarea>
+
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
+
+<div class="form-group{{ $errors->has('meta_keywords') ? 'has-error' : ''}}">
+    <label for="meta_keywords" class="control-label">{{ 'Telefon' }}</label>
+    <input class="form-control" name="phone" type="text" id="meta_keywords" value="{{ $senator->phone ?? ''}}" >
+    {!! $errors->first('meta_keywords', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('fax') ? 'has-error' : ''}}">
+    <label for="meta_keywords" class="control-label">{{ 'Fax' }}</label>
+    <input class="form-control" name="fax" type="text" id="fax" value="{{ $senator->fax ?? ''}}" >
+    {!! $errors->first('fax', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('email') ? 'has-error' : ''}}">
+    <label for="email" class="control-label">{{ 'Email' }}</label>
+    <input class="form-control" name="email" type="text" id="email" value="{{ $senator->email ?? ''}}" >
+    {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
+</div>
+
+<div class="form-group{{ $errors->has('meta_description') ? 'has-error' : ''}}">
+    <label for="meta_description" class="control-label">{{ 'Meta Description' }}</label>
+    <input class="form-control" name="meta_description" type="text" id="meta_description" value="{{ $post->meta_description ?? ''}}" >
+    {!! $errors->first('meta_description', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('meta_keywords') ? 'has-error' : ''}}">
+    <label for="meta_keywords" class="control-label">{{ 'Meta Keywords' }}</label>
+    <input class="form-control" name="meta_keywords" type="text" id="meta_keywords" value="{{ $post->meta_keywords ?? ''}}" >
+    {!! $errors->first('meta_keywords', '<p class="help-block">:message</p>') !!}
+</div>
 
 <div class="form-group">
     <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">

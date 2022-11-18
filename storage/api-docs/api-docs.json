@@ -914,6 +914,35 @@
                 }
             }
         },
+        "/senators/{slug}": {
+            "get": {
+                "tags": [
+                    "Mahalliy kengash"
+                ],
+                "summary": "Get one senator by slug",
+                "description": "Returns one senator",
+                "operationId": "getOneSenator",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "Senator Slug",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if senator not found"
+                    }
+                }
+            }
+        },
         "/main-services": {
             "get": {
                 "tags": [

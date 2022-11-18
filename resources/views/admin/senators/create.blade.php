@@ -42,3 +42,11 @@
         </div>
     </div>
 @endsection
+@section('js')
+    <script src="/admin/assets/bundles/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript">
+        CKEDITOR.replace( 'body_uz');
+        CKEDITOR.replace( 'body_ru',);
+        CKEDITOR.replace( 'body_en');
+    </script>
+@endsection

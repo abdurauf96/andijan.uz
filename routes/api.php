@@ -110,3 +110,4 @@ Route::get('agendas', [\App\Http\Controllers\Api\AgendasController::class, 'getA
 Route::get('meetings', [\App\Http\Controllers\Api\MeetingsController::class, 'getAll']);
 Route::get('comissions', [\App\Http\Controllers\Api\ComissionsController::class, 'getAll']);
 Route::get('senators', [\App\Http\Controllers\Api\SenatorsController::class, 'getAll']);
+Route::get('senators/{slug}', [\App\Http\Controllers\Api\SenatorsController::class, 'getOne']);

@@ -62,7 +62,6 @@
     </select>
 </div>
 
-
 <div class="form-group{{ $errors->has('meta_description') ? 'has-error' : ''}}">
     <label for="meta_description" class="control-label">{{ 'Meta Description' }}</label>
     <input class="form-control" name="meta_description" type="text" id="meta_description" value="{{ $post->meta_description ?? ''}}" >
@@ -73,7 +72,6 @@
     <input class="form-control" name="meta_keywords" type="text" id="meta_keywords" value="{{ $post->meta_keywords ?? ''}}" >
     {!! $errors->first('meta_keywords', '<p class="help-block">:message</p>') !!}
 </div>
-
 
 <div class="form-group">
     <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">

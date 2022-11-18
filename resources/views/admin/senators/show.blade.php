@@ -41,6 +41,18 @@
                                     <tr><th> Qisqacha ma'lumot Ru </th><td> {{ $senator->description_ru }} </td></tr>
                                     <tr><th> Qisqacha ma'lumot En </th><td> {{ $senator->description_en }} </td></tr>
                                     <tr><th> Image </th><td><img src="/{{ $senator->image }}" width="100" alt=""> </td></tr>
+
+                                    <tr><th> Senator haqida Uz </th><td> {!! $senator->body_uz !!} </td></tr>
+                                    <tr><th> Senator haqida Ru </th><td> {!! $senator->body_ru !!} </td></tr>
+                                    <tr><th> Senator haqida En </th><td> {!! $senator->body_en !!} </td></tr>
+
+                                    <tr><th> Telefon </th><td> {{ $senator->phone }} </td></tr>
+                                    <tr><th> Email </th><td> {{ $senator->email }} </td></tr>
+                                    <tr><th> Fax </th><td> {{ $senator->fax }} </td></tr>
+
+                                    <tr><th> Slug </th><td> {{ $senator->slug }} </td></tr>
+                                    <tr><th> Meta Description </th><td> {{ $senator->meta_description }} </td></tr>
+                                    <tr><th> Meta Keywords </th><td> {{ $senator->meta_keywords }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
