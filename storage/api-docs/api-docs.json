@@ -455,6 +455,21 @@
                 }
             }
         },
+        "/informations": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "Ma'lumotlar ro'yhati",
+                "description": "Get list of informations",
+                "operationId": "getInformations",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/investments": {
             "get": {
                 "tags": [
@@ -1170,7 +1185,11 @@
         },
         {
             "name": "Mahalliy kengash",
-            "description": "Sessiya kun tartibi"
+            "description": "Mahalliy kengash bo'limi uchun API"
+        },
+        {
+            "name": "Ma'lumotnoma",
+            "description": "Ma'lumotnoma bo'limi uchun API"
         }
     ]
 }

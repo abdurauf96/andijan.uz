@@ -115,3 +115,4 @@ Route::get('senators', [\App\Http\Controllers\Api\SenatorsController::class, 'ge
 Route::get('senators/{slug}', [\App\Http\Controllers\Api\SenatorsController::class, 'getOne']);
 //kengash qarorlari
 Route::get('council-decisions', [\App\Http\Controllers\Api\CouncilDecisionsController::class, 'getAll']);
+Route::get('informations', [\App\Http\Controllers\Api\InformationsController::class, 'getAll']);

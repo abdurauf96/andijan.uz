@@ -94,7 +94,13 @@
                     <li><a class="nav-link" href="{{ route('admin.comission-members.index') }}">Doimiy komissiyalar a'zolari</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.senators.index') }}">Senatorlar</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.council-decisions.index') }}">Kengash qarorlari</a> </li>
-
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                        data-feather="briefcase"></i><span>Ma'lumotnoma </span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ route('admin.informations.index') }}">Ma'lumotlar ro'yhati</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

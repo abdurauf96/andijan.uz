@@ -33,7 +33,11 @@ use Illuminate\Http\Request;
  * )
  * @OA\Tag(
  *     name="Mahalliy kengash",
- *     description="Sessiya kun tartibi"
+ *     description="Mahalliy kengash bo'limi uchun API"
+ * )
+ * @OA\Tag(
+ *     name="Ma'lumotnoma",
+ *     description="Ma'lumotnoma bo'limi uchun API"
  * )
  *
  */
