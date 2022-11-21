@@ -1,7 +1,13 @@
+<div class="form-group{{ $errors->has('type') ? 'has-error' : ''}}">
+    <label for="type" class="control-label">{{ 'Turini tanlang' }}</label>
+    <select name="type" class="form-control">
+        <option @isset($senator) {{ $senator->type==1 ? 'selected' : '' }} @endisset value="1">Senator</option>
+        <option @isset($senator) {{ $senator->type==2 ? 'selected' : '' }} @endisset value="2">Deputat</option>
+    </select>
+</div>
 <div class="form-group{{ $errors->has('name_uz') ? 'has-error' : ''}}">
     <label for="name_uz" class="control-label">{{ 'F.I.O Uz' }}</label>
     <input class="form-control" name="name_uz" type="text" id="name_uz" value="{{ $senator->name_uz ?? ''}}" required>
-
     {!! $errors->first('name_uz', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group{{ $errors->has('name_ru') ? 'has-error' : ''}}">

@@ -19,12 +19,12 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Senators</li>
+                                <li class="breadcrumb-item active">Senator va Deputatlar</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4> Senators </h4>
+                        <h4> Senator va Deputatlar </h4>
                         <div class="card-header-form">
                             <a href="{{ url('/admin/senators/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
                         </div>
@@ -35,14 +35,14 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Name Uz</th><th>Ma'lumot Uz</th><th>Actions</th>
+                                        <th>#</th><th>Name Uz</th><th>Turi</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($senators as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name_uz }}</td><td>{{ $item->description_uz }}</td>
+                                        <td>{{ $item->name_uz }}</td><td>{{ $item->type==1 ? 'senator' : 'deputat' }}</td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/senators/' . $item->id) }}" title="View Senator"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/senators/' . $item->id . '/edit') }}" title="Edit Senator"><i class="far fa-edit"></i></a>

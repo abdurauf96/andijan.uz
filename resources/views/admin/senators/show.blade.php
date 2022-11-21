@@ -49,7 +49,7 @@
                                     <tr><th> Telefon </th><td> {{ $senator->phone }} </td></tr>
                                     <tr><th> Email </th><td> {{ $senator->email }} </td></tr>
                                     <tr><th> Fax </th><td> {{ $senator->fax }} </td></tr>
-
+                                    <tr><th> Turi </th><td> {{ $senator->type==1 ? 'senator' : 'deputat' }} </td></tr>
                                     <tr><th> Slug </th><td> {{ $senator->slug }} </td></tr>
                                     <tr><th> Meta Description </th><td> {{ $senator->meta_description }} </td></tr>
                                     <tr><th> Meta Keywords </th><td> {{ $senator->meta_keywords }} </td></tr>

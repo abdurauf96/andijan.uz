@@ -109,5 +109,7 @@ Route::get('cities/{slug}', [\App\Http\Controllers\Api\CitiesController::class, 
 Route::get('agendas', [\App\Http\Controllers\Api\AgendasController::class, 'getAll']);
 Route::get('meetings', [\App\Http\Controllers\Api\MeetingsController::class, 'getAll']);
 Route::get('comissions', [\App\Http\Controllers\Api\ComissionsController::class, 'getAll']);
-Route::get('senators', [\App\Http\Controllers\Api\SenatorsController::class, 'getAll']);
+
+Route::get('deputats', [\App\Http\Controllers\Api\SenatorsController::class, 'getAllDeputats']);
+Route::get('senators', [\App\Http\Controllers\Api\SenatorsController::class, 'getAllSenators']);
 Route::get('senators/{slug}', [\App\Http\Controllers\Api\SenatorsController::class, 'getOne']);

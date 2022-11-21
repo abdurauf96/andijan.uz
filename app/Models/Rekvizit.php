@@ -9,7 +9,6 @@ class Rekvizit extends Model
 {
     use LogsActivity;
 
-
     /**
      * The database table used by the model.
      *

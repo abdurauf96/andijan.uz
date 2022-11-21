@@ -899,6 +899,21 @@
                 }
             }
         },
+        "/deputats": {
+            "get": {
+                "tags": [
+                    "Mahalliy kengash"
+                ],
+                "summary": "Deputatlar",
+                "description": "Returns list of deputats",
+                "operationId": "getDeputats",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/senators": {
             "get": {
                 "tags": [
@@ -919,14 +934,14 @@
                 "tags": [
                     "Mahalliy kengash"
                 ],
-                "summary": "Get one senator by slug",
-                "description": "Returns one senator",
+                "summary": "Get one senator or deputat by slug",
+                "description": "Returns one senator or deputat",
                 "operationId": "getOneSenator",
                 "parameters": [
                     {
                         "name": "slug",
                         "in": "path",
-                        "description": "Senator Slug",
+                        "description": "Senator or Deputat Slug",
                         "required": true,
                         "schema": {
                             "type": "string"

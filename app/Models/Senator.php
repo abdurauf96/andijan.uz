@@ -9,7 +9,8 @@ class Senator extends Model
 {
     use LogsActivity;
 
-
+    protected const SENATOR=1;
+    protected const DEPUTAT=2;
     /**
      * The database table used by the model.
      *
@@ -29,7 +30,15 @@ class Senator extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'description_uz', 'description_ru', 'description_en', 'image','body_uz', 'body_ru', 'body_en', 'phone', 'email', 'fax', 'meta_keywords', 'meta_description'];
+    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'description_uz', 'description_ru', 'description_en', 'image','body_uz', 'body_ru', 'body_en', 'phone', 'email', 'fax', 'meta_keywords', 'meta_description','type'];
+
+    public function scopeDeputat($query){
+        return $query->where('type', self::DEPUTAT);
+    }
+
+    public function scopeSenator($query){
+        return $query->where('type', self::SENATOR);
+    }
 
     protected static function boot()
     {
