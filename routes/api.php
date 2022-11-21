@@ -113,3 +113,5 @@ Route::get('comissions', [\App\Http\Controllers\Api\ComissionsController::class,
 Route::get('deputats', [\App\Http\Controllers\Api\SenatorsController::class, 'getAllDeputats']);
 Route::get('senators', [\App\Http\Controllers\Api\SenatorsController::class, 'getAllSenators']);
 Route::get('senators/{slug}', [\App\Http\Controllers\Api\SenatorsController::class, 'getOne']);
+//kengash qarorlari
+Route::get('council-decisions', [\App\Http\Controllers\Api\CouncilDecisionsController::class, 'getAll']);
