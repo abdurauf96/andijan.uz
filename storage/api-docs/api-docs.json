@@ -85,6 +85,21 @@
                 }
             }
         },
+        "/awards": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "Davlat mukofotlari",
+                "description": "Get list of awards",
+                "operationId": "getAwards",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/buildings": {
             "get": {
                 "tags": [
@@ -421,6 +436,21 @@
                     },
                     "404": {
                         "description": "if governor not found"
+                    }
+                }
+            }
+        },
+        "/holidays": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "Bayram va Muhim sanalar",
+                "description": "Get list of holidays",
+                "operationId": "getHolidays",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
                     }
                 }
             }

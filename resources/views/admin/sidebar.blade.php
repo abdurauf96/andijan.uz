@@ -101,6 +101,8 @@
                         data-feather="briefcase"></i><span>Ma'lumotnoma </span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.informations.index') }}">Ma'lumotlar ro'yhati</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.awards.index') }}">Davlat mukofotlari</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.holidays.index') }}">Bayram va Muhim sanalar</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

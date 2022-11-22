@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\Admin\AgendasController;
+use App\Http\Controllers\Admin\AwardsController;
 use App\Http\Controllers\Admin\CitiesController;
 use App\Http\Controllers\Admin\ComissionMembersController;
 use App\Http\Controllers\Admin\ComissionsController;
 use App\Http\Controllers\Admin\CouncilDecisionsController;
 use App\Http\Controllers\Admin\GeneralInfosController;
 use App\Http\Controllers\Admin\GovernmentsController;
+use App\Http\Controllers\Admin\HolidaysController;
 use App\Http\Controllers\Admin\InformationsController;
 use App\Http\Controllers\Admin\MeetingsController;
 use App\Http\Controllers\Admin\SenatorsController;
@@ -144,6 +146,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('council-decisions', CouncilDecisionsController::class);
 
     Route::resource('informations', InformationsController::class);
+    Route::resource('awards', AwardsController::class);
+    Route::resource('holidays', HolidaysController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
