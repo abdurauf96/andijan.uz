@@ -56,7 +56,14 @@ class OrganizationsController extends Controller
             $path='admin/images/organizations';
             $image=time().$file->getClientOriginalName();
             $file->move(public_path($path), $image);
-            $requestData['image']=$path.'/'.$image;
+            $requestData['director_image']=$path.'/'.$image;
+        }
+        if($request->hasFile('statute')){
+            $file=$request->file('statute');
+            $path='admin/files/organizations';
+            $image=time().$file->getClientOriginalName();
+            $file->move($path, $image);
+            $requestData['statute']=$path.'/'.$image;
         }
         Organization::create($requestData);
 
@@ -122,7 +129,7 @@ class OrganizationsController extends Controller
 
         if($request->hasFile('statute')){
             $file=$request->file('statute');
-            $path='admin/images/organizations';
+            $path='admin/files/organizations';
             $image=time().$file->getClientOriginalName();
             $file->move($path, $image);
             $requestData['statute']=$path.'/'.$image;

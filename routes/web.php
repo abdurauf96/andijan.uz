@@ -11,7 +11,9 @@ use App\Http\Controllers\Admin\GovernmentsController;
 use App\Http\Controllers\Admin\HolidaysController;
 use App\Http\Controllers\Admin\InformationsController;
 use App\Http\Controllers\Admin\MeetingsController;
+use App\Http\Controllers\Admin\OrgansController;
 use App\Http\Controllers\Admin\SenatorsController;
+use App\Http\Controllers\Admin\WebsitesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\InfoCategoriesController;
@@ -148,6 +150,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('informations', InformationsController::class);
     Route::resource('awards', AwardsController::class);
     Route::resource('holidays', HolidaysController::class);
+    Route::resource('organs', OrgansController::class);
+    Route::resource('websites', WebsitesController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -156,3 +160,4 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+

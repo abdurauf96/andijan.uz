@@ -35,11 +35,11 @@ class OrganizationResource extends JsonResource
             'instagram'=>$this->instagram,
 
             'director'=>$this->director,
-            'director_image'=>$this->image,
+            'director_image'=>$this->director_image,
             'director_info_uz'=>$this->director_info_uz,
             'director_info_ru'=>$this->director_info_ru,
             'director_info_en'=>$this->director_info_en,
-            'phone'=>$this->director_phone,
+            'director_phone'=>$this->director_phone,
             'director_telegram'=>$this->director_telegram,
             'director_instagram'=>$this->director_instagram,
             'director_facebook'=>$this->director_facebook,

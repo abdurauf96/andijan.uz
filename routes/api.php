@@ -118,3 +118,4 @@ Route::get('council-decisions', [\App\Http\Controllers\Api\CouncilDecisionsContr
 Route::get('informations', [\App\Http\Controllers\Api\InformationsController::class, 'getAll']);
 Route::get('awards', [\App\Http\Controllers\Api\AwardsController::class, 'getAll']);
 Route::get('holidays', [\App\Http\Controllers\Api\HolidaysController::class, 'getAll']);
+Route::get('organs', [\App\Http\Controllers\Api\OrgansController::class, 'getAll']);

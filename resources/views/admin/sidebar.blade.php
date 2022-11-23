@@ -103,6 +103,8 @@
                     <li><a class="nav-link" href="{{ route('admin.informations.index') }}">Ma'lumotlar ro'yhati</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.awards.index') }}">Davlat mukofotlari</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.holidays.index') }}">Bayram va Muhim sanalar</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.organs.index') }}">Davlat organlari</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.websites.index') }}">Davlat organlari saytlari</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

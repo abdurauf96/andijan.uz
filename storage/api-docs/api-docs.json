@@ -692,6 +692,21 @@
                 }
             }
         },
+        "/organs": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "Davlat organlari websitelari",
+                "description": "Get list of organs",
+                "operationId": "getOrgans",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/parks": {
             "get": {
                 "tags": [
