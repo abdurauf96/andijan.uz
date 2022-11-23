@@ -11,6 +11,21 @@
         }
     ],
     "paths": {
+        "/accreditations": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "Akkreditatsiya qilish tartibi\t",
+                "description": "Get list of accreditations",
+                "operationId": "getaccreditations",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/agendas": {
             "get": {
                 "tags": [
@@ -1132,6 +1147,21 @@
                     },
                     "404": {
                         "description": "if speech not found"
+                    }
+                }
+            }
+        },
+        "/symbols": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "Davlat ramzlari",
+                "description": "Get list of symbols",
+                "operationId": "getSymbols",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
                     }
                 }
             }

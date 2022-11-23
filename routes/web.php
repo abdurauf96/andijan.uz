@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AccreditationsController;
 use App\Http\Controllers\Admin\AgendasController;
 use App\Http\Controllers\Admin\AwardsController;
 use App\Http\Controllers\Admin\CitiesController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\Admin\InformationsController;
 use App\Http\Controllers\Admin\MeetingsController;
 use App\Http\Controllers\Admin\OrgansController;
 use App\Http\Controllers\Admin\SenatorsController;
+use App\Http\Controllers\Admin\SymbolsController;
 use App\Http\Controllers\Admin\WebsitesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostsController;
@@ -152,6 +154,11 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('holidays', HolidaysController::class);
     Route::resource('organs', OrgansController::class);
     Route::resource('websites', WebsitesController::class);
+    Route::resource('accreditations', AccreditationsController::class);
+    Route::resource('symbols', SymbolsController::class);
+
+    Route::resource('symbols', SymbolsController::class);
+    Route::post('symbols/image-upload', [SymbolsController::class, 'imageUpload'])->name('symbolsImageUpload');
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -160,4 +167,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
-

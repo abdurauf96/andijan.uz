@@ -119,3 +119,5 @@ Route::get('informations', [\App\Http\Controllers\Api\InformationsController::cl
 Route::get('awards', [\App\Http\Controllers\Api\AwardsController::class, 'getAll']);
 Route::get('holidays', [\App\Http\Controllers\Api\HolidaysController::class, 'getAll']);
 Route::get('organs', [\App\Http\Controllers\Api\OrgansController::class, 'getAll']);
+Route::get('accreditations', [\App\Http\Controllers\Api\AccreditationsController::class, 'getAll']);
+Route::get('symbols', [\App\Http\Controllers\Api\SymbolsController::class, 'getAll']);

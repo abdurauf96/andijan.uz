@@ -105,6 +105,8 @@
                     <li><a class="nav-link" href="{{ route('admin.holidays.index') }}">Bayram va Muhim sanalar</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.organs.index') }}">Davlat organlari</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.websites.index') }}">Davlat organlari saytlari</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.accreditations.index') }}">Akkreditatsiya qilish tartibi</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.symbols.index') }}">Davlat ramzlari</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">
