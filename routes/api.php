@@ -121,3 +121,5 @@ Route::get('holidays', [\App\Http\Controllers\Api\HolidaysController::class, 'ge
 Route::get('organs', [\App\Http\Controllers\Api\OrgansController::class, 'getAll']);
 Route::get('accreditations', [\App\Http\Controllers\Api\AccreditationsController::class, 'getAll']);
 Route::get('symbols', [\App\Http\Controllers\Api\SymbolsController::class, 'getAll']);
+Route::get('constitution', [\App\Http\Controllers\Api\ConstitutionsController::class, 'getAll']);
+Route::get('region-websites', [\App\Http\Controllers\Api\RegionWebsitesController::class, 'getAll']);

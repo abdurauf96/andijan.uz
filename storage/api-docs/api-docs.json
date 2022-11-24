@@ -189,6 +189,21 @@
                 }
             }
         },
+        "/constitution": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "Konstitutsiya",
+                "description": "Get list of constitutions",
+                "operationId": "getConstitution",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/contact": {
             "get": {
                 "tags": [
@@ -967,6 +982,21 @@
                 "summary": "Fuqarolarni qabul qilish vaqtlari",
                 "description": "Returns list of reception-times",
                 "operationId": "getReceptionTimes",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/region-websites": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "Viloyat saytlari",
+                "description": "Get list of websites",
+                "operationId": "getRegionWebsites",
                 "responses": {
                     "200": {
                         "description": "Successful operation"
