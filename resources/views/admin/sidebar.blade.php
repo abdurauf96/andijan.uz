@@ -109,6 +109,7 @@
                     <li><a class="nav-link" href="{{ route('admin.symbols.index') }}">Davlat ramzlari</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.constitutions.index') }}">Konstitutsiya</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.region-websites.index') }}">Viloyat saytlari</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.car-prices.index') }}">GM avto narxlari</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

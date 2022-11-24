@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AccreditationsController;
 use App\Http\Controllers\Admin\AgendasController;
 use App\Http\Controllers\Admin\AwardsController;
+use App\Http\Controllers\Admin\CarPricesController;
 use App\Http\Controllers\Admin\CitiesController;
 use App\Http\Controllers\Admin\ComissionMembersController;
 use App\Http\Controllers\Admin\ComissionsController;
@@ -164,6 +165,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('constitutions', ConstitutionsController::class);
     Route::resource('region-websites', RegionWebsitesController::class);
+    Route::resource('car-prices', CarPricesController::class);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');

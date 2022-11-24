@@ -123,3 +123,4 @@ Route::get('accreditations', [\App\Http\Controllers\Api\AccreditationsController
 Route::get('symbols', [\App\Http\Controllers\Api\SymbolsController::class, 'getAll']);
 Route::get('constitution', [\App\Http\Controllers\Api\ConstitutionsController::class, 'getAll']);
 Route::get('region-websites', [\App\Http\Controllers\Api\RegionWebsitesController::class, 'getAll']);
+Route::get('car-prices', [\App\Http\Controllers\Api\CarPricesController::class, 'getAll']);

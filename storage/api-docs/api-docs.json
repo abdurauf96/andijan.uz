@@ -130,6 +130,21 @@
                 }
             }
         },
+        "/car-prices": {
+            "get": {
+                "tags": [
+                    "Ma'lumotnoma"
+                ],
+                "summary": "GM Mashina narxlari",
+                "description": "Get list of car-prices",
+                "operationId": "getCarPrices",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/cities": {
             "get": {
                 "tags": [
