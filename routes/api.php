@@ -124,3 +124,8 @@ Route::get('symbols', [\App\Http\Controllers\Api\SymbolsController::class, 'getA
 Route::get('constitution', [\App\Http\Controllers\Api\ConstitutionsController::class, 'getAll']);
 Route::get('region-websites', [\App\Http\Controllers\Api\RegionWebsitesController::class, 'getAll']);
 Route::get('car-prices', [\App\Http\Controllers\Api\CarPricesController::class, 'getAll']);
+Route::get('app-form', [\App\Http\Controllers\Api\AppFormsController::class, 'getAll']);
+
+Route::get('citizens', [\App\Http\Controllers\Api\CitizensController::class, 'getAll']);
+Route::get('citizens/{slug}', [\App\Http\Controllers\Api\CitizensController::class, 'getOne']);
+Route::get('tenders', [\App\Http\Controllers\Api\TendersController::class, 'getAll']);

@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\Admin\AccreditationsController;
 use App\Http\Controllers\Admin\AgendasController;
+use App\Http\Controllers\Admin\AppFormsController;
 use App\Http\Controllers\Admin\AwardsController;
 use App\Http\Controllers\Admin\CarPricesController;
 use App\Http\Controllers\Admin\CitiesController;
+use App\Http\Controllers\Admin\CitizensController;
 use App\Http\Controllers\Admin\ComissionMembersController;
 use App\Http\Controllers\Admin\ComissionsController;
 use App\Http\Controllers\Admin\ConstitutionsController;
@@ -19,6 +21,7 @@ use App\Http\Controllers\Admin\RegionWebsitesController;
 use App\Http\Controllers\Admin\SenatorsController;
 use App\Http\Controllers\Admin\SymbolsController;
 use App\Http\Controllers\Admin\WebsitesController;
+use App\Http\Controllers\Admin\TendersController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\InfoCategoriesController;
@@ -167,6 +170,12 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('region-websites', RegionWebsitesController::class);
     Route::resource('car-prices', CarPricesController::class);
 
+    Route::resource('app-forms', AppFormsController::class);
+    Route::post('app-forms/image-upload', [SymbolsController::class, 'imageUpload'])->name('appFormImageUpload');
+
+    Route::resource('citizens', CitizensController::class);
+    Route::resource('tenders', TendersController::class);
+
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
     Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
@@ -174,3 +183,4 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+

@@ -39,6 +39,10 @@ use Illuminate\Http\Request;
  *     name="Ma'lumotnoma",
  *     description="Ma'lumotnoma bo'limi uchun API"
  * )
+ * @OA\Tag(
+ *     name="Interaktiv",
+ *     description="Interaktiv bo'limi"
+ * )
  *
  */
 class BaseController extends Controller

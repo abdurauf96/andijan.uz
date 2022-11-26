@@ -56,6 +56,21 @@
                 }
             }
         },
+        "/app-form": {
+            "get": {
+                "tags": [
+                    "Interaktiv"
+                ],
+                "summary": "Murojat tartibi",
+                "description": "Get list of app-forms",
+                "operationId": "getAppForm",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/arenas": {
             "get": {
                 "tags": [
@@ -185,6 +200,50 @@
                     },
                     "404": {
                         "description": "if city not found"
+                    }
+                }
+            }
+        },
+        "/citizens": {
+            "get": {
+                "tags": [
+                    "Interaktiv"
+                ],
+                "summary": "Fuqarolar uchun",
+                "description": "Returns list of citizens",
+                "operationId": "getCitizens",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/citizens/{slug}": {
+            "get": {
+                "tags": [
+                    "Interaktiv"
+                ],
+                "summary": "Get one citizen by slug",
+                "description": "Returns one citizen ",
+                "operationId": "getOneCitizens",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "Citizen Slug",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if citizen not found"
                     }
                 }
             }
@@ -1211,6 +1270,21 @@
                 }
             }
         },
+        "/tenders": {
+            "get": {
+                "tags": [
+                    "Interaktiv"
+                ],
+                "summary": "Tender savdolari",
+                "description": "Returns list of tenders",
+                "operationId": "getTenders",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
         "/tourisms": {
             "get": {
                 "tags": [
@@ -1310,6 +1384,10 @@
         {
             "name": "Ma'lumotnoma",
             "description": "Ma'lumotnoma bo'limi uchun API"
+        },
+        {
+            "name": "Interaktiv",
+            "description": "Interaktiv bo'limi"
         }
     ]
 }
