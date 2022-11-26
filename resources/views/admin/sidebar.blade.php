@@ -119,6 +119,7 @@
                     <li><a class="nav-link" href="{{ route('admin.app-forms.index') }}">Murojat tartibi</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.citizens.index') }}">Fuqarolar uchun</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.tenders.index') }}">Tender savdolari</a> </li>
+                    <li><a class="nav-link" href="{{ route('admin.extra-services.index') }}">Qo'shimcha xizmatlar</a> </li>
                 </ul>
             </li>
             <li class="dropdown ">

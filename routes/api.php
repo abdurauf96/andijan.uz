@@ -129,3 +129,5 @@ Route::get('app-form', [\App\Http\Controllers\Api\AppFormsController::class, 'ge
 Route::get('citizens', [\App\Http\Controllers\Api\CitizensController::class, 'getAll']);
 Route::get('citizens/{slug}', [\App\Http\Controllers\Api\CitizensController::class, 'getOne']);
 Route::get('tenders', [\App\Http\Controllers\Api\TendersController::class, 'getAll']);
+Route::get('extra-services', [\App\Http\Controllers\Api\ExtraServicesController::class, 'getAll']);
+Route::get('extra-services/{slug}', [\App\Http\Controllers\Api\ExtraServicesController::class, 'getOne']);

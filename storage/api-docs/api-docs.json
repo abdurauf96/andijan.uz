@@ -397,6 +397,50 @@
                 }
             }
         },
+        "/extra-services": {
+            "get": {
+                "tags": [
+                    "Interaktiv"
+                ],
+                "summary": "Qo'shimcha xizmatlari",
+                "description": "Returns list of extra-services",
+                "operationId": "getExtraServices",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/extra-services/{slug}": {
+            "get": {
+                "tags": [
+                    "Interaktiv"
+                ],
+                "summary": "Get one extra-service by slug",
+                "description": "Returns one extra-service ",
+                "operationId": "getOneExtraServices",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "description": "extra-service Slug",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if extra-service not found"
+                    }
+                }
+            }
+        },
         "/fields": {
             "get": {
                 "tags": [
