@@ -71,6 +71,60 @@
                 }
             }
         },
+        "/appeals/store": {
+            "post": {
+                "tags": [
+                    "Murojat qoldirish"
+                ],
+                "description": "Murojat qoldirish",
+                "operationId": "storeAppeal",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "phone": {
+                                        "type": "string"
+                                    },
+                                    "addres": {
+                                        "type": "string"
+                                    },
+                                    "body": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "204": {
+                        "description": "appeal sent successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Appeal stored"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation error"
+                    }
+                }
+            }
+        },
         "/arenas": {
             "get": {
                 "tags": [

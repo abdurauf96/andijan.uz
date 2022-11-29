@@ -131,3 +131,8 @@ Route::get('citizens/{slug}', [\App\Http\Controllers\Api\CitizensController::cla
 Route::get('tenders', [\App\Http\Controllers\Api\TendersController::class, 'getAll']);
 Route::get('extra-services', [\App\Http\Controllers\Api\ExtraServicesController::class, 'getAll']);
 Route::get('extra-services/{slug}', [\App\Http\Controllers\Api\ExtraServicesController::class, 'getOne']);
+
+
+//post requests
+
+Route::post('appeals/store', [\App\Http\Controllers\Api\AppealController::class, 'store']);

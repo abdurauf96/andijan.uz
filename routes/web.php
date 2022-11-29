@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AccreditationsController;
 use App\Http\Controllers\Admin\AgendasController;
+use App\Http\Controllers\Admin\AppealsController;
 use App\Http\Controllers\Admin\AppFormsController;
 use App\Http\Controllers\Admin\AwardsController;
 use App\Http\Controllers\Admin\CarPricesController;
@@ -177,6 +178,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('citizens', CitizensController::class);
     Route::resource('tenders', TendersController::class);
     Route::resource('extra-services', ExtraServicesController::class);
+    Route::resource('appeals', AppealsController::class)->only(['index', 'destroy']);
 
     Route::resource('settings', 'App\Http\Controllers\Admin\SettingsController');
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->name('generator');
@@ -185,3 +187,4 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
+

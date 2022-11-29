@@ -123,6 +123,9 @@
                 </ul>
             </li>
             <li class="dropdown ">
+                <a href="{{ route('admin.appeals.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Murojatlar</a>
+            </li>
+            <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</a>
             </li>
         </ul>

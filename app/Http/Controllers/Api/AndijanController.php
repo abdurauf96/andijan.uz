@@ -28,4 +28,6 @@ class AndijanController extends Controller
         $andijan=Andijan::first();
         return new AndijanResource($andijan);
     }
+
+
 }
