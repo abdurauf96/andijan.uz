@@ -31,87 +31,31 @@
                     <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
                             <i data-feather="maximize"></i>
                         </a></li>
-                    <li>
-                        <form class="form-inline mr-auto">
-                            <div class="search-element">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
-                                <button class="btn" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </li>
                 </ul>
             </div>
             <ul class="navbar-nav navbar-right">
-                <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                                                             class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
+                <li class="dropdown dropdown-list-toggle " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Yangi murojatlar">
+                    <a href="{{ route('admin.appeals.index') }}"
+                                                             class="nav-link nav-link-lg message-toggle"><i data-feather="bell"></i>
                         <span class="badge headerBadge1">
-                6 </span> </a>
-                    <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
-                        <div class="dropdown-header">
-                            Messages
-                            <div class="float-right">
-                                <a href="#">Mark All As Read</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-list-content dropdown-list-message">
-                            <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
-											text-white"> <img alt="image" src="/admin/assets/img/users/user-1.png" class="rounded-circle">
-                  </span> <span class="dropdown-item-desc"> <span class="message-user">John
-                      Deo</span>
-                    <span class="time messege-text">Please check your mail !!</span>
-                    <span class="time">2 Min Ago</span>
-                  </span>
-                            </a>
-                        </div>
-                        <div class="dropdown-footer text-center">
-                            <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-                        </div>
-                    </div>
+                {{ auth()->user()->unreadNotifications->count() }} </span> </a>
+
                 </li>
-                <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                                                             class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
-                        <div class="dropdown-header">
-                            Notifications
-                            <div class="float-right">
-                                <a href="#">Mark All As Read</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-list-content dropdown-list-icons">
-                            <a href="#" class="dropdown-item dropdown-item-unread"> <span
-                                    class="dropdown-item-icon bg-primary text-white"> <i class="fas
-												fa-code"></i>
-                  </span> <span class="dropdown-item-desc"> Template update is
-                    available now! <span class="time">2 Min
-                      Ago</span>
-                  </span>
-                            </a>  <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
-												fa-bell"></i>
-                  </span> <span class="dropdown-item-desc"> Welcome to Otika
-                    template! <span class="time">Yesterday</span>
-                  </span>
-                            </a>
-                        </div>
-                        <div class="dropdown-footer text-center">
-                            <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li class="dropdown"><a href="#" data-toggle="dropdown"
-                                        class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png"
-                                                                                                         class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown"
+                                        class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                        <img alt="image" src="assets/img/user.png"class="user-img-radious-style">
+                        <span class="d-sm-none d-lg-inline-block"></span></a>
                     <div class="dropdown-menu dropdown-menu-right pullDown">
-                        <div class="dropdown-title">{{ auth()->user()->name }}</div>
-                        <a href="profile.html" class="dropdown-item has-icon"> <i class="far
-										fa-user"></i> Profile
-                        </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
-                            Activities
-                        </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
-                            Settings
-                        </a>
+                        <div class="dropdown-title">Admin</div>
+{{--                        <a href="profile.html" class="dropdown-item has-icon"> <i class="far--}}
+{{--										fa-user"></i> Profile--}}
+{{--                        </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>--}}
+{{--                            Activities--}}
+{{--                        </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>--}}
+{{--                            Settings--}}
+{{--                        </a>--}}
                         <div class="dropdown-divider"></div>
                         <form action="{{ route('logout') }}" method="POST" id="logoutForm">
                             @csrf
@@ -243,17 +187,17 @@
 <script src="/admin/assets/js/scripts.js"></script>
 <!-- Custom JS File -->
 <script src="/admin/assets/js/custom.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.8.1/tinymce.min.js"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.8.1/tinymce.min.js"></script>--}}
+{{--<script type="text/javascript">--}}
+{{--    tinymce.init({--}}
+{{--        selector: '.crud-richtext'--}}
+{{--    });--}}
+{{--</script>--}}
 <script type="text/javascript">
-    tinymce.init({
-        selector: '.crud-richtext'
-    });
-</script>
-<script type="text/javascript">
-    $(function () {
-        // Navigation active
-        $('ul.sidebar-menu a[href="{{ "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" }}"]').closest('li').addClass('active');
-    });
+    var url=window.location.href;
+    a=document.querySelectorAll("[href='"+url+"']")[0];
+    a.parentElement.classList.add('active');
+    a.parentElement.parentElement.style.display="block";
 </script>
 @yield('js')
 </body>

@@ -18,6 +18,9 @@ class AppealsController extends Controller
     public function index(Request $request)
     {
         $appeals = Appeal::latest()->paginate(10);
+
+        auth()->user()->unreadNotifications->markAsRead();
+
         return view('admin.appeals.index', compact('appeals'));
     }
 

@@ -76,9 +76,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [\App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('dashboard');
 
     Route::get('/', 'App\Http\Controllers\Admin\AdminController@index');
     Route::resource('users', 'App\Http\Controllers\Admin\UsersController');

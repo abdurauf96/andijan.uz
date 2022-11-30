@@ -14,7 +14,7 @@
                             </ol>
                         </nav>
                     </div>
-                    <div class="card-header"> <h4> Appeal {{ $appeal->id }} </h4>
+                    <div class="card-header"> <h4> Murojat ID {{ $appeal->id }} </h4>
                         <div class="card-header-form">
                           <a href="{{ url('/admin/appeals') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                           <a href="{{ url('/admin/appeals/' . $appeal->id . '/edit') }}" title="Edit Appeal"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
@@ -34,7 +34,10 @@
                                     <tr>
                                         <th>ID</th><td>{{ $appeal->id }}</td>
                                     </tr>
-                                    <tr><th> Name </th><td> {{ $appeal->name }} </td></tr><tr><th> Phone </th><td> {{ $appeal->phone }} </td></tr><tr><th> Addres </th><td> {{ $appeal->addres }} </td></tr>
+                                    <tr><th> Murojatchi </th><td> {{ $appeal->name }} </td></tr>
+                                    <tr><th> Telefon </th><td> {{ $appeal->phone }} </td></tr>
+                                    <tr><th> Manzil </th><td> {{ $appeal->addres }} </td></tr>
+                                    <tr><th> Murojat matni </th><td> {{ $appeal->body }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

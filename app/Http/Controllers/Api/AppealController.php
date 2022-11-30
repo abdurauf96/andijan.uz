@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAppealRequest;
 use App\Models\Appeal;
+use App\Models\User;
+use App\Notifications\NewAppeal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Validation\ValidationException;
 
 class AppealController extends Controller
@@ -56,7 +59,11 @@ class AppealController extends Controller
 
         $data=Appeal::create($request->all());
 
-        \Mail::to('saydaliyevabdurauf@gmail.com')->send(new \App\Mail\Appeal($data));
+        $user=User::find(1);
+
+        $user->notify(new NewAppeal);
+
+        //\Mail::to('saydaliyevabdurauf@gmail.com')->send(new \App\Mail\Appeal($data));
 
         return response()->json(['message'=>'murojat qoldirildi'], 204 );
     }
