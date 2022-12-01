@@ -4,8 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Arena extends Model
+class Arena extends Model implements Searchable
 {
     use LogsActivity;
 
@@ -30,6 +32,15 @@ class Arena extends Model
      * @var array
      */
     protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'image', 'slug'];
+
+    public function getSearchResult(): SearchResult
+    {
+        return new \Spatie\Searchable\SearchResult(
+            $this,
+            $this->title_uz,
+            $this->slug,
+        );
+    }
 
     protected static function boot()
     {

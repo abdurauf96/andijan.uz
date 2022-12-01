@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Post extends Model
+class Post extends Model implements Searchable
 {
     use LogsActivity;
 
@@ -43,6 +45,17 @@ class Post extends Model
 
     public function scopeType($query, $type){
         return $query->where('type', $type);
+    }
+
+    //public $searchableType = 'Xabarlar';
+
+    public function getSearchResult(): SearchResult
+    {
+        return new \Spatie\Searchable\SearchResult(
+            $this,
+            $this->title_uz,
+            $this->slug,
+        );
     }
 
     protected static function boot()

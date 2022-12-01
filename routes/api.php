@@ -132,6 +132,8 @@ Route::get('tenders', [\App\Http\Controllers\Api\TendersController::class, 'getA
 Route::get('extra-services', [\App\Http\Controllers\Api\ExtraServicesController::class, 'getAll']);
 Route::get('extra-services/{slug}', [\App\Http\Controllers\Api\ExtraServicesController::class, 'getOne']);
 
+Route::get('search', [\App\Http\Controllers\Api\SearchController::class, 'search']);
+
 
 //post requests
 

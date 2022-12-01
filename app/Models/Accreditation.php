@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Accreditation extends Model
+class Accreditation extends Model implements Searchable
 {
     use LogsActivity;
-    
 
     /**
      * The database table used by the model.
@@ -31,7 +32,17 @@ class Accreditation extends Model
      */
     protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en'];
 
-    
+    public static $searchFields=['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en'];
+
+    //public $searchableType = 'Xabarlar';
+
+    public function getSearchResult(): SearchResult
+    {
+        return new SearchResult(
+            $this,
+            $this->title_uz
+        );
+    }
 
     /**
      * Change activity log event description

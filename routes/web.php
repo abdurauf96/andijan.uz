@@ -74,6 +74,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/cache', function () {
+    \Artisan::call('config:cache');
+    return back();
+});
+
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 
     Route::get('/dashboard', [\App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('dashboard');
