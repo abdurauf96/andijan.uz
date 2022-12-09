@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Link extends Model
+class Schedule extends Model
 {
     use LogsActivity;
-
+    
 
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'links';
+    protected $table = 'schedules';
 
     /**
     * The database primary key value.
@@ -29,17 +29,9 @@ class Link extends Model
      *
      * @var array
      */
-    protected $fillable = ['link', 'image', 'title'];
+    protected $fillable = ['day_uz', 'day_ru', 'day_en', 'day_kr', 'time', 'description_uz', 'description_ru', 'description_en', 'description_kr'];
 
-    protected static function boot()
-    {
-        parent::boot();
-        static::deleting(function ($model) {
-            if(file_exists(public_path($model->image))){
-                unlink(public_path($model->image));
-            }
-        });
-    }
+    
 
     /**
      * Change activity log event description

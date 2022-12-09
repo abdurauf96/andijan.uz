@@ -1191,6 +1191,48 @@
                 }
             }
         },
+        "/schedules": {
+            "get": {
+                "tags": [
+                    "Viloyat hokimligi"
+                ],
+                "summary": "Kun tartibi",
+                "description": "Returns list of schedules",
+                "operationId": "getSchedules",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/search": {
+            "get": {
+                "tags": [
+                    "Search"
+                ],
+                "summary": "qidiruv",
+                "operationId": "search",
+                "parameters": [
+                    {
+                        "name": "key",
+                        "in": "query",
+                        "description": "key",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "if senator not found"
+                    }
+                }
+            }
+        },
         "/deputats": {
             "get": {
                 "tags": [

@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\InformationsController;
 use App\Http\Controllers\Admin\MeetingsController;
 use App\Http\Controllers\Admin\OrgansController;
 use App\Http\Controllers\Admin\RegionWebsitesController;
+use App\Http\Controllers\Admin\SchedulesController;
 use App\Http\Controllers\Admin\SenatorsController;
 use App\Http\Controllers\Admin\SymbolsController;
 use App\Http\Controllers\Admin\WebsitesController;
@@ -89,6 +90,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
         'index', 'show', 'destroy'
     ]);
 
+    //bosh sahifa
     Route::resource('posts', PostsController::class);
     Route::post('posts/image-upload', [PostsController::class, 'imageUpload'])->name('postImageUpload');
     Route::resource('info-categories', InfoCategoriesController::class);
@@ -105,7 +107,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
     Route::post('fields/image-upload', [FieldsController::class, 'imageUpload'])->name('fieldImageUpload');
 
     Route::resource('governors', GovernorsController::class);
-
+    Route::resource('schedules', SchedulesController::class);
     Route::resource('councils', CouncilsController::class);
     Route::resource('members', MembersController::class);
 
@@ -190,4 +192,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function(){
 });
 
 require __DIR__.'/auth.php';
-

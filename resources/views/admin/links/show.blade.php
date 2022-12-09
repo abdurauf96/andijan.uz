@@ -34,7 +34,9 @@
                                     <tr>
                                         <th>ID</th><td>{{ $link->id }}</td>
                                     </tr>
-                                    <tr><th> Link </th><td> {{ $link->link }} </td></tr><tr><th> Image </th><td> <img src="/{{ $link->image }}" alt="" width="100">  </td></tr>
+                                    <tr><th> Sarlavha </th><td> {{ $link->title }} </td></tr>
+                                    <tr><th> Link </th><td> {{ $link->link }} </td></tr>
+                                    <tr><th> Image </th><td> <img src="/{{ $link->image }}" alt="" width="100">  </td></tr>
                                 </tbody>
                             </table>
                         </div>

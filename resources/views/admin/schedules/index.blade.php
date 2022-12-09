@@ -19,14 +19,14 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Link</li>
+                                <li class="breadcrumb-item active">Schedules</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="card-header">
-                        <h4> Links </h4>
+                        <h4> Schedules </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/admin/links/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
+                            <a href="{{ url('/admin/schedules/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
                         </div>
                     </div>
 
@@ -35,31 +35,31 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Sarlavha</th><th>Link</th><th>Image</th><th>Actions</th>
+                                        <th>#</th><th>Kun Uz</th><th>Vaqt oralig'i</th><th>Ta'rifi</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($links as $item)
+                                @foreach($schedules as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title }}</td>
-                                        <td>{{ $item->link }}</td>
-                                        <td><img src="/{{ $item->image }}" alt="" width="100"> </td>
+                                        <td>{{ $item->day_uz }}</td>
+                                        <td>{{ $item->time }}</td>
+                                        <td>{{ $item->description_uz }}</td>
                                         <td>
-                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/links/' . $item->id) }}" title="View Link"><i class="fas fa-eye"></i></a>
-                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/links/' . $item->id . '/edit') }}" title="Edit Link"><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/schedules/' . $item->id) }}" title="View Schedule"><i class="fas fa-eye"></i></a>
+                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/schedules/' . $item->id . '/edit') }}" title="Edit Schedule"><i class="far fa-edit"></i></a>
 
-                                            <form method="POST" action="{{ url('/admin/links' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('/admin/schedules' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete Link" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                                                <button type="submit" class="btn btn-danger btn-icon" title="Delete Schedule" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {{ $links->links() }} </div>
+                            <div class="pagination-wrapper"> {{ $schedules->links() }} </div>
                         </div>
 
                     </div>

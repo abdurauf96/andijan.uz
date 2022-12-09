@@ -31,6 +31,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.councils.index') }}">Kengashlar</a> </li>
                     <li><a class="nav-link" href="{{ route('admin.members.index') }}">Kengash a'zolari</a> </li>
+                    <li><a href="{{ route('admin.schedules.index') }}" class="nav-link">Kun tartibi</a>
                     <li><a href="{{ route('admin.governors.index') }}" class="nav-link">Xokimlar</a>
                     </li>
                     <li><a href="{{ route('admin.speeches.index') }}" class="nav-link">Xokim maruzalari</a>

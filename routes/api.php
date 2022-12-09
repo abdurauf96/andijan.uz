@@ -59,6 +59,9 @@ Route::get('speeches/{id}', [\App\Http\Controllers\Api\SpeechesController::class
 //kengashlar
 Route::get('councils', [\App\Http\Controllers\Api\CouncilsController::class, 'getAll']);
 
+//kun tartibi
+Route::get('schedules', [\App\Http\Controllers\Api\SchedulesController::class, 'getAll']);
+
 //rahbariyat
 Route::get('andijan', [\App\Http\Controllers\Api\AndijanController::class, 'getOne']);
 Route::get('contact', [\App\Http\Controllers\Api\ContactController::class, 'getOne']);
