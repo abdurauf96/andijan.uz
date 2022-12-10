@@ -37,19 +37,23 @@
                                     <tr><th> Tuman Uz </th><td> {{ $city->title_uz }} </td></tr>
                                     <tr><th> Tuman Ru </th><td> {{ $city->title_ru }} </td></tr>
                                     <tr><th> Tuman En </th><td> {{ $city->title_en }} </td></tr>
+                                    <tr><th> Tuman Kr </th><td> {{ $city->title_kr }} </td></tr>
                                     <tr><th> Tuman haqida Uz </th><td> {!! $city->body_uz !!} </td></tr>
                                     <tr><th> Tuman haqida Ru </th><td> {!! $city->body_ru !!} </td></tr>
                                     <tr><th> Tuman haqida En </th><td> {!! $city->body_en !!} </td></tr>
+                                    <tr><th> Tuman haqida Kr </th><td> {!! $city->body_kr !!} </td></tr>
 
                                     <tr><th> Hokim Image </th><td><img src="/{{ $city->hokim_image }}" width="200" alt=""></td></tr>
 
                                     <tr><th> Hokim haqida Uz </th><td> {!! $city->hokim_text_uz !!} </td></tr>
                                     <tr><th> Hokim haqida Ru </th><td> {!! $city->hokim_text_ru !!} </td></tr>
                                     <tr><th> Hokim haqida En </th><td> {!! $city->hokim_text_en !!} </td></tr>
+                                    <tr><th> Hokim haqida Kr </th><td> {!! $city->hokim_text_kr !!} </td></tr>
 
                                     <tr><th> Manzil Uz </th><td> {{ $city->addres_uz }} </td></tr>
                                     <tr><th> Manzil Ru </th><td> {{ $city->addres_ru }} </td></tr>
                                     <tr><th> Manzil En </th><td> {{ $city->addres_en }} </td></tr>
+                                    <tr><th> Manzil Kr </th><td> {{ $city->addres_kr }} </td></tr>
 
                                     <tr><th> Telefon </th><td> {{ $city->phone1 }} </td></tr>
                                     <tr><th> Ishonch Telefon </th><td> {{ $city->phone2 }} </td></tr>

@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $university->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $university->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $university->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $university->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $university->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $university->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $university->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $university->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

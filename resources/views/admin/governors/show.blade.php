@@ -37,12 +37,15 @@
                                     <tr><th> Name Uz </th><td> {{ $governor->name_uz }} </td></tr>
                                     <tr><th> Name Ru </th><td> {{ $governor->name_ru }} </td></tr>
                                     <tr><th> Name En </th><td> {{ $governor->name_en }} </td></tr>
+                                    <tr><th> Name kr </th><td> {{ $governor->name_kr }} </td></tr>
                                     <tr><th> Lavozimi Uz </th><td> {{ $governor->position_uz }} </td></tr>
                                     <tr><th> Lavozimi Ru </th><td> {{ $governor->position_ru }} </td></tr>
                                     <tr><th> Lavozimi En </th><td> {{ $governor->position_en }} </td></tr>
+                                    <tr><th> Lavozimi kr </th><td> {{ $governor->position_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $governor->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $governor->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $governor->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $governor->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $governor->image }}" alt=""> </td></tr>
                                 </tbody>
                             </table>

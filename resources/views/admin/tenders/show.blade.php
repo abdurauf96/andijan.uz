@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $tender->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $tender->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $tender->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $tender->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $tender->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $tender->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $tender->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $tender->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

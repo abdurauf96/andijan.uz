@@ -9,48 +9,48 @@ use Illuminate\Http\Request;
 
 class ArenasController extends Controller
 {
-    /**
-     * @OA\Get(
-     *      path="/arenas",
-     *      operationId="getArenas",
-     *      tags={"Bosh sahifa"},
-     *      summary="Sport obyektlari",
-     *      description="Returns list of arenas",
-     *      @OA\Response(
-     *          response=200,
-     *          description="Successful operation",
-     *       )
-     *     )
-     */
+//    /**
+//     * @OA\Get(
+//     *      path="/arenas",
+//     *      operationId="getArenas",
+//     *      tags={"Bosh sahifa"},
+//     *      summary="Sport obyektlari",
+//     *      description="Returns list of arenas",
+//     *      @OA\Response(
+//     *          response=200,
+//     *          description="Successful operation",
+//     *       )
+//     *     )
+//     */
     public function getAll()
     {
         return ArenaResource::collection(Arena::all());
     }
 
-    /**
-     * @OA\Get(
-     *      path="/arenas/{slug}",
-     *      operationId="getOneArena",
-     *      tags={"Bosh sahifa"},
-     *      summary="Get one arena by Slug",
-     *      description="Returns one arena",
-     *      @OA\Parameter(
-     *          name="slug",
-     *          required=true,
-     *          description="Arena Slug",
-     *          in="path",
-     *          @OA\Schema(type="string")
-     *      ),
-     *      @OA\Response(
-     *          response=200,
-     *          description="Successful operation",
-     *       ),
-     *      @OA\Response(
-     *          response=404,
-     *          description="if arena not found",
-     *       )
-     *     )
-     */
+//    /**
+//     * @OA\Get(
+//     *      path="/arenas/{slug}",
+//     *      operationId="getOneArena",
+//     *      tags={"Bosh sahifa"},
+//     *      summary="Get one arena by Slug",
+//     *      description="Returns one arena",
+//     *      @OA\Parameter(
+//     *          name="slug",
+//     *          required=true,
+//     *          description="Arena Slug",
+//     *          in="path",
+//     *          @OA\Schema(type="string")
+//     *      ),
+//     *      @OA\Response(
+//     *          response=200,
+//     *          description="Successful operation",
+//     *       ),
+//     *      @OA\Response(
+//     *          response=404,
+//     *          description="if arena not found",
+//     *       )
+//     *     )
+//     */
     public function getOne($slug)
     {
         $arena=Arena::whereSlug($slug)->first();

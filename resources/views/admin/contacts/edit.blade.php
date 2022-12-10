@@ -49,8 +49,10 @@
         CKEDITOR.replace( 'addres_uz');
         CKEDITOR.replace( 'addres_ru');
         CKEDITOR.replace( 'addres_en');
+        CKEDITOR.replace( 'addres_kr');
         CKEDITOR.replace( 'phone_uz');
         CKEDITOR.replace( 'phone_ru');
         CKEDITOR.replace( 'phone_en');
+        CKEDITOR.replace( 'phone_kr');
     </script>
 @endsection

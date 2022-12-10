@@ -18,6 +18,7 @@ class CreateOrgansTable extends Migration
             $table->string('title_uz')->nullable();
             $table->string('title_ru')->nullable();
             $table->string('title_en')->nullable();
+            $table->string('title_kr')->nullable();
             });
     }
 

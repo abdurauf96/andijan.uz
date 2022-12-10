@@ -15,12 +15,10 @@ class CreateInformationsTable extends Migration
         Schema::create('informations', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->mediumText('title_uz')->nullable();
-            $table->mediumText('title_ru')->nullable();
-            $table->mediumText('title_en')->nullable();
             $table->text('body_uz')->nullable();
             $table->text('body_ru')->nullable();
             $table->text('body_en')->nullable();
+            $table->text('body_kr')->nullable();
             });
     }
 

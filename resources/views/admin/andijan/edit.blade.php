@@ -58,5 +58,9 @@
             filebrowserUploadUrl: "{{route('admin.andijanImageUpload', ['_token' => csrf_token() ])}}",
             filebrowserUploadMethod: 'form'
         });
+        CKEDITOR.replace( 'body_kr',{
+            filebrowserUploadUrl: "{{route('admin.andijanImageUpload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
     </script>
 @endsection

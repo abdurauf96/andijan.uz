@@ -29,7 +29,7 @@ class Service extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'image', 'slug', 'meta_keywords', 'meta_description', 'type','link'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'body_uz', 'body_ru', 'body_en', 'body_kr', 'image', 'slug', 'meta_keywords', 'meta_description', 'type','link'];
 
     protected static function boot()
     {

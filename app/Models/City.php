@@ -29,7 +29,7 @@ class City extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'hokim_image', 'hokim_text_uz', 'hokim_text_ru', 'hokim_text_en', 'addres_uz', 'addres_ru', 'addres_en', 'phone1', 'phone2', 'exat', 'website', 'work_time', 'decision', 'statute', 'slug'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'body_kr', 'body_uz', 'body_ru', 'body_en', 'hokim_image', 'hokim_text_uz', 'hokim_text_ru', 'hokim_text_en', 'hokim_text_kr', 'addres_uz', 'addres_ru', 'addres_en', 'addres_en', 'phone1', 'phone2', 'exat', 'website', 'work_time', 'decision', 'statute', 'slug'];
 
     protected static function boot()
     {

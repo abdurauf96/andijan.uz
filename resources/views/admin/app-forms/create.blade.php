@@ -57,5 +57,10 @@
             filebrowserUploadUrl: "{{route('admin.appFormImageUpload', ['_token' => csrf_token() ])}}",
             filebrowserUploadMethod: 'form'
         });
+        CKEDITOR.replace( 'body_kr',{
+            filebrowserUploadUrl: "{{route('admin.appFormImageUpload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
+
     </script>
 @endsection

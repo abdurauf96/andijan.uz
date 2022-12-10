@@ -29,7 +29,7 @@ class Citizen extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en', 'slug', 'file'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'body_kr', 'body_uz', 'body_ru', 'body_en', 'slug', 'file'];
 
     protected static function boot()
     {

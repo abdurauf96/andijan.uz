@@ -26,7 +26,7 @@
                     <div class="card-header">
                         <h4> Districts </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/districts/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
+                            <a href="{{ url('/admin/districts/create') }}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i>Add new</a>
                         </div>
                     </div>
 
@@ -44,10 +44,10 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->title_uz }}</td><td>{{ $item->title_ru }}</td><td>{{ $item->title_en }}</td>
                                         <td>
-                                            <a class="btn btn-icon btn-primary" href="{{ url('/districts/' . $item->id) }}" title="View District"><i class="fas fa-eye"></i></a>
-                                            <a class="btn btn-icon btn-info" href="{{ url('/districts/' . $item->id . '/edit') }}" title="Edit District"><i class="far fa-edit"></i></a>
+                                            <a class="btn btn-icon btn-primary" href="{{ url('/admin/districts/' . $item->id) }}" title="View District"><i class="fas fa-eye"></i></a>
+                                            <a class="btn btn-icon btn-info" href="{{ url('/admin/districts/' . $item->id . '/edit') }}" title="Edit District"><i class="far fa-edit"></i></a>
 
-                                            <form method="POST" action="{{ url('/districts' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('/admin/districts' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 @method('DELETE')
                                                 @csrf
                                                 <button type="submit" class="btn btn-danger btn-icon" title="Delete District" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>

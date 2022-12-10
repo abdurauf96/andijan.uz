@@ -37,12 +37,15 @@
                                     <tr><th> Title Uz </th><td> {{ $field->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $field->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $field->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $field->title_kr }} </td></tr>
                                     <tr><th> Description Uz </th><td> {{ $field->description_uz }} </td></tr>
                                     <tr><th> Description Ru </th><td> {{ $field->description_ru }} </td></tr>
                                     <tr><th> Description En </th><td> {{ $field->description_en }} </td></tr>
+                                    <tr><th> Description kr </th><td> {{ $field->description_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $field->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $field->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $field->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $field->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $field->image }}" alt=""> </td></tr>
                                     <tr><th> Slug </th><td> {{ $field->slug }} </td></tr>
                                     <tr><th> Meta Description </th><td> {{ $field->meta_description }} </td></tr>

@@ -29,7 +29,7 @@ class Council extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr'];
 
     public function members()
     {

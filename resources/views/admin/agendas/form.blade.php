@@ -16,6 +16,12 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title Kr' }}</label>
+    <textarea class="form-control" rows="5" name="title_kr" type="textarea" id="title_kr" >{{ $agenda->title_kr ?? ''}}</textarea>
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('file') ? 'has-error' : ''}}">
     <label for="file" class="control-label">{{ 'File' }}</label>
     <input class="form-control" name="file" type="file" id="file" value="{{ $agenda->file ?? ''}}" >

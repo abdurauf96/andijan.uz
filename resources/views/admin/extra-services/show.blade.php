@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $extraservice->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $extraservice->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $extraservice->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $extraservice->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $extraservice->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $extraservice->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $extraservice->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $extraservice->body_kr !!} </td></tr>
                                     <tr><th> Slug </th><td> {{ $extraservice->slug }} </td></tr>
                                 </tbody>
                             </table>

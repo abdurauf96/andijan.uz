@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $indicator->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $indicator->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $indicator->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $indicator->title_kr }} </td></tr>
                                     <tr><th> File </th><td> <a href="/{{ $indicator->file }}">Yuklab olish</a> </td></tr>
                                 </tbody>
                             </table>

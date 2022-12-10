@@ -16,6 +16,12 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_uz') ? 'has-error' : ''}}">
+    <label for="title_uz" class="control-label">{{ 'Title Kr' }}</label>
+    <input class="form-control" name="title_kr" type="text" id="title_uz" value="{{ $extraservice->title_kr ?? ''}}" required>
+
+    {!! $errors->first('title_uz', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
     <label for="body_uz" class="control-label">{{ 'Body Uz' }}</label>
     <textarea class="form-control" rows="5" name="body_uz" type="textarea" id="body_uz" >{{ $extraservice->body_uz ?? ''}}</textarea>
@@ -34,7 +40,12 @@
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Body Kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_en" >{{ $extraservice->body_kr ?? ''}}</textarea>
 
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group">
     <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">
 </div>

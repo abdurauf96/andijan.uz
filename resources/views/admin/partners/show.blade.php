@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $partner->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $partner->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $partner->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $partner->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $partner->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $partner->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $partner->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $partner->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $partner->image }}" alt=""> </td></tr>
                                     <tr><th> Slug </th><td> {{ $partner->slug }} </td></tr>
                                     <tr><th> Meta Description </th><td> {{ $partner->meta_description }} </td></tr>

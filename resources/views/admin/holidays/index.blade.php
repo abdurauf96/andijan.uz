@@ -37,14 +37,14 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title Uz</th><th>Title Ru</th><th>Title En</th><th>Actions</th>
+                                        <th>#</th><th>Body Uz</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($holidays as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title_uz }}</td><td>{{ $item->title_ru }}</td><td>{{ $item->title_en }}</td>
+                                        <td>{!! $item->body_uz !!}</td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/holidays/' . $item->id) }}" title="View Holiday"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/holidays/' . $item->id . '/edit') }}" title="Edit Holiday"><i class="far fa-edit"></i></a>

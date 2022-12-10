@@ -16,12 +16,26 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title kr' }}</label>
+    <textarea class="form-control" rows="5" name="title_en" type="textarea" id="title_kr" >{{ $speech->title_kr ?? ''}}</textarea>
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
     <label for="body_uz" class="control-label">{{ 'Body Uz' }}</label>
     <textarea class="form-control" rows="5" name="body_uz" type="textarea" id="body_uz" >{{ $speech->body_uz ?? ''}}</textarea>
 
     {!! $errors->first('body_uz', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
+    <label for="body_uz" class="control-label">{{ 'Body kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_uz" >{{ $speech->body_kr ?? ''}}</textarea>
+
+    {!! $errors->first('body_uz', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('body_ru') ? 'has-error' : ''}}">
     <label for="body_ru" class="control-label">{{ 'Body Ru' }}</label>
     <textarea class="form-control" rows="5" name="body_ru" type="textarea" id="body_ru" >{{ $speech->body_ru ?? ''}}</textarea>

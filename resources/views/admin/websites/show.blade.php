@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $website->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $website->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $website->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $website->title_kr }} </td></tr>
                                     <tr><th> Link</th><td> {{ $website->link }} </td></tr>
                                     <tr><th> Organ</th><td> {{ $website->organ->title_uz }} </td></tr>
                                 </tbody>

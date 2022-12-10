@@ -16,6 +16,13 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title kr' }}</label>
+    <textarea class="form-control" rows="5" name="title_kr" type="textarea" id="title_en" >{{ $openinfo->title_kr ?? ''}}</textarea>
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('passport_uz') ? 'has-error' : ''}}">
     <label for="passport_uz" class="control-label">{{ 'Passport Uz' }}</label>
     <textarea class="form-control" rows="5" name="passport_uz" type="textarea" id="passport_uz" >{{ $openinfo->passport_uz ?? ''}}</textarea>
@@ -31,6 +38,12 @@
 <div class="form-group{{ $errors->has('passport_en') ? 'has-error' : ''}}">
     <label for="passport_en" class="control-label">{{ 'Passport En' }}</label>
     <textarea class="form-control" rows="5" name="passport_en" type="textarea" id="passport_en" >{{ $openinfo->passport_en ?? ''}}</textarea>
+
+    {!! $errors->first('passport_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('passport_en') ? 'has-error' : ''}}">
+    <label for="passport_en" class="control-label">{{ 'Passport kr' }}</label>
+    <textarea class="form-control" rows="5" name="passport_kr" type="textarea" id="passport_en" >{{ $openinfo->passport_kr ?? ''}}</textarea>
 
     {!! $errors->first('passport_en', '<p class="help-block">:message</p>') !!}
 </div>
@@ -52,7 +65,12 @@
 
     {!! $errors->first('table_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('table_en') ? 'has-error' : ''}}">
+    <label for="table_en" class="control-label">{{ 'Table kr' }}</label>
+    <textarea class="form-control" rows="5" name="table_kr" type="textarea" id="table_en" >{{ $openinfo->table_kr ?? ''}}</textarea>
 
+    {!! $errors->first('table_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group">
     <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">
 </div>

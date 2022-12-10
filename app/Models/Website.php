@@ -29,7 +29,7 @@ class Website extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'organ_id', 'link'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'organ_id', 'link'];
 
     public function organ()
     {

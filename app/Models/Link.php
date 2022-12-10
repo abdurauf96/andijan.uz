@@ -29,7 +29,7 @@ class Link extends Model
      *
      * @var array
      */
-    protected $fillable = ['link', 'image', 'title'];
+    protected $fillable = ['link', 'image', 'title_uz', 'title_ru', 'title_en', 'title_kr'];
 
     protected static function boot()
     {

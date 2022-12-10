@@ -29,7 +29,7 @@ class Document extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'image', 'link'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'image', 'link'];
 
     protected static function boot()
     {

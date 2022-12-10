@@ -29,7 +29,7 @@ class InfoCategory extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'slug', 'image'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'slug', 'image'];
 
     protected static function boot()
     {

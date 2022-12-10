@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $carprice->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $carprice->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $carprice->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $carprice->title_kr }} </td></tr>
                                     <tr><th> Mashina haqida Uz </th><td> {!! $carprice->body_uz !!} </td></tr>
                                     <tr><th> Mashina haqida Ru </th><td> {!! $carprice->body_ru !!} </td></tr>
                                     <tr><th> Mashina haqida En </th><td> {!! $carprice->body_en !!} </td></tr>
+                                    <tr><th> Mashina haqida Kr </th><td> {!! $carprice->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img src="/{{ $carprice->image }}" width="200" alt=""></td></tr>
                                 </tbody>
                             </table>

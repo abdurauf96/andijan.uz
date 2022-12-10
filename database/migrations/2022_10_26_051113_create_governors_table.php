@@ -18,12 +18,15 @@ class CreateGovernorsTable extends Migration
             $table->string('name_uz')->nullable();
             $table->string('name_ru')->nullable();
             $table->string('name_en')->nullable();
+            $table->string('name_kr')->nullable();
             $table->string('position_uz')->nullable();
             $table->string('position_ru')->nullable();
             $table->string('position_en')->nullable();
+            $table->string('position_kr')->nullable();
             $table->text('body_uz')->nullable();
             $table->text('body_ru')->nullable();
             $table->text('body_en')->nullable();
+            $table->text('body_kr')->nullable();
             $table->string('image')->nullable();
             });
     }

@@ -26,7 +26,7 @@ Route::get('posts/andijan', [\App\Http\Controllers\Api\PostsController::class, '
 Route::get('posts/randomly', [\App\Http\Controllers\Api\PostsController::class, 'getPostsRandomly']);
 Route::get('posts/{slug}', [\App\Http\Controllers\Api\PostsController::class, 'getOne']);
 
-Route::get('info-categories', [\App\Http\Controllers\Api\InfoCategoriesController::class, 'getAll']);
+//Route::get('info-categories', [\App\Http\Controllers\Api\InfoCategoriesController::class, 'getAll']);
 
 Route::get('projects', [\App\Http\Controllers\Api\ProjectsController::class, 'getAll']);
 Route::get('projects/{slug}', [\App\Http\Controllers\Api\ProjectsController::class, 'getOne']);
@@ -40,11 +40,11 @@ Route::get('services/{slug}', [\App\Http\Controllers\Api\ServicesController::cla
 
 Route::get('districts/{id}', [\App\Http\Controllers\Api\DistrictsController::class, 'getOne']);
 
-Route::get('arenas', [\App\Http\Controllers\Api\ArenasController::class, 'getAll']);
-Route::get('arenas/{slug}', [\App\Http\Controllers\Api\ArenasController::class, 'getOne']);
+//Route::get('arenas', [\App\Http\Controllers\Api\ArenasController::class, 'getAll']);
+//Route::get('arenas/{slug}', [\App\Http\Controllers\Api\ArenasController::class, 'getOne']);
 
-Route::get('fields', [\App\Http\Controllers\Api\FieldsController::class, 'getAll']);
-Route::get('fields/{slug}', [\App\Http\Controllers\Api\FieldsController::class, 'getOne']);
+//Route::get('fields', [\App\Http\Controllers\Api\FieldsController::class, 'getAll']);
+//Route::get('fields/{slug}', [\App\Http\Controllers\Api\FieldsController::class, 'getOne']);
 
 
 /* viloyat hokimligi bo'limi; */
@@ -135,9 +135,12 @@ Route::get('tenders', [\App\Http\Controllers\Api\TendersController::class, 'getA
 Route::get('extra-services', [\App\Http\Controllers\Api\ExtraServicesController::class, 'getAll']);
 Route::get('extra-services/{slug}', [\App\Http\Controllers\Api\ExtraServicesController::class, 'getOne']);
 
+
+Route::get('questions', [\App\Http\Controllers\Api\QuestionsController::class, 'getAll']);
+
 Route::get('search', [\App\Http\Controllers\Api\SearchController::class, 'search']);
 
-
 //post requests
+Route::post('vote', [\App\Http\Controllers\Api\QuestionsController::class, 'vote']);
 
 Route::post('appeals/store', [\App\Http\Controllers\Api\AppealController::class, 'store']);

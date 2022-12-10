@@ -37,6 +37,7 @@
                                     <tr><th> Body Uz </th><td> {!! $andijan->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $andijan->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $andijan->body_en !!} </td></tr>
+                                    <tr><th> Body Kr </th><td> {!! $andijan->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

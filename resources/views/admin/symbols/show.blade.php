@@ -34,12 +34,10 @@
                                     <tr>
                                         <th>ID</th><td>{{ $symbol->id }}</td>
                                     </tr>
-                                    <tr><th> Title Uz </th><td> {{ $symbol->title_uz }} </td></tr>
-                                    <tr><th> Title Ru </th><td> {{ $symbol->title_ru }} </td></tr>
-                                    <tr><th> Title En </th><td> {{ $symbol->title_en }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $symbol->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $symbol->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $symbol->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $symbol->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

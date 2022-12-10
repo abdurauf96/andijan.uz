@@ -29,7 +29,7 @@ class OpenInfo extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'passport_uz', 'passport_ru', 'passport_en', 'table_uz', 'table_ru', 'table_en', 'slug'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'passport_uz', 'passport_ru', 'passport_en', 'passport_kr', 'table_uz', 'table_ru', 'table_en', 'table_kr', 'slug'];
 
     protected static function boot()
     {

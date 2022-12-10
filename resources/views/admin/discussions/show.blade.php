@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $discussion->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $discussion->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $discussion->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $discussion->title_kr }} </td></tr>
                                     <tr><th> Link </th><td> {{ $discussion->link }} </td></tr>
                                     <tr><th> Joylashtirilgan sana </th><td> {{ $discussion->date }} </td></tr>
                                 </tbody>

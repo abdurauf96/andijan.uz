@@ -18,12 +18,15 @@ class CreateSenatorsTable extends Migration
             $table->string('name_uz')->nullable();
             $table->string('name_ru')->nullable();
             $table->string('name_en')->nullable();
+            $table->string('name_kr')->nullable();
             $table->mediumText('description_uz')->nullable();
             $table->mediumText('description_ru')->nullable();
             $table->mediumText('description_en')->nullable();
+            $table->mediumText('description_kr')->nullable();
             $table->text('body_uz')->nullable();
             $table->text('body_ru')->nullable();
             $table->text('body_en')->nullable();
+            $table->text('body_kr')->nullable();
             $table->string('image')->nullable();
             $table->string('phone')->nullable();
             $table->string('fax')->nullable();

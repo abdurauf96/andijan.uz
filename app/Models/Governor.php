@@ -29,7 +29,7 @@ class Governor extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'position_uz', 'position_ru', 'position_en', 'body_uz', 'body_ru', 'body_en', 'image'];
+    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'name_kr', 'position_uz', 'position_ru', 'position_en', 'position_kr', 'body_uz', 'body_ru', 'body_en', 'body_kr', 'image'];
 
     protected static function boot()
     {

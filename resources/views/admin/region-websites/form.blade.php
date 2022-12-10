@@ -16,6 +16,12 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title kr' }}</label>
+    <input class="form-control" name="title_kr" type="text" id="title_en" value="{{ $regionwebsite->title_kr ?? ''}}" >
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('link') ? 'has-error' : ''}}">
     <label for="link" class="control-label">{{ 'Link' }}</label>
     <input class="form-control" name="link" type="text" id="link" value="{{ $regionwebsite->link ?? ''}}" >

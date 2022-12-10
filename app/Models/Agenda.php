@@ -29,7 +29,7 @@ class Agenda extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'file'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'file'];
 
     protected static function boot()
     {

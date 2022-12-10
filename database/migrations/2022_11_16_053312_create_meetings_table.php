@@ -18,9 +18,11 @@ class CreateMeetingsTable extends Migration
             $table->mediumText('title_uz')->nullable();
             $table->mediumText('title_ru')->nullable();
             $table->mediumText('title_en')->nullable();
+            $table->mediumText('title_kr')->nullable();
             $table->text('body_uz')->nullable();
             $table->text('body_ru')->nullable();
             $table->text('body_en')->nullable();
+            $table->text('body_kr')->nullable();
             });
     }
 

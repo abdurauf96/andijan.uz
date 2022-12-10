@@ -43,6 +43,10 @@ use Illuminate\Http\Request;
  *     name="Interaktiv",
  *     description="Interaktiv bo'limi"
  * )
+ * @OA\Tag(
+ *     name="So'rovnoma",
+ *     description="So'rovnomalar "
+ * )
  *
  */
 class BaseController extends Controller

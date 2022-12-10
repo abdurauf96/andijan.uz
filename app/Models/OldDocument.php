@@ -29,7 +29,7 @@ class OldDocument extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'organ_uz', 'organ_ru', 'organ_en', 'date', 'file'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'organ_uz', 'organ_ru', 'organ_en', 'organ_kr', 'date', 'file'];
 
     protected static function boot()
     {

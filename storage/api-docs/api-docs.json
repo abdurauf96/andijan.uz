@@ -125,50 +125,6 @@
                 }
             }
         },
-        "/arenas": {
-            "get": {
-                "tags": [
-                    "Bosh sahifa"
-                ],
-                "summary": "Sport obyektlari",
-                "description": "Returns list of arenas",
-                "operationId": "getArenas",
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    }
-                }
-            }
-        },
-        "/arenas/{slug}": {
-            "get": {
-                "tags": [
-                    "Bosh sahifa"
-                ],
-                "summary": "Get one arena by Slug",
-                "description": "Returns one arena",
-                "operationId": "getOneArena",
-                "parameters": [
-                    {
-                        "name": "slug",
-                        "in": "path",
-                        "description": "Arena Slug",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    },
-                    "404": {
-                        "description": "if arena not found"
-                    }
-                }
-            }
-        },
         "/awards": {
             "get": {
                 "tags": [
@@ -495,50 +451,6 @@
                 }
             }
         },
-        "/fields": {
-            "get": {
-                "tags": [
-                    "Bosh sahifa"
-                ],
-                "summary": "Ustuvor tarmoqlar",
-                "description": "Returns list of fields",
-                "operationId": "getFields",
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    }
-                }
-            }
-        },
-        "/fields/{slug}": {
-            "get": {
-                "tags": [
-                    "Bosh sahifa"
-                ],
-                "summary": "Get one field by Slug",
-                "description": "Returns one field",
-                "operationId": "getOneField",
-                "parameters": [
-                    {
-                        "name": "slug",
-                        "in": "path",
-                        "description": "Field Slug",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    },
-                    "404": {
-                        "description": "if field not found"
-                    }
-                }
-            }
-        },
         "/general-info": {
             "get": {
                 "tags": [
@@ -665,21 +577,6 @@
                 "summary": "Iqtisodiy ko'rsatkichlar",
                 "description": "Returns list of indicators",
                 "operationId": "getIndicators",
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    }
-                }
-            }
-        },
-        "/info-categories": {
-            "get": {
-                "tags": [
-                    "Bosh sahifa"
-                ],
-                "summary": "Ma'lumotlar",
-                "description": "Returns list of InfoCategories",
-                "operationId": "getInfoCategories",
                 "responses": {
                     "200": {
                         "description": "Successful operation"
@@ -1102,14 +999,14 @@
                 }
             }
         },
-        "/projects": {
+        "/questions": {
             "get": {
                 "tags": [
-                    "Bosh sahifa"
+                    "So'rovnoma"
                 ],
-                "summary": "Get list of Projects",
-                "description": "Returns list of Projects",
-                "operationId": "getProjects",
+                "summary": "sorovnoma",
+                "description": "Returns list of questions",
+                "operationId": "getQuestions",
                 "responses": {
                     "200": {
                         "description": "Successful operation"
@@ -1117,31 +1014,50 @@
                 }
             }
         },
-        "/projects/{slug}": {
-            "get": {
+        "/vote": {
+            "post": {
                 "tags": [
-                    "Bosh sahifa"
+                    "So'rovnoma"
                 ],
-                "summary": "Get one project by slug",
-                "description": "Returns one project",
-                "operationId": "getOneProject",
-                "parameters": [
-                    {
-                        "name": "slug",
-                        "in": "path",
-                        "description": "Project Slug",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
+                "description": "Ovoz berish",
+                "operationId": "storeVote",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "question_id": {
+                                        "type": "integer"
+                                    },
+                                    "answer_id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
                         }
                     }
-                ],
+                },
                 "responses": {
-                    "200": {
-                        "description": "Successful operation"
+                    "204": {
+                        "description": "appeal sent successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Appeal stored"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     },
-                    "404": {
-                        "description": "if project not found"
+                    "422": {
+                        "description": "Validation error"
                     }
                 }
             }
@@ -1528,6 +1444,10 @@
         {
             "name": "Interaktiv",
             "description": "Interaktiv bo'limi"
+        },
+        {
+            "name": "So'rovnoma",
+            "description": "So'rovnomalar "
         }
     ]
 }

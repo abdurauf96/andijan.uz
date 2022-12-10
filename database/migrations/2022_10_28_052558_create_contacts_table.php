@@ -18,9 +18,11 @@ class CreateContactsTable extends Migration
             $table->text('addres_uz')->nullable();
             $table->text('addres_ru')->nullable();
             $table->text('addres_en')->nullable();
+            $table->text('addres_kr')->nullable();
             $table->text('phone_uz')->nullable();
             $table->text('phone_ru')->nullable();
             $table->text('phone_en')->nullable();
+            $table->text('phone_kr')->nullable();
             });
     }
 

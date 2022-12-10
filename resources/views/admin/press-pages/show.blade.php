@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $presspage->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $presspage->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $presspage->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $presspage->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $presspage->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $presspage->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $presspage->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $presspage->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

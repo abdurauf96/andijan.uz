@@ -16,6 +16,12 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title kr' }}</label>
+    <input class="form-control" name="title_kr" type="text" id="title_en" value="{{ $field->title_kr ?? ''}}" >
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('description_uz') ? 'has-error' : ''}}">
     <label for="description_uz" class="control-label">{{ 'Description Uz' }}</label>
     <textarea class="form-control" rows="5" name="description_uz" type="textarea" id="description_uz" >{{ $field->description_uz ?? ''}}</textarea>
@@ -31,8 +37,10 @@
 <div class="form-group{{ $errors->has('description_en') ? 'has-error' : ''}}">
     <label for="description_en" class="control-label">{{ 'Description En' }}</label>
     <textarea class="form-control" rows="5" name="description_en" type="textarea" id="description_en" >{{ $field->description_en ?? ''}}</textarea>
-
-    {!! $errors->first('description_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('description_en') ? 'has-error' : ''}}">
+    <label for="description_en" class="control-label">{{ 'Description kr' }}</label>
+    <textarea class="form-control" rows="5" name="description_kr" type="textarea" id="description_en" >{{ $field->description_kr ?? ''}}</textarea>
 </div>
 <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
     <label for="body_uz" class="control-label">{{ 'Body Uz' }}</label>
@@ -49,6 +57,12 @@
 <div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
     <label for="body_en" class="control-label">{{ 'Body En' }}</label>
     <textarea class="form-control" rows="5" name="body_en" type="textarea" id="body_en" >{{ $field->body_en ?? ''}}</textarea>
+
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Body kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_en" >{{ $field->body_kr ?? ''}}</textarea>
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>

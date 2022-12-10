@@ -16,6 +16,13 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title kr' }}</label>
+    <textarea class="form-control" rows="5" name="title_kr" type="textarea" id="title_en" >{{ $olddocument->title_kr ?? ''}}</textarea>
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('organ_uz') ? 'has-error' : ''}}">
     <label for="organ_uz" class="control-label">{{ 'Organ Uz' }}</label>
     <textarea class="form-control" rows="5" name="organ_uz" type="textarea" id="organ_uz" >{{ $olddocument->organ_uz ?? ''}}</textarea>
@@ -34,6 +41,13 @@
 
     {!! $errors->first('organ_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('organ_en') ? 'has-error' : ''}}">
+    <label for="organ_en" class="control-label">{{ 'Organ kr' }}</label>
+    <textarea class="form-control" rows="5" name="organ_kr" type="textarea" id="organ_en" >{{ $olddocument->organ_kr ?? ''}}</textarea>
+
+    {!! $errors->first('organ_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('date') ? 'has-error' : ''}}">
     <label for="date" class="control-label">{{ 'Date' }}</label>
     <input class="form-control" name="date" type="date" id="date" value="{{ $olddocument->date ?? ''}}" >

@@ -16,6 +16,13 @@
 
     {!! $errors->first('name_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('name_en') ? 'has-error' : ''}}">
+    <label for="name_en" class="control-label">{{ 'Name kr' }}</label>
+    <input class="form-control" name="name_kr" type="text" id="name_en" value="{{ $member->name_kr ?? ''}}" >
+
+    {!! $errors->first('name_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('description_uz') ? 'has-error' : ''}}">
     <label for="description_uz" class="control-label">{{ 'Description Uz' }}</label>
     <textarea class="form-control" rows="5" name="description_uz" type="textarea" id="description_uz" >{{ $member->description_uz ?? ''}}</textarea>
@@ -34,6 +41,13 @@
 
     {!! $errors->first('description_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('description_uz') ? 'has-error' : ''}}">
+    <label for="description_uz" class="control-label">{{ 'Description kr' }}</label>
+    <textarea class="form-control" rows="5" name="description_kr" type="textarea" id="description_uz" >{{ $member->description_kr ?? ''}}</textarea>
+
+    {!! $errors->first('description_uz', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('council_id') ? 'has-error' : ''}}">
     <label for="council_id" class="control-label">{{ 'Kengash' }}</label>
     <select name="council_id" class="form-control"  id="">

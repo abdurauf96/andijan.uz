@@ -29,7 +29,7 @@ class Member extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'description_uz', 'description_ru', 'description_en', 'council_id', 'image', 'phone', 'email'];
+    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'name_kr', 'description_uz', 'description_ru', 'description_en', 'description_kr', 'council_id', 'image', 'phone', 'email'];
 
     public function council()
     {

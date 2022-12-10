@@ -29,7 +29,7 @@ class Field extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'description_uz', 'description_ru', 'description_en', 'body_uz', 'body_ru', 'body_en', 'image', 'slug', 'meta_keywords', 'meta_description'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'description_uz', 'description_ru', 'description_en', 'description_kr', 'body_uz', 'body_ru', 'body_en', 'body_kr', 'image', 'slug', 'meta_keywords', 'meta_description'];
 
     protected static function boot()
     {

@@ -34,7 +34,10 @@
                                     <tr>
                                         <th>ID</th><td>{{ $link->id }}</td>
                                     </tr>
-                                    <tr><th> Sarlavha </th><td> {{ $link->title }} </td></tr>
+                                    <tr><th> Sarlavha UZ </th><td> {{ $link->title_uz }} </td></tr>
+                                    <tr><th> Sarlavha ru </th><td> {{ $link->title_ru }} </td></tr>
+                                    <tr><th> Sarlavha en </th><td> {{ $link->title_en }} </td></tr>
+                                    <tr><th> Sarlavha kr  </th><td> {{ $link->title_kr }} </td></tr>
                                     <tr><th> Link </th><td> {{ $link->link }} </td></tr>
                                     <tr><th> Image </th><td> <img src="/{{ $link->image }}" alt="" width="100">  </td></tr>
                                 </tbody>

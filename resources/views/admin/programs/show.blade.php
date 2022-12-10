@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $program->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $program->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $program->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $program->title_kr }} </td></tr>
                                     <tr><th> File </th><td> <a href="/{{ $program->file }}">Ko'rish</a> </td></tr>
                                 </tbody>
                             </table>

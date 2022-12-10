@@ -29,7 +29,7 @@ class ComissionMember extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'comission_id', 'description_uz', 'description_ru', 'description_en', 'image', 'phone', 'email'];
+    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'name_kr', 'comission_id', 'description_uz', 'description_ru', 'description_en', 'description_kr', 'image', 'phone', 'email'];
 
     public function comission()
     {

@@ -30,7 +30,7 @@ class Senator extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'description_uz', 'description_ru', 'description_en', 'image','body_uz', 'body_ru', 'body_en', 'phone', 'email', 'fax', 'meta_keywords', 'meta_description','type'];
+    protected $fillable = ['name_uz', 'name_ru', 'name_en', 'name_kr', 'description_uz', 'description_ru', 'description_en', 'description_kr', 'image','body_uz', 'body_ru', 'body_en', 'body_kr', 'phone', 'email', 'fax', 'meta_keywords', 'meta_description','type'];
 
     public function scopeDeputat($query){
         return $query->where('type', self::DEPUTAT);

@@ -16,6 +16,12 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Tuman yoki shahar Kr' }}</label>
+    <input class="form-control" name="title_kr" type="text" id="title_en" value="{{ $city->title_kr ?? ''}}" >
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
     <label for="body_uz" class="control-label">{{ 'Tuman yoki shahar haqida Uz' }}</label>
     <textarea class="form-control" rows="5" name="body_uz" type="textarea" id="body_uz" >{{ $city->body_uz ?? ''}}</textarea>
@@ -31,6 +37,12 @@
 <div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
     <label for="body_en" class="control-label">{{ 'Tuman yoki shahar haqida En' }}</label>
     <textarea class="form-control" rows="5" name="body_en" type="textarea" id="body_en" >{{ $city->body_en ?? ''}}</textarea>
+
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Tuman yoki shahar haqida Kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_en" >{{ $city->body_kr ?? ''}}</textarea>
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>
@@ -58,6 +70,11 @@
 
     {!! $errors->first('hokim_text_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('hokim_text_en') ? 'has-error' : ''}}">
+    <label for="hokim_text_en" class="control-label">{{ 'Hokim haqida Kr' }}</label>
+    <textarea class="form-control" rows="5" name="hokim_text_kr" type="textarea" id="hokim_text_en" >{{ $city->hokim_text_kr ?? ''}}</textarea>
+
+</div>
 <div class="form-group{{ $errors->has('addres_uz') ? 'has-error' : ''}}">
     <label for="addres_uz" class="control-label">{{ 'Addres Uz' }}</label>
     <input class="form-control" name="addres_uz" type="text" id="addres_uz" value="{{ $city->addres_uz ?? ''}}" >
@@ -73,6 +90,12 @@
 <div class="form-group{{ $errors->has('addres_en') ? 'has-error' : ''}}">
     <label for="addres_en" class="control-label">{{ 'Addres En' }}</label>
     <input class="form-control" name="addres_en" type="text" id="addres_en" value="{{ $city->addres_en ?? ''}}" >
+
+    {!! $errors->first('addres_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('addres_en') ? 'has-error' : ''}}">
+    <label for="addres_en" class="control-label">{{ 'Addres Kr' }}</label>
+    <input class="form-control" name="addres_kr" type="text" id="addres_en" value="{{ $city->addres_kr ?? ''}}" >
 
     {!! $errors->first('addres_en', '<p class="help-block">:message</p>') !!}
 </div>

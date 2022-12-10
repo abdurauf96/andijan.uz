@@ -37,6 +37,7 @@
                                     <tr><th> Body Uz </th><td> {!! $appform->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $appform->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $appform->body_en !!} </td></tr>
+                                    <tr><th> Body Kr </th><td> {!! $appform->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

@@ -16,6 +16,12 @@
 
     {!! $errors->first('addres_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('addres_en') ? 'has-error' : ''}}">
+    <label for="addres_en" class="control-label">{{ 'Addres Kr' }}</label>
+    <textarea class="form-control" rows="5" name="addres_kr" type="textarea" id="addres_en" >{{ $contact->addres_kr ?? ''}}</textarea>
+
+    {!! $errors->first('addres_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('phone_uz') ? 'has-error' : ''}}">
     <label for="phone_uz" class="control-label">{{ 'Phone Uz' }}</label>
     <textarea class="form-control" rows="5" name="phone_uz" type="textarea" id="phone_uz" >{{ $contact->phone_uz ?? ''}}</textarea>
@@ -34,7 +40,12 @@
 
     {!! $errors->first('phone_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('phone_en') ? 'has-error' : ''}}">
+    <label for="phone_en" class="control-label">{{ 'Phone Kr' }}</label>
+    <textarea class="form-control" rows="5" name="phone_kr" type="textarea" id="phone_en" >{{ $contact->phone_kr ?? ''}}</textarea>
 
+    {!! $errors->first('phone_en', '<p class="help-block">:message</p>') !!}
+</div>
 
 <div class="form-group">
     <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">

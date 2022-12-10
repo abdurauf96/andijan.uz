@@ -1,21 +1,4 @@
-<div class="form-group{{ $errors->has('title_uz') ? 'has-error' : ''}}">
-    <label for="title_uz" class="control-label">{{ 'Title Uz' }}</label>
-    <input class="form-control" name="title_uz" type="text" id="title_uz" value="{{ $accreditation->title_uz ?? ''}}" >
 
-    {!! $errors->first('title_uz', '<p class="help-block">:message</p>') !!}
-</div>
-<div class="form-group{{ $errors->has('title_ru') ? 'has-error' : ''}}">
-    <label for="title_ru" class="control-label">{{ 'Title Ru' }}</label>
-    <input class="form-control" name="title_ru" type="text" id="title_ru" value="{{ $accreditation->title_ru ?? ''}}" >
-
-    {!! $errors->first('title_ru', '<p class="help-block">:message</p>') !!}
-</div>
-<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
-    <label for="title_en" class="control-label">{{ 'Title En' }}</label>
-    <input class="form-control" name="title_en" type="text" id="title_en" value="{{ $accreditation->title_en ?? ''}}" >
-
-    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
-</div>
 <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
     <label for="body_uz" class="control-label">{{ 'Body Uz' }}</label>
     <textarea class="form-control" rows="5" name="body_uz" type="textarea" id="body_uz" >{{ $accreditation->body_uz ?? ''}}</textarea>
@@ -31,6 +14,12 @@
 <div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
     <label for="body_en" class="control-label">{{ 'Body En' }}</label>
     <textarea class="form-control" rows="5" name="body_en" type="textarea" id="body_en" >{{ $accreditation->body_en ?? ''}}</textarea>
+
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Body Kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_kr" >{{ $accreditation->body_kr ?? ''}}</textarea>
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>

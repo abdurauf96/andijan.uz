@@ -8,7 +8,7 @@ use Spatie\Activitylog\Traits\LogsActivity;
 class Contact extends Model
 {
     use LogsActivity;
-    
+
 
     /**
      * The database table used by the model.
@@ -29,9 +29,9 @@ class Contact extends Model
      *
      * @var array
      */
-    protected $fillable = ['addres_uz', 'addres_ru', 'addres_en', 'phone_uz', 'phone_ru', 'phone_en'];
+    protected $fillable = ['addres_uz', 'addres_ru', 'addres_en', 'addres_kr', 'phone_uz', 'phone_ru', 'phone_en', 'phone_kr'];
 
-    
+
 
     /**
      * Change activity log event description

@@ -34,12 +34,10 @@
                                     <tr>
                                         <th>ID</th><td>{{ $holiday->id }}</td>
                                     </tr>
-                                    <tr><th> Title Uz </th><td> {{ $holiday->title_uz }} </td></tr>
-                                    <tr><th> Title Ru </th><td> {{ $holiday->title_ru }} </td></tr>
-                                    <tr><th> Title En </th><td> {{ $holiday->title_en }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $holiday->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $holiday->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $holiday->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $holiday->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

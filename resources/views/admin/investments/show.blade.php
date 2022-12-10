@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $investment->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $investment->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $investment->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $investment->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $investment->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $investment->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $investment->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $investment->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $investment->image }}" alt=""> </td></tr>
                                     <tr><th> Slug </th><td> {{ $investment->slug }} </td></tr>
                                 </tbody>

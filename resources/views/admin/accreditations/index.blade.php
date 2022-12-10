@@ -37,14 +37,14 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title Uz</th><th>Actions</th>
+                                        <th>#</th><th>Body Uz</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($accreditations as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title_uz }}</td>
+                                        <td>{!! $item->body_uz !!}</td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/accreditations/' . $item->id) }}" title="View Accreditation"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/accreditations/' . $item->id . '/edit') }}" title="Edit Accreditation"><i class="far fa-edit"></i></a>

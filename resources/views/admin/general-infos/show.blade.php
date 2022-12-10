@@ -37,6 +37,7 @@
                                     <tr><th> Body Uz </th><td> {!! $generalinfo->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $generalinfo->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $generalinfo->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $generalinfo->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

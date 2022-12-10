@@ -16,6 +16,12 @@
 
     {!! $errors->first('name_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('name_en') ? 'has-error' : ''}}">
+    <label for="name_en" class="control-label">{{ 'Name kr' }}</label>
+    <input class="form-control" name="name_kr" type="text" id="name_en" value="{{ $governor->name_kr ?? ''}}" >
+
+    {!! $errors->first('name_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('position_uz') ? 'has-error' : ''}}">
     <label for="position_uz" class="control-label">{{ 'Position Uz' }}</label>
     <input class="form-control" name="position_uz" type="text" id="position_uz" value="{{ $governor->position_uz ?? ''}}" >
@@ -34,6 +40,12 @@
 
     {!! $errors->first('position_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('position_en') ? 'has-error' : ''}}">
+    <label for="position_en" class="control-label">{{ 'Position kr' }}</label>
+    <input class="form-control" name="position_kr" type="text" id="position_en" value="{{ $governor->position_kr ?? ''}}" >
+
+    {!! $errors->first('position_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
     <label for="body_uz" class="control-label">{{ 'Body Uz' }}</label>
     <textarea class="form-control" rows="5" name="body_uz" type="textarea" id="body_uz" >{{ $governor->body_uz ?? ''}}</textarea>
@@ -49,6 +61,12 @@
 <div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
     <label for="body_en" class="control-label">{{ 'Body En' }}</label>
     <textarea class="form-control" rows="5" name="body_en" type="textarea" id="body_en" >{{ $governor->body_en ?? ''}}</textarea>
+
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Body kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_en" >{{ $governor->body_kr ?? ''}}</textarea>
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>

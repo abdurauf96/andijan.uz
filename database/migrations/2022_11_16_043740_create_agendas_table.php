@@ -18,6 +18,7 @@ class CreateAgendasTable extends Migration
             $table->mediumText('title_uz')->nullable();
             $table->mediumText('title_ru')->nullable();
             $table->mediumText('title_en')->nullable();
+            $table->mediumText('title_kr')->nullable();
             $table->string('file')->nullable();
             });
     }

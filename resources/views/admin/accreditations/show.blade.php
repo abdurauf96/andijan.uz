@@ -34,12 +34,10 @@
                                     <tr>
                                         <th>ID</th><td>{{ $accreditation->id }}</td>
                                     </tr>
-                                    <tr><th> Title Uz </th><td> {{ $accreditation->title_uz }} </td></tr>
-                                    <tr><th> Title Ru </th><td> {{ $accreditation->title_ru }} </td></tr>
-                                    <tr><th> Title En </th><td> {{ $accreditation->title_en }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $accreditation->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $accreditation->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $accreditation->body_en !!} </td></tr>
+                                    <tr><th> Body En </th><td> {!! $accreditation->body_kr !!} </td></tr>
                                 </tbody>
                             </table>
                         </div>

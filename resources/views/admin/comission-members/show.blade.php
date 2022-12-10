@@ -37,9 +37,11 @@
                                     <tr><th> Name Uz </th><td> {{ $comissionmember->name_uz }} </td></tr>
                                     <tr><th> Name Ru </th><td> {{ $comissionmember->name_ru }} </td></tr>
                                     <tr><th> Name En </th><td> {{ $comissionmember->name_en }} </td></tr>
+                                    <tr><th> Name kr </th><td> {{ $comissionmember->name_kr }} </td></tr>
                                     <tr><th> Lavozimi Uz </th><td> {{ $comissionmember->description_uz }} </td></tr>
                                     <tr><th> Lavozimi Ru </th><td> {{ $comissionmember->description_ru }} </td></tr>
                                     <tr><th> Lavozimi En </th><td> {{ $comissionmember->description_en }} </td></tr>
+                                    <tr><th> Lavozimi kr </th><td> {{ $comissionmember->description_kr }} </td></tr>
                                     <tr><th> Komissiyasi </th><td> {{ $comissionmember->comission->title_uz }} </td></tr>
                                     <tr><th> Phone </th><td> {{ $comissionmember->phone }} </td></tr>
                                     <tr><th> Email </th><td> {{ $comissionmember->email }} </td></tr>

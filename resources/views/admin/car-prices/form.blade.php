@@ -16,6 +16,12 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title Kr' }}</label>
+    <input class="form-control" name="title_kr" type="text" id="title_en" value="{{ $carprice->title_kr ?? ''}}" >
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
     <label for="body_uz" class="control-label">{{ 'Body Uz' }}</label>
     <input class="form-control" name="body_uz" type="text" id="body_uz" value="{{ $carprice->body_uz ?? ''}}" >
@@ -31,6 +37,12 @@
 <div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
     <label for="body_en" class="control-label">{{ 'Body En' }}</label>
     <input class="form-control" name="body_en" type="text" id="body_en" value="{{ $carprice->body_en ?? ''}}" >
+
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Body Kr' }}</label>
+    <input class="form-control" name="body_kr" type="text" id="body_en" value="{{ $carprice->body_kr ?? ''}}" >
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>

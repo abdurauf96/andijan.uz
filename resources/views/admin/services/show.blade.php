@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $service->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $service->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $service->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $service->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $service->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $service->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $service->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $service->body_kr !!} </td></tr>
                                     <tr><th> Link </th><td> {{ $service->link }} </td></tr>
                                     <tr><th> Image </th><td> <img src="/{{ $service->image }}" width="100" alt=""> </td></tr>
                                     <tr><th> Type </th><td> {{ $service->type==1 ? 'Main (Asosiy)' : 'Secondary (Qo\'shimcha)' }} </td></tr>

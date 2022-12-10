@@ -16,6 +16,13 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title kr' }}</label>
+    <input class="form-control" name="title_kr" type="text" id="title_en" value="{{ $organization->title_kr ?? ''}}" >
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('position_uz') ? 'has-error' : ''}}">
     <label for="position_uz" class="control-label">{{ 'Tashkilot vakili lavozimi Uz' }}</label>
     <input class="form-control" name="position_uz" type="text" id="position_uz" value="{{ $organization->position_uz ?? ''}}" >
@@ -34,6 +41,13 @@
 
     {!! $errors->first('position_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('position_en') ? 'has-error' : ''}}">
+    <label for="position_en" class="control-label">{{ 'Tashkilot vakili lavozimi kr' }}</label>
+    <input class="form-control" name="position_kr" type="text" id="position_en" value="{{ $organization->position_kr ?? ''}}" >
+
+    {!! $errors->first('position_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('image') ? 'has-error' : ''}}">
     <label for="image" class="control-label">{{ 'Image' }}</label>
     <input class="form-control" name="image" type="file" id="image" value="{{ $organization->image ?? ''}}" >
@@ -61,6 +75,12 @@
 <div class="form-group{{ $errors->has('addres_en') ? 'has-error' : ''}}">
     <label for="addres_en" class="control-label">{{ 'Addres En' }}</label>
     <textarea class="form-control" rows="5" name="addres_en" type="textarea" id="addres_en" >{{ $organization->addres_en ?? ''}}</textarea>
+
+    {!! $errors->first('addres_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('addres_en') ? 'has-error' : ''}}">
+    <label for="addres_en" class="control-label">{{ 'Addres kr' }}</label>
+    <textarea class="form-control" rows="5" name="addres_kr" type="textarea" id="addres_en" >{{ $organization->addres_kr ?? ''}}</textarea>
 
     {!! $errors->first('addres_en', '<p class="help-block">:message</p>') !!}
 </div>
@@ -103,6 +123,12 @@
 <div class="form-group{{ $errors->has('reception_time_en') ? 'has-error' : ''}}">
     <label for="reception_time_en" class="control-label">{{ 'Fuqarolarni qabul qilish vaqti En' }}</label>
     <input class="form-control" name="reception_time_en" type="text" id="reception_time_en" value="{{ $organization->reception_time_en ?? ''}}" >
+
+    {!! $errors->first('reception_time_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('reception_time_en') ? 'has-error' : ''}}">
+    <label for="reception_time_en" class="control-label">{{ 'Fuqarolarni qabul qilish vaqti kr' }}</label>
+    <input class="form-control" name="reception_time_kr" type="text" id="reception_time_en" value="{{ $organization->reception_time_kr ?? ''}}" >
 
     {!! $errors->first('reception_time_en', '<p class="help-block">:message</p>') !!}
 </div>
@@ -157,6 +183,11 @@
 <div class="form-group{{ $errors->has('director_info') ? 'has-error' : ''}}">
     <label for="director_info" class="control-label">{{ 'Director Haqida En' }}</label>
     <textarea class="form-control" rows="5" name="director_info_en" type="textarea" id="director_info" >{{ $organization->director_info_en ?? ''}}</textarea>
+    {!! $errors->first('director_info', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('director_info') ? 'has-error' : ''}}">
+    <label for="director_info" class="control-label">{{ 'Director Haqida kr' }}</label>
+    <textarea class="form-control" rows="5" name="director_info_kr" type="textarea" id="director_info" >{{ $organization->director_info_kr ?? ''}}</textarea>
     {!! $errors->first('director_info', '<p class="help-block">:message</p>') !!}
 </div>
 

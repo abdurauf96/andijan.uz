@@ -49,5 +49,6 @@
         CKEDITOR.replace( 'body_uz');
         CKEDITOR.replace( 'body_ru',);
         CKEDITOR.replace( 'body_en');
+        CKEDITOR.replace( 'body_kr');
     </script>
 @endsection

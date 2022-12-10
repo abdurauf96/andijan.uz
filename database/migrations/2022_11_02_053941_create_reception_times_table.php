@@ -18,9 +18,11 @@ class CreateReceptionTimesTable extends Migration
             $table->string('title_uz')->nullable();
             $table->string('title_ru')->nullable();
             $table->string('title_en')->nullable();
+            $table->string('title_kr')->nullable();
             $table->mediumText('body_uz')->nullable();
             $table->mediumText('body_ru')->nullable();
             $table->mediumText('body_en')->nullable();
+            $table->mediumText('body_kr')->nullable();
             $table->string('image')->nullable();
             });
     }

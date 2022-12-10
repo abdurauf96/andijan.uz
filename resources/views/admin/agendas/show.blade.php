@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $agenda->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $agenda->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $agenda->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $agenda->title_kr }} </td></tr>
                                     <tr><th> File </th><td> <a href="/{{ $agenda->file }}">Yuklab olish</a> </td></tr>
                                 </tbody>
                             </table>

@@ -35,14 +35,14 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title Uz</th><th>Actions</th>
+                                        <th>#</th><th>Body Uz</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($symbols as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title_uz }}</td>
+                                        <td>{!! $item->body_uz !!}</td>
                                         <td>
                                             <a class="btn btn-icon btn-primary" href="{{ url('/admin/symbols/' . $item->id) }}" title="View Symbol"><i class="fas fa-eye"></i></a>
                                             <a class="btn btn-icon btn-info" href="{{ url('/admin/symbols/' . $item->id . '/edit') }}" title="Edit Symbol"><i class="far fa-edit"></i></a>

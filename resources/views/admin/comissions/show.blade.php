@@ -34,7 +34,9 @@
                                     <tr>
                                         <th>ID</th><td>{{ $comission->id }}</td>
                                     </tr>
-                                    <tr><th> Title Uz </th><td> {{ $comission->title_uz }} </td></tr><tr><th> Title Ru </th><td> {{ $comission->title_ru }} </td></tr><tr><th> Title En </th><td> {{ $comission->title_en }} </td></tr>
+                                    <tr><th> Title Uz </th><td> {{ $comission->title_uz }} </td></tr><tr><th> Title Ru </th><td> {{ $comission->title_ru }} </td></tr>
+                                    <tr><th> Title En </th><td> {{ $comission->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $comission->title_kr }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

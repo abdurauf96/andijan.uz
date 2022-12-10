@@ -16,13 +16,13 @@
                         data-feather="briefcase"></i><span>Bosh sahifa </span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.posts.index') }}">Yangiliklar</a> </li>
-                    <li><a class="nav-link" href="{{ route('admin.info-categories.index') }}">Kategoriyalar</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.projects.index') }}">Loyihalar</a></li>
+{{--                    <li><a class="nav-link" href="{{ route('admin.info-categories.index') }}">Kategoriyalar</a></li>--}}
+{{--                    <li><a class="nav-link" href="{{ route('admin.projects.index') }}">Loyihalar</a></li>--}}
                     <li><a class="nav-link" href="{{ route('admin.links.index') }}">Foydali saytlar</a></li>
                     <li><a class="nav-link" href="{{ route('admin.services.index') }}">Xizmatlar</a></li>
                     <li><a class="nav-link" href="{{ route('admin.districts.index') }}">Tumanlar</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.arenas.index') }}">Sport obyektlari</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.fields.index') }}">Ustuvor tarmoqlar</a></li>
+{{--                    <li><a class="nav-link" href="{{ route('admin.arenas.index') }}">Sport obyektlari</a></li>--}}
+{{--                    <li><a class="nav-link" href="{{ route('admin.fields.index') }}">Ustuvor tarmoqlar</a></li>--}}
                 </ul>
             </li>
             <li class="dropdown">
@@ -125,6 +125,9 @@
             </li>
             <li class="dropdown ">
                 <a href="{{ route('admin.appeals.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Murojatlar</a>
+            </li>
+            <li class="dropdown ">
+                <a href="{{ route('admin.questions.index') }}" class="nav-link"><i data-feather="monitor"></i><span>So'rovnomalar</a>
             </li>
             <li class="dropdown ">
                 <a href="{{ route('admin.generator') }}" class="nav-link"><i data-feather="monitor"></i><span>Generator</a>

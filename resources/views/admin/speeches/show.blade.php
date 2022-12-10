@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $speech->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $speech->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $speech->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $speech->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $speech->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $speech->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $speech->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $speech->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td> <img src="/{{ $speech->image }}" width="100" alt=""></td></tr>
                                     <tr><th>Video file</th>
                                         <td><video width="320" height="240" controls>

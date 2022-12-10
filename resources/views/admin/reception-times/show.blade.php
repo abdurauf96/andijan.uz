@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $receptiontime->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $receptiontime->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $receptiontime->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $receptiontime->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $receptiontime->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $receptiontime->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $receptiontime->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $receptiontime->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img src="/{{ $receptiontime->image }}" width="100" alt=""></td></tr>
                                 </tbody>
                             </table>

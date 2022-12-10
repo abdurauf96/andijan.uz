@@ -17,7 +17,12 @@
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>
 
+<div class="form-group{{ $errors->has('body_kr') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Body kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_en" >{{ $generalinfo->body_kr ?? ''}}</textarea>
 
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group">
     <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">
 </div>

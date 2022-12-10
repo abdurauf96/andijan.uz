@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $award->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $award->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $award->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $award->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $award->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $award->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $award->body_en !!} </td></tr>
+                                    <tr><th> Body Kr </th><td> {!! $award->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $award->image }}" alt=""> </td></tr>
                                 </tbody>
                             </table>

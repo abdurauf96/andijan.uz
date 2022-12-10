@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $councildecision->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $councildecision->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $councildecision->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $councildecision->title_kr }} </td></tr>
                                     <tr><th> File </th><td><a href="/{{ $councildecision->file }}">Ko'rish</a></td></tr>
                                 </tbody>
                             </table>

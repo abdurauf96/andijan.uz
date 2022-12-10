@@ -17,7 +17,7 @@
                     <div class="card-header">
                         <h4> Edit District #{{ $district->id }} </h4>
                         <div class="card-header-form">
-                            <a href="{{ url('/districts') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                            <a href="{{ url('/admin/districts') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         </div>
                     </div>
                     <div class="card-body">

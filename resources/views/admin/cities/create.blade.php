@@ -48,8 +48,10 @@
         CKEDITOR.replace( 'body_uz');
         CKEDITOR.replace( 'body_ru',);
         CKEDITOR.replace( 'body_en');
+        CKEDITOR.replace( 'body_kr');
         CKEDITOR.replace( 'hokim_text_uz');
         CKEDITOR.replace( 'hokim_text_ru',);
         CKEDITOR.replace( 'hokim_text_en');
+        CKEDITOR.replace( 'hokim_text_kr');
     </script>
 @endsection

@@ -16,6 +16,12 @@
 
     {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('title_en') ? 'has-error' : ''}}">
+    <label for="title_en" class="control-label">{{ 'Title Kr' }}</label>
+    <textarea class="form-control" rows="5" name="title_kr" type="textarea" id="title_en" >{{ $citizen->title_kr ?? ''}}</textarea>
+
+    {!! $errors->first('title_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('body_uz') ? 'has-error' : ''}}">
     <label for="body_uz" class="control-label">{{ 'Body Uz' }}</label>
     <textarea class="form-control" rows="5" name="body_uz" type="textarea" id="body_uz" >{{ $citizen->body_uz ?? ''}}</textarea>
@@ -34,7 +40,12 @@
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Body Kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_en" >{{ $citizen->body_kr ?? ''}}</textarea>
 
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group{{ $errors->has('file') ? 'has-error' : ''}}">
     <label for="file" class="control-label">{{ 'File' }}</label>
     <input class="form-control" name="file" type="file" id="file" value="{{ $citizen->file ?? ''}}" >

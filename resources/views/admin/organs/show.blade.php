@@ -34,7 +34,10 @@
                                     <tr>
                                         <th>ID</th><td>{{ $organ->id }}</td>
                                     </tr>
-                                    <tr><th> Title Uz </th><td> {{ $organ->title_uz }} </td></tr><tr><th> Title Ru </th><td> {{ $organ->title_ru }} </td></tr><tr><th> Title En </th><td> {{ $organ->title_en }} </td></tr>
+                                    <tr><th> Title Uz </th><td> {{ $organ->title_uz }} </td></tr>
+                                    <tr><th> Title Ru </th><td> {{ $organ->title_ru }} </td></tr>
+                                    <tr><th> Title En </th><td> {{ $organ->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $organ->title_kr }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

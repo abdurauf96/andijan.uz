@@ -9,48 +9,48 @@ use Illuminate\Http\Request;
 
 class FieldsController extends Controller
 {
-    /**
-     * @OA\Get(
-     *      path="/fields",
-     *      operationId="getFields",
-     *      tags={"Bosh sahifa"},
-     *      summary="Ustuvor tarmoqlar",
-     *      description="Returns list of fields",
-     *      @OA\Response(
-     *          response=200,
-     *          description="Successful operation",
-     *       )
-     *     )
-     */
+//    /**
+//     * @OA\Get(
+//     *      path="/fields",
+//     *      operationId="getFields",
+//     *      tags={"Bosh sahifa"},
+//     *      summary="Ustuvor tarmoqlar",
+//     *      description="Returns list of fields",
+//     *      @OA\Response(
+//     *          response=200,
+//     *          description="Successful operation",
+//     *       )
+//     *     )
+//     */
     public function getAll()
     {
         return FieldResource::collection(Field::latest()->get());
     }
 
-    /**
-     * @OA\Get(
-     *      path="/fields/{slug}",
-     *      operationId="getOneField",
-     *      tags={"Bosh sahifa"},
-     *      summary="Get one field by Slug",
-     *      description="Returns one field",
-     *      @OA\Parameter(
-     *          name="slug",
-     *          required=true,
-     *          description="Field Slug",
-     *          in="path",
-     *          @OA\Schema(type="string")
-     *      ),
-     *      @OA\Response(
-     *          response=200,
-     *          description="Successful operation",
-     *       ),
-     *      @OA\Response(
-     *          response=404,
-     *          description="if field not found",
-     *       )
-     *     )
-     */
+//    /**
+//     * @OA\Get(
+//     *      path="/fields/{slug}",
+//     *      operationId="getOneField",
+//     *      tags={"Bosh sahifa"},
+//     *      summary="Get one field by Slug",
+//     *      description="Returns one field",
+//     *      @OA\Parameter(
+//     *          name="slug",
+//     *          required=true,
+//     *          description="Field Slug",
+//     *          in="path",
+//     *          @OA\Schema(type="string")
+//     *      ),
+//     *      @OA\Response(
+//     *          response=200,
+//     *          description="Successful operation",
+//     *       ),
+//     *      @OA\Response(
+//     *          response=404,
+//     *          description="if field not found",
+//     *       )
+//     *     )
+//     */
     public function getOne($slug)
     {
         $field=Field::whereSlug($slug)->first();

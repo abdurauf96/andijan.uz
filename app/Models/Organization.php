@@ -29,7 +29,7 @@ class Organization extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'position_uz', 'position_ru', 'position_en', 'image', 'statute', 'addres_uz', 'addres_ru', 'addres_en', 'phone', 'website', 'email', 'fax', 'reception_time_uz', 'reception_time_ru', 'reception_time_en', 'telegram', 'facebook', 'instagram', 'view', 'slug', 'meta_keywords', 'meta_description', 'director', 'director_image', 'director_phone', 'director_info_uz', 'director_info_ru', 'director_info_en', 'director_facebook', 'director_telegram', 'director_instagram'];
+    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'title_kr', 'position_uz', 'position_ru', 'position_en', 'position_kr', 'image', 'statute', 'addres_uz', 'addres_ru', 'addres_en', 'addres_kr', 'phone', 'website', 'email', 'fax', 'reception_time_uz', 'reception_time_ru', 'reception_time_en', 'reception_time_kr', 'telegram', 'facebook', 'instagram', 'view', 'slug', 'meta_keywords', 'meta_description', 'director', 'director_image', 'director_phone', 'director_info_uz', 'director_info_ru', 'director_info_en', 'director_info_kr', 'director_facebook', 'director_telegram', 'director_instagram'];
 
     protected static function boot()
     {

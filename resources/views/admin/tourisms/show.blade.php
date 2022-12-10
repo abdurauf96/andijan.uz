@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $tourism->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $tourism->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $tourism->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $tourism->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $tourism->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $tourism->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $tourism->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $tourism->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $tourism->image }}" alt=""> </td></tr>
                                     <tr><th> Slug </th><td> {{ $tourism->slug }} </td></tr>
                                 </tbody>

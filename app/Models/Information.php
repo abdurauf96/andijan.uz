@@ -8,7 +8,7 @@ use Spatie\Activitylog\Traits\LogsActivity;
 class Information extends Model
 {
     use LogsActivity;
-    
+
 
     /**
      * The database table used by the model.
@@ -29,9 +29,9 @@ class Information extends Model
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en'];
+    protected $fillable = ['body_uz', 'body_ru', 'body_en', 'body_kr'];
 
-    
+
 
     /**
      * Change activity log event description

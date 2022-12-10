@@ -22,6 +22,13 @@
 
     {!! $errors->first('name_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('name_en') ? 'has-error' : ''}}">
+    <label for="name_en" class="control-label">{{ 'F.I.O kr' }}</label>
+    <input class="form-control" name="name_kr" type="text" id="name_en" value="{{ $senator->name_kr ?? ''}}" >
+
+    {!! $errors->first('name_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('description_uz') ? 'has-error' : ''}}">
     <label for="description_uz" class="control-label">{{ 'Qisqacha malumot Uz' }}</label>
     <textarea class="form-control" rows="5" name="description_uz" type="textarea" id="description_uz" >{{ $senator->description_uz ?? ''}}</textarea>
@@ -40,6 +47,13 @@
 
     {!! $errors->first('description_en', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group{{ $errors->has('description_en') ? 'has-error' : ''}}">
+    <label for="description_en" class="control-label">{{ 'Qisqacha malumot kr' }}</label>
+    <textarea class="form-control" rows="5" name="description_kr" type="textarea" id="description_en" >{{ $senator->description_kr ?? ''}}</textarea>
+
+    {!! $errors->first('description_en', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group{{ $errors->has('image') ? 'has-error' : ''}}">
     <label for="image" class="control-label">{{ 'Image' }}</label>
     <input class="form-control" name="image" type="file" id="image" value="{{ $senator->image ?? ''}}" >
@@ -62,6 +76,12 @@
 <div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
     <label for="body_en" class="control-label">{{ 'Senator haqida En' }}</label>
     <textarea class="form-control" rows="5" name="body_en" type="textarea" id="body_en" >{{ $senator->body_en ?? ''}}</textarea>
+
+    {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group{{ $errors->has('body_en') ? 'has-error' : ''}}">
+    <label for="body_en" class="control-label">{{ 'Senator haqida kr' }}</label>
+    <textarea class="form-control" rows="5" name="body_kr" type="textarea" id="body_en" >{{ $senator->body_kr ?? ''}}</textarea>
 
     {!! $errors->first('body_en', '<p class="help-block">:message</p>') !!}
 </div>

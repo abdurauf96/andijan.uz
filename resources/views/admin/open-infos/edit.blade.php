@@ -49,8 +49,10 @@
         CKEDITOR.replace('passport_uz');
         CKEDITOR.replace('passport_ru',);
         CKEDITOR.replace('passport_en');
+        CKEDITOR.replace('passport_kr');
         CKEDITOR.replace('table_uz');
         CKEDITOR.replace('table_ru',);
         CKEDITOR.replace('table_en');
+        CKEDITOR.replace('table_kr');
     </script>
 @endsection

@@ -49,5 +49,6 @@
         CKEDITOR.replace( 'organ_uz');
         CKEDITOR.replace( 'organ_ru',);
         CKEDITOR.replace( 'organ_en');
+        CKEDITOR.replace( 'organ_kr');
     </script>
 @endsection

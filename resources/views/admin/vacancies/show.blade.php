@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $vacancy->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $vacancy->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $vacancy->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $vacancy->title_kr }} </td></tr>
                                     <tr><th> Link </th><td> {{ $vacancy->link }} </td></tr>
                                 </tbody>
                             </table>

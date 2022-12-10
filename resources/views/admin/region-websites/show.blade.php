@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $regionwebsite->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $regionwebsite->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $regionwebsite->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $regionwebsite->title_kr }} </td></tr>
                                     <tr><th> Link </th><td> {{ $regionwebsite->link }} </td></tr>
                                 </tbody>
                             </table>

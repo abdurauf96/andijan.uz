@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $olddocument->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $olddocument->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $olddocument->title_en }} </td></tr>
+                                    <tr><th> Title KR </th><td> {{ $olddocument->title_kr }} </td></tr>
                                     <tr><th> Chiqaruvchi organ Uz </th><td> {{ $olddocument->organ_uz }} </td></tr>
                                     <tr><th> Chiqaruvchi organ Ru </th><td> {{ $olddocument->organ_ru }} </td></tr>
                                     <tr><th> Chiqaruvchi organ En </th><td> {{ $olddocument->organ_en }} </td></tr>
+                                    <tr><th> Chiqaruvchi organ kr </th><td> {{ $olddocument->organ_kr }} </td></tr>
                                     <tr><th> Sana </th><td> {{ $olddocument->date }} </td></tr>
                                     <tr><th> File </th><td><a href="/{{ $olddocument->file }}">Yuklab olish</a> </td></tr>
                                 </tbody>

@@ -37,12 +37,15 @@
                                     <tr><th> Title Uz </th><td> {{ $openinfo->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $openinfo->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $openinfo->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $openinfo->title_kr }} </td></tr>
                                     <tr><th> Ma'lumotlar to'plami passporti Uz </th><td> {{ $openinfo->passport_uz }} </td></tr>
                                     <tr><th> Ma'lumotlar to'plami passporti Ru </th><td> {{ $openinfo->passport_ru }} </td></tr>
                                     <tr><th> Ma'lumotlar to'plami passporti En </th><td> {{ $openinfo->passport_en }} </td></tr>
+                                    <tr><th> Ma'lumotlar to'plami passporti kr </th><td> {{ $openinfo->passport_kr }} </td></tr>
                                     <tr><th> Malumotlar to'plami jadvali Uz </th><td> {{ $openinfo->table_uz }} </td></tr>
                                     <tr><th> Malumotlar to'plami jadvali Ru </th><td> {{ $openinfo->table_ru }} </td></tr>
                                     <tr><th> Malumotlar to'plami jadvali En </th><td> {{ $openinfo->table_en }} </td></tr>
+                                    <tr><th> Malumotlar to'plami jadvali kr </th><td> {{ $openinfo->table_kr }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

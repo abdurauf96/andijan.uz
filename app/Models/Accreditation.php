@@ -30,9 +30,9 @@ class Accreditation extends Model implements Searchable
      *
      * @var array
      */
-    protected $fillable = ['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en'];
+    protected $fillable = ['body_uz', 'body_ru', 'body_en' ,'body_kr'];
 
-    public static $searchFields=['title_uz', 'title_ru', 'title_en', 'body_uz', 'body_ru', 'body_en'];
+    public static $searchFields=['body_uz', 'body_ru', 'body_en', 'body_kr'];
 
     //public $searchableType = 'Xabarlar';
 

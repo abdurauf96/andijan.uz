@@ -18,6 +18,7 @@ class CreateGeneralInfosTable extends Migration
             $table->text('body_uz')->nullable();
             $table->text('body_ru')->nullable();
             $table->text('body_en')->nullable();
+            $table->text('body_kr')->nullable();
             });
     }
 

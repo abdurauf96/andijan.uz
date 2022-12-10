@@ -29,7 +29,7 @@ class CarPrice extends Model
      *
      * @var array
      */
-    protected $fillable = ['body_uz', 'body_ru', 'body_en', 'title_uz', 'title_ru', 'title_en', 'image'];
+    protected $fillable = ['body_uz', 'body_ru', 'body_en', 'title_kr', 'body_kr', 'title_uz', 'title_ru', 'title_en', 'image'];
 
     protected static function boot()
     {

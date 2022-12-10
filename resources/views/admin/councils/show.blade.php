@@ -37,6 +37,7 @@
                                     <tr><th> Title Uz </th><td> {{ $council->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $council->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $council->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $council->title_kr }} </td></tr>
                                     <tr><th> Kengash A'zolari </th><td> @foreach( $council->members as $member) <li> {{ $member->name_uz }} @endforeach</li> </td></tr>
                                 </tbody>
                             </table>

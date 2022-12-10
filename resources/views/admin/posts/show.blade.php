@@ -37,12 +37,15 @@
                                     <tr><th> Title Uz </th><td> {{ $post->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $post->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $post->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $post->title_kr }} </td></tr>
                                     <tr><th> Description Uz </th><td> {{ $post->description_uz }} </td></tr>
                                     <tr><th> Description Ru </th><td> {{ $post->description_ru }} </td></tr>
                                     <tr><th> Description En </th><td> {{ $post->description_en }} </td></tr>
+                                    <tr><th> Description kr </th><td> {{ $post->description_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $post->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $post->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $post->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $post->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $post->image }}" alt=""> </td></tr>
                                     <tr><th> Ko'rishlar soni </th><td> {{ $post->view }} ta </td></tr>
                                     <tr><th> Yangilik turi </th><td> @if($post->type==1) Andijon @elseif($post->type==2) Muxim @else Odatiy @endif </td></tr>

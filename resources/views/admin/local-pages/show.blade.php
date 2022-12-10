@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $localpage->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $localpage->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $localpage->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $localpage->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $localpage->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $localpage->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $localpage->body_en !!} </td></tr>
+                                    <tr><th> Body kr </th><td> {!! $localpage->body_kr !!} </td></tr>
                                     <tr><th> Ko'rishlar soni </th><td> {{ $localpage->view }} ta </td></tr>
                                 </tbody>
                             </table>

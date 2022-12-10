@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $arena->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $arena->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $arena->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $arena->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $arena->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $arena->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $arena->body_en !!} </td></tr>
+                                    <tr><th> Body Kr </th><td> {!! $arena->body_kr !!} </td></tr>
                                     <tr><th> Image </th><td><img width="200" src="/{{ $arena->image }}" alt=""> </td></tr>
                                     <tr><th> Slug </th><td> {{ $arena->slug }} </td></tr>
                                 </tbody>

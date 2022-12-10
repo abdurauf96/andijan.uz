@@ -37,9 +37,11 @@
                                     <tr><th> Title Uz </th><td> {{ $citizen->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $citizen->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $citizen->title_en }} </td></tr>
+                                    <tr><th> Title Kr </th><td> {{ $citizen->title_kr }} </td></tr>
                                     <tr><th> Body Uz </th><td> {!! $citizen->body_uz !!} </td></tr>
                                     <tr><th> Body Ru </th><td> {!! $citizen->body_ru !!} </td></tr>
                                     <tr><th> Body En </th><td> {!! $citizen->body_en !!} </td></tr>
+                                    <tr><th> Body Kr </th><td> {!! $citizen->body_kr !!} </td></tr>
                                     <tr><th> File  </th><td><a href="/{{ $citizen->file }}">Yuklab olish</a></td></tr>
                                 </tbody>
                             </table>

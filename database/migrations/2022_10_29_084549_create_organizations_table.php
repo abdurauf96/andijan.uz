@@ -18,14 +18,17 @@ class CreateOrganizationsTable extends Migration
             $table->string('title_uz')->nullable();
             $table->string('title_ru')->nullable();
             $table->string('title_en')->nullable();
+            $table->string('title_kr')->nullable();
             $table->string('position_uz')->nullable();
             $table->string('position_ru')->nullable();
             $table->string('position_en')->nullable();
+            $table->string('position_kr')->nullable();
             $table->string('image')->nullable();
             $table->string('statute')->nullable();
             $table->mediumText('addres_uz')->nullable();
             $table->mediumText('addres_ru')->nullable();
             $table->mediumText('addres_en')->nullable();
+            $table->mediumText('addres_kr')->nullable();
             $table->string('phone')->nullable();
             $table->string('website')->nullable();
             $table->string('email')->nullable();
@@ -33,6 +36,7 @@ class CreateOrganizationsTable extends Migration
             $table->string('reception_time_uz')->nullable();
             $table->string('reception_time_ru')->nullable();
             $table->string('reception_time_en')->nullable();
+            $table->string('reception_time_kr')->nullable();
             $table->string('telegram')->nullable();
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
@@ -46,6 +50,7 @@ class CreateOrganizationsTable extends Migration
             $table->text('director_info_uz')->nullable();
             $table->text('director_info_ru')->nullable();
             $table->text('director_info_en')->nullable();
+            $table->text('director_info_kr')->nullable();
             $table->string('director_facebook')->nullable();
             $table->string('director_telegram')->nullable();
             $table->string('director_instagram')->nullable();

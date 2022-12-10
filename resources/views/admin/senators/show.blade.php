@@ -37,14 +37,17 @@
                                     <tr><th> Name Uz </th><td> {{ $senator->name_uz }} </td></tr>
                                     <tr><th> Name Ru </th><td> {{ $senator->name_ru }} </td></tr>
                                     <tr><th> Name En </th><td> {{ $senator->name_en }} </td></tr>
+                                    <tr><th> Name kr </th><td> {{ $senator->name_kr }} </td></tr>
                                     <tr><th> Qisqacha ma'lumot Uz </th><td> {{ $senator->description_uz }} </td></tr>
                                     <tr><th> Qisqacha ma'lumot Ru </th><td> {{ $senator->description_ru }} </td></tr>
                                     <tr><th> Qisqacha ma'lumot En </th><td> {{ $senator->description_en }} </td></tr>
+                                    <tr><th> Qisqacha ma'lumot kr </th><td> {{ $senator->description_kr }} </td></tr>
                                     <tr><th> Image </th><td><img src="/{{ $senator->image }}" width="100" alt=""> </td></tr>
 
                                     <tr><th> Senator haqida Uz </th><td> {!! $senator->body_uz !!} </td></tr>
                                     <tr><th> Senator haqida Ru </th><td> {!! $senator->body_ru !!} </td></tr>
                                     <tr><th> Senator haqida En </th><td> {!! $senator->body_en !!} </td></tr>
+                                    <tr><th> Senator haqida kr </th><td> {!! $senator->body_kr !!} </td></tr>
 
                                     <tr><th> Telefon </th><td> {{ $senator->phone }} </td></tr>
                                     <tr><th> Email </th><td> {{ $senator->email }} </td></tr>

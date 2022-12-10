@@ -37,10 +37,12 @@
                                     <tr><th> Title Uz </th><td> {{ $organization->title_uz }} </td></tr>
                                     <tr><th> Title Ru </th><td> {{ $organization->title_ru }} </td></tr>
                                     <tr><th> Title En </th><td> {{ $organization->title_en }} </td></tr>
+                                    <tr><th> Title kr </th><td> {{ $organization->title_kr }} </td></tr>
 
                                     <tr><th> Tashkilot vakili lavozimi Uz </th><td> {{ $organization->position_uz }} </td></tr>
                                     <tr><th> Tashkilot vakili lavozimi Ru </th><td> {{ $organization->position_ru }} </td></tr>
                                     <tr><th> Tashkilot vakili lavozimi En </th><td> {{ $organization->position_en }} </td></tr>
+                                    <tr><th> Tashkilot vakili lavozimi kr </th><td> {{ $organization->position_kr }} </td></tr>
 
                                     <tr><th> Tashkilot Image </th><td><img src="/{{ $organization->image }}" width="100" alt=""></td></tr>
                                     <tr><th> Tashkilot Nizomi </th><td><a href="/{{ $organization->statute }}">Ko'rish</a> </td></tr>
@@ -48,6 +50,7 @@
                                     <tr><th> Addres Uz </th><td> {{ $organization->addres_uz }} </td></tr>
                                     <tr><th> Addres Ru </th><td> {{ $organization->addres_ru }} </td></tr>
                                     <tr><th> Addres En </th><td> {{ $organization->addres_en }} </td></tr>
+                                    <tr><th> Addres kr </th><td> {{ $organization->addres_kr }} </td></tr>
 
                                     <tr><th> Phone </th><td> {{ $organization->phone }} </td></tr>
                                     <tr><th> Email </th><td> {{ $organization->email }} </td></tr>
@@ -57,6 +60,7 @@
                                     <tr><th> Fuqarolarni qabul qilish vaqti Uz </th><td> {{ $organization->reception_time_uz }} </td></tr>
                                     <tr><th> Fuqarolarni qabul qilish vaqti Ru </th><td> {{ $organization->reception_time_ru }} </td></tr>
                                     <tr><th> Fuqarolarni qabul qilish vaqti En </th><td> {{ $organization->reception_time_en }} </td></tr>
+                                    <tr><th> Fuqarolarni qabul qilish vaqti kr </th><td> {{ $organization->reception_time_kr }} </td></tr>
 
                                     <tr><th> Telegram </th><td> {{ $organization->telegram }} </td></tr>
                                     <tr><th> Facebook </th><td> {{ $organization->facebook }} </td></tr>
@@ -73,6 +77,7 @@
                                     <tr><th> Director haqida Uz </th><td> {{ $organization->director_info_uz }} </td></tr>
                                     <tr><th> Director haqida Ru </th><td> {{ $organization->director_info_ru }} </td></tr>
                                     <tr><th> Director haqida En </th><td> {{ $organization->director_info_en }} </td></tr>
+                                    <tr><th> Director haqida kr </th><td> {{ $organization->director_info_kr }} </td></tr>
                                     <tr><th> Director telegram </th><td> {{ $organization->director_telegram }} </td></tr>
                                     <tr><th> Director facebook </th><td> {{ $organization->director_facebook }} </td></tr>
                                     <tr><th> Director instagram </th><td> {{ $organization->director_instagram }} </td></tr>
